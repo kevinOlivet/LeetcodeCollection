@@ -3,8 +3,8 @@ import Foundation
 // NOT RECURSION NOR BACKTRACKING
 
 /*
- https://leetcode.com/problems/check-if-number-is-a-sum-of-powers-of-three/description/
  1780. Check if Number is a Sum of Powers of Three
+ https://leetcode.com/problems/check-if-number-is-a-sum-of-powers-of-three/description/
 
  Given an integer n, return true if it is possible to represent n as the sum of distinct powers of three. Otherwise, return false.
 

@@ -3,9 +3,9 @@ import Foundation
 // NOT BACKTRACKING BUT RECURSION
 
 /*
+ 50. Pow(x, n)
  https://leetcode.com/problems/powx-n/
 
- 50. Pow(x, n)
  Implement pow(x, n), which calculates x raised to the power n (i.e., xn).
 
  Example 1:

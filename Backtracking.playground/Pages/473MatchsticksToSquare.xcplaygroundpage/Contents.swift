@@ -1,5 +1,6 @@
 import Foundation
 /*
+ 473. Matchsticks to Square
  https://leetcode.com/problems/matchsticks-to-square/
 
  You are given an integer array matchsticks where matchsticks[i] is the length of the ith matchstick.
@@ -9,14 +10,11 @@ import Foundation
  Return true if you can make this square and false otherwise.
 
  Example: 1
-
  Input: matchsticks = [1,1,2,2,2]
  Output: true
  Explanation: You can form a square with length 2, one side of the square came two sticks with length 1.
 
-
  Example 2:
-
  Input: matchsticks = [3,3,3,3,4]
  Output: false
  Explanation: You cannot find a way to form a square with all the matchsticks.
