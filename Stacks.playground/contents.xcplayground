@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='20ValidParentheses'/>
+        <page name='71SimplifyPath'/>
+        <page name='155MinStack'/>
+        <page name='22GenerateParentheses'/>
+        <page name='735AsteroidCollision'/>
+        <page name='853CarFleet'/>
+        <page name='1776CarFleet2'/>
+        <page name='225StackUsingQueues'/>
+        <page name='232QueuesUsingStacks'/>
+        <page name='901OnlineStockSpan'/>
+        <page name='739DailyTemperatures'/>
+        <page name='150EvaluateReversePolishNotation'/>
+        <page name='151ReverseWordsInAString'/>
+        <page name='402RemoveKDigits'/>
+        <page name='895MaximumFrequencyStack'/>
+        <page name='496NexGreaterElement'/>
+        <page name='503NextGreaterElement2'/>
+        <page name='173BinarySearchTreeIterator'/>
+        <page name='94BinaryTreeInorderTraversal'/>
+        <page name='682BaseballGame'/>
+        <page name='1209RemoveAllAdjacentDublicates'/>
+        <page name='456132Pattern'/>
+    </pages>
+</playground>

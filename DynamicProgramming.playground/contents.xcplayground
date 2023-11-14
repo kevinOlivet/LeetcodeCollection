@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='494TargetSum'/>
+        <page name='70ClimbingStairs'/>
+        <page name='983MinimumCostsForTickets'/>
+        <page name='322CoinChange'/>
+        <page name='518CoinChange2'/>
+        <page name='139WordBreak'/>
+        <page name='5LongestPalindromicSubstring'/>
+        <page name='91DecodeWays'/>
+        <page name='198HouseRobber'/>
+        <page name='97InterleavingString'/>
+        <page name='213HouseRobber2'/>
+        <page name='515PaintHouse'/>
+        <page name='300LongestIncreasingSubsequence'/>
+        <page name='1143LongestCommonSubsequence'/>
+        <page name='152MaximumProductSubarray'/>
+        <page name='120Triangle'/>
+        <page name='62UniquePaths'/>
+        <page name='221MaximalSquare'/>
+        <page name='63UniquePaths2'/>
+        <page name='64MinimumPathSum'/>
+        <page name='55JumpGame'/>
+        <page name='45JumpGame2'/>
+        <page name='1871JumpGame7'/>
+        <page name='10RegularExpressionMatching'/>
+        <page name='44WildcardMatching'/>
+        <page name='79WordSearch'/>
+    </pages>
+</playground>

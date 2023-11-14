@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='641NQueensLeetcode'/>
+        <page name='642NQueens2Leetcode'/>
+        <page name='79WordSearch'/>
+        <page name='WordSearch2'/>
+        <page name='46Permutations'/>
+        <page name='RemoveDuplicates2'/>
+        <page name='SearchRange'/>
+        <page name='LetterCombinationsPhoneNumber'/>
+        <page name='39CombinationSum'/>
+        <page name='GenerateParentheses'/>
+        <page name='CombinationSum2'/>
+        <page name='Subsets2'/>
+        <page name='Combinations'/>
+        <page name='PalindromePartitioning'/>
+        <page name='PalindromePartitioning2'/>
+        <page name='MaxPalindromes'/>
+        <page name='SplitString'/>
+        <page name='FindUniqueBinaryString'/>
+        <page name='1239MaximumLengthConcatenatedString'/>
+        <page name='93RestoreIPAddresses'/>
+        <page name='698PartitionToKEqualSumSubsets'/>
+        <page name='473MatchsticksToSquare'/>
+        <page name='332ReconstructItinerary'/>
+        <page name='75Subsets'/>
+        <page name='47Permutations2'/>
+        <page name='50PowXN'/>
+        <page name='1780CheckIfNumberIsSumOfPowersOfThree'/>
+    </pages>
+</playground>
