@@ -2,10 +2,11 @@ import Foundation
 //  NOTE: This doesn't work in a playground! But it works in leetcode
 
 /*
+ 191. Number of 1 Bits
+ https://leetcode.com/problems/number-of-1-bits/
+
  Bit manipulation
  NOTE: This doesn't work in a playground! But it works in leetcode
-
- 191. Number of 1 Bits
 
  Write a function that takes the binary representation of an unsigned integer and returns the number of '1' bits it has (also known as the Hamming weight).
 

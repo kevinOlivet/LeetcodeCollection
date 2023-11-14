@@ -1,8 +1,7 @@
 import Foundation
 
 /*
- 18. 4Sum
-
+ 18. 4Sum, FourSum
  https://leetcode.com/problems/4sum/description/
 
  Given an array nums of n integers, return an array of all the unique quadruplets [nums[a], nums[b], nums[c], nums[d]] such that:

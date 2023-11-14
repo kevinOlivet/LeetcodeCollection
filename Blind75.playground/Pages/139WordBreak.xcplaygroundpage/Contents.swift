@@ -1,9 +1,10 @@
 import Foundation
 
 /*
- https://leetcode.com/problems/word-break/
  139. Word Break
- Bottom up dynamic programming
+ https://leetcode.com/problems/word-break/
+
+ // Bottom up dynamic programming
 
  Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.
 

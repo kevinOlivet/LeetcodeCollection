@@ -1,10 +1,10 @@
 import Foundation
 
 /*
+ 1143. Longest Common Subsequence
  https://leetcode.com/problems/longest-common-subsequence/description/
 
- 1143. Longest Common Subsequence
-Bottom Up Dynamic programming
+// Bottom Up Dynamic programming
 
  Given two strings text1 and text2, return the length of their longest common subsequence. If there is no common subsequence, return 0.
 

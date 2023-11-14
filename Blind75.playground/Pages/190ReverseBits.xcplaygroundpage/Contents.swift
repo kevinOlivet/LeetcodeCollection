@@ -4,7 +4,6 @@ import Foundation
  // NOTE: Works in Leetcode but not in a playground
 
  190. Reverse Bits
-
  https://leetcode.com/problems/reverse-bits/description/
 
  // NOTE: Works in Leetcode but not in a playground
@@ -24,9 +23,6 @@ import Foundation
  Input: n = 11111111111111111111111111111101
  Output:   3221225471 (10111111111111111111111111111111)
  Explanation: The input binary string 11111111111111111111111111111101 represents the unsigned integer 4294967293, so return 3221225471 which its binary representation is 10111111111111111111111111111111.
-
- Constraints:
- The input must be a binary string of length 32
  */
 
 

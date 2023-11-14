@@ -2,7 +2,6 @@ import Foundation
 
 /*
  70. Climbing Stairs
-
  https://leetcode.com/problems/climbing-stairs/description/
 
  You are climbing a staircase. It takes n steps to reach the top.

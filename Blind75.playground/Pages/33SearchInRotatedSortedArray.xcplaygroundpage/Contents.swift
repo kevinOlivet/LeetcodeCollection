@@ -2,10 +2,9 @@ import Foundation
 
 /*
  33. Search in Rotated Sorted Array
+ https://leetcode.com/problems/search-in-rotated-sorted-array/
 
  Need to search in O(log n)
-
- https://leetcode.com/problems/search-in-rotated-sorted-array/
 
  There is an integer array nums sorted in ascending order (with distinct values).
 
