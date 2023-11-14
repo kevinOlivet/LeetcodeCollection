@@ -1,10 +1,9 @@
 import Foundation
 
-// DOESN'T WORK. I THINK I DON'T UNDERSTAND THE PROBLEM MAYBE
-
 /*
- https://leetcode.com/problems/jump-game-vii/description/
  1871. Jump Game VII
+ https://leetcode.com/problems/jump-game-vii/description/
+ // DOESN'T WORK. I THINK I DON'T UNDERSTAND THE PROBLEM MAYBE
 
  You are given a 0-indexed binary string s and two integers minJump and maxJump. In the beginning, you are standing at index 0, which is equal to '0'. You can move from index i to index j if the following conditions are fulfilled:
 

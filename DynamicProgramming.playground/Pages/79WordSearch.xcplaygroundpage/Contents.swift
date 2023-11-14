@@ -1,10 +1,10 @@
 import Foundation
 
-    // MY DYNAMIC PROGRAMMING TRY DOESN'T WORK
 
 /*
- https://leetcode.com/problems/word-search/
  79. Word Search
+ https://leetcode.com/problems/word-search/
+ // MY DYNAMIC PROGRAMMING TRY DOESN'T WORK
 
  Given an m x n grid of characters board and a string word, return true if word exists in the grid.
 

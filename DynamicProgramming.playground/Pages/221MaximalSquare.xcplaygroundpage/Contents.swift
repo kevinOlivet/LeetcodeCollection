@@ -1,9 +1,9 @@
 import Foundation
 
 /*
- https://leetcode.com/problems/maximal-square/
-
  221. Maximal Square
+ https://leetcode.com/problems/maximal-square/
+ // Dynamic programming bottom up
 
  Given an m x n binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.
 

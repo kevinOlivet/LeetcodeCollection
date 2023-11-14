@@ -1,9 +1,9 @@
 import Foundation
 
 /*
+ 515 · Paint House
  found on chinese leet code called lintcode
  https://www.lintcode.com/problem/515/
- 515 · Paint House
 
  Description
  There are a row of n houses, each house can be painted with one of the three colors: red, blue or green. The cost of painting each house with a certain color is different. You have to paint all the houses such that no two adjacent houses have the same color, and you need to cost the least. Return the minimum cost.

@@ -1,9 +1,9 @@
 import Foundation
-/// RECURSION WITH MEMOIZATION, NOT DYNAMIC PROGRAMMING
 
 /*
- https://leetcode.com/problems/regular-expression-matching/
  10. Regular Expression Matching
+ https://leetcode.com/problems/regular-expression-matching/
+ // RECURSION WITH MEMOIZATION, NOT DYNAMIC PROGRAMMING
 
  Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:
 

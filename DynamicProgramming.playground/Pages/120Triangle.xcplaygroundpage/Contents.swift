@@ -1,8 +1,10 @@
 import Foundation
 
 /*
- https://leetcode.com/problems/triangle/
  120. Triangle
+ https://leetcode.com/problems/triangle/
+ // BOTTOM UP DYNAMIC PROGRAMMING
+ // I SOLVED BY MYSELF ON PAPER
 
  Given a triangle array, return the minimum path sum from top to bottom.
 
