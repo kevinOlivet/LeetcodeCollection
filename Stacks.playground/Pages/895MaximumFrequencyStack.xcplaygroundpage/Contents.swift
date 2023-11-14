@@ -1,9 +1,8 @@
 import Foundation
 
 /*
- https://leetcode.com/problems/maximum-frequency-stack/
-
  895. Maximum Frequency Stack
+ https://leetcode.com/problems/maximum-frequency-stack/
 
  Design a stack-like data structure to push elements to the stack and pop the most frequent element from the stack.
 

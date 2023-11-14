@@ -1,10 +1,9 @@
 import Foundation
 
 /*
- Not a stack :)
- https://leetcode.com/problems/reverse-words-in-a-string/description/
-
  151. Reverse Words in a String
+ https://leetcode.com/problems/reverse-words-in-a-string/description/
+ Not a stack :)
 
  Given an input string s, reverse the order of the words.
 

@@ -1,9 +1,8 @@
 import Foundation
 
 /*
- https://leetcode.com/problems/next-greater-element-i/
-
  496. Next Greater Element I
+ https://leetcode.com/problems/next-greater-element-i/
 
  The next greater element of some element x in an array is the first greater element that is to the right of x in the same array.
 

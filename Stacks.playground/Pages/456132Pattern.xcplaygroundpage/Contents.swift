@@ -1,9 +1,8 @@
 import Foundation
 
 /*
- https://leetcode.com/problems/132-pattern/description/
-
  456. 132 Pattern
+ https://leetcode.com/problems/132-pattern/description/
 
  Given an array of n integers nums, a 132 pattern is a subsequence of three integers nums[i], nums[j] and nums[k] such that i < j < k and nums[i] < nums[k] < nums[j].
 
