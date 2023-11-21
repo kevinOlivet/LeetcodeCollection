@@ -560,3 +560,77 @@ Various Leetcode playgrounds: Backtracking, Stacks, DynamicProgramming, Blind75
  Example 3:
  Input: nums = [1,2,3]
  Output: 3
+
+## 91. Decode Ways
+ https://leetcode.com/problems/decode-ways/description/
+
+ A message containing letters from A-Z can be encoded into numbers using the following mapping:
+
+ 'A' -> "1"
+ 'B' -> "2"
+ ...
+ 'Z' -> "26"
+ To decode an encoded message, all the digits must be grouped then mapped back into letters using the reverse of the mapping above (there may be multiple ways). For example, "11106" can be mapped into:
+
+ "AAJF" with the grouping (1 1 10 6)
+ "KJF" with the grouping (11 10 6)
+ Note that the grouping (1 11 06) is invalid because "06" cannot be mapped into 'F' since "6" is different from "06".
+
+ Given a string s containing only digits, return the number of ways to decode it.
+
+ The test cases are generated so that the answer fits in a 32-bit integer.
+
+ Example 1:
+ Input: s = "12"
+ Output: 2
+ Explanation: "12" could be decoded as "AB" (1 2) or "L" (12).
+
+ Example 2:
+ Input: s = "226"
+ Output: 3
+ Explanation: "226" could be decoded as "BZ" (2 26), "VF" (22 6), or "BBF" (2 2 6).
+
+ Example 3:
+ Input: s = "06"
+ Output: 0
+ Explanation: "06" cannot be mapped to "F" because of the leading zero ("6" is different from "06").
+
+## 62. Unique Paths
+ https://leetcode.com/problems/unique-paths/description/
+ // BOTTOM UP DYNAMIC PROGRAMMING
+ // I SOLOVED ALONE
+
+ There is a robot on an m x n grid. The robot is initially located at the top-left corner (i.e., grid[0][0]). The robot tries to move to the bottom-right corner (i.e., grid[m - 1][n - 1]). The robot can only move either down or right at any point in time.
+
+ Given the two integers m and n, return the number of possible unique paths that the robot can take to reach the bottom-right corner.
+
+ The test cases are generated so that the answer will be less than or equal to 2 * 109.
+
+ Example 1:
+ Input: m = 3, n = 7
+ Output: 28
+
+ Example 2:
+ Input: m = 3, n = 2
+ Output: 3
+ Explanation: From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:
+ 1. Right -> Down -> Down
+ 2. Down -> Down -> Right
+ 3. Down -> Right -> Down
+
+## 55. Jump Game
+ https://leetcode.com/problems/jump-game/description/
+
+ You are given an integer array nums. You are initially positioned at the array's first index, and each element in the array represents your maximum jump length at that position.
+
+ Return true if you can reach the last index, or false otherwise.
+
+ Example 1:
+ Input: nums = [2,3,1,1,4]
+ Output: true
+ Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
+
+ Example 2:
+ Input: nums = [3,2,1,0,4]
+ Output: false
+ Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.

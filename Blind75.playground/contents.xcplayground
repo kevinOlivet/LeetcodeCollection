@@ -26,5 +26,8 @@
         <page name='39CombinationSum'/>
         <page name='198HouseRobber'/>
         <page name='213HouseRobber2'/>
+        <page name='91DecodeWays'/>
+        <page name='62UniquePaths'/>
+        <page name='55JumpGame'/>
     </pages>
 </playground>
