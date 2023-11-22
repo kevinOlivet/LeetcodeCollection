@@ -19,6 +19,7 @@ import Foundation
  Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.
  */
 
+// Dynamic Programming Solution
 func canJump(_ nums: [Int]) -> Bool {
     var dp = Array(repeating: false, count: nums.count)
     dp[nums.count - 1] = true
@@ -37,6 +38,19 @@ func canJump(_ nums: [Int]) -> Bool {
     }
     return dp[0]
 }
+
+// Greedy Solution
+//func canJump(_ nums: [Int]) -> Bool {
+//    var goal = nums.count - 1
+//
+//    for i in (0..<nums.count).reversed() {
+//        if i + nums[i] >= goal {
+//            goal = i
+//        }
+//    }
+//    return goal == 0
+//}
+
 
 let result = canJump([2,3,1,1,4]) // true
 print(result)
