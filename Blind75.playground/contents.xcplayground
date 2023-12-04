@@ -32,5 +32,6 @@
         <page name='133CloneGraph'/>
         <page name='207CourseSchedule'/>
         <page name='417PacificAtlanticWaterFlow'/>
+        <page name='2364CountNumberOfBadPairs'/>
     </pages>
 </playground>

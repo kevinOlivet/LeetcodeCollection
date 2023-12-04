@@ -55,11 +55,13 @@ func pacificAtlantic(_ heights: [[Int]]) -> [[Int]] {
         dfs(r: r, c: c - 1, visit: &visit, prevHeight: heights[r][c])
     }
 
+    // Set top row and bottom to visited state. Top to Pacific, bottom to Atlantic
     for c in 0..<COLS {
         dfs(r: 0, c: c, visit: &pac, prevHeight: heights[0][c])
         dfs(r: ROWS - 1, c: c, visit: &atl, prevHeight: heights[ROWS - 1][c])
     }
 
+    // Set Leftmost column and rightmost column to visited state. Left to Pacific, right to Atlantic
     for r in 0..<ROWS {
         dfs(r: r, c: 0, visit: &pac, prevHeight: heights[r][0])
         dfs(r: r, c: COLS - 1, visit: &atl, prevHeight: heights[r][COLS - 1])
