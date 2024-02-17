@@ -36,5 +36,7 @@
         <page name='200NumberOfIslands'/>
         <page name='128LongestConsecutiveSequence'/>
         <page name='57InsertInterval'/>
+        <page name='435NonOverlappingIntervals'/>
+        <page name='56MergeIntervals'/>
     </pages>
 </playground>

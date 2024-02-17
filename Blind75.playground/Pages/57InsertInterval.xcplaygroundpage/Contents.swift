@@ -35,10 +35,11 @@ func insert(_ intervals: [[Int]], _ newInterval: [Int]) -> [[Int]] {
             // newInterval will go after so ad intervals[i] to the result array
             result.append(intervals[i])
         } else {
-            // make a new interval
+            // make a new interval because it's overlapping
             newInterval = [min(newInterval[0], intervals[i][0]), max(newInterval[1], intervals[i][1])]
         }
     }
+    // newInterval comes at the end.
     result.append(newInterval)
     return result
 }
