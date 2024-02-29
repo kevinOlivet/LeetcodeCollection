@@ -38,5 +38,11 @@
         <page name='57InsertInterval'/>
         <page name='435NonOverlappingIntervals'/>
         <page name='56MergeIntervals'/>
+        <page name='920MeetingRooms'/>
+        <page name='919MeetingRooms2'/>
+        <page name='892AlienDictionary'/>
+        <page name='206ReverseLinkedList'/>
+        <page name='141LinkedListCycle'/>
+        <page name='21MergeTwoSortedLists'/>
     </pages>
 </playground>

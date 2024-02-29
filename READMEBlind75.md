@@ -847,3 +847,134 @@ Various Leetcode playgrounds: Backtracking, Stacks, DynamicProgramming, Blind75
  Input: intervals = [[1,2],[2,3]]
  Output: 0
  Explanation: You don't need to remove any of the intervals since they're already non-overlapping.
+
+ ## 920 · Meeting Rooms
+ https://www.lintcode.com/problem/920/
+
+ NOTE: This is a premium leetcode problem so I'm using lintcode instead
+ Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), determine if a person could attend all meetings.
+
+ (0,8),(8,10) is not conflict at 8
+
+ Example1
+ Input: intervals = [(0,30),(5,10),(15,20)]
+ Output: false
+ Explanation:
+ (0,30), (5,10) and (0,30),(15,20) will conflict
+
+ Example2
+ Input: intervals = [(5,8),(9,15)]
+ Output: true
+ Explanation:
+ Two times will not conflict
+
+ ## 919 · Meeting Rooms II
+ https://www.lintcode.com/problem/919/
+
+ NOTE: This is a premium leetcode problem so I'm using lintcode instead
+
+ Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), find the minimum number of conference rooms required.)
+ (0,8),(8,10) is not conflict at 8
+
+ Example1
+ Input: intervals = [(0,30),(5,10),(15,20)]
+ Output: 2
+ Explanation:
+ We need two meeting rooms
+ room1: (0,30)
+ room2: (5,10),(15,20)
+
+ Example2
+ Input: intervals = [(2,7)]
+ Output: 1
+ Explanation:
+ Only need one meeting room
+ 
+ ## 206. Reverse Linked List
+ https://leetcode.com/problems/reverse-linked-list/description/
+
+ Given the head of a singly linked list, reverse the list, and return the reversed list.
+
+ Example 1:
+ Input: head = [1,2,3,4,5]
+ Output: [5,4,3,2,1]
+
+ Example 2:
+ Input: head = [1,2]
+ Output: [2,1]
+
+ Example 3:
+ Input: head = []
+ Output: []
+
+ ## 141. Linked List Cycle
+ https://leetcode.com/problems/linked-list-cycle/description/
+
+ Given head, the head of a linked list, determine if the linked list has a cycle in it.
+
+ There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.
+
+ Return true if there is a cycle in the linked list. Otherwise, return false.
+
+ Example 1:
+ Input: head = [3,2,0,-4], pos = 1
+ Output: true
+ Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).
+
+ Example 2:
+ Input: head = [1,2], pos = 0
+ Output: true
+ Explanation: There is a cycle in the linked list, where the tail connects to the 0th node.
+
+ Example 3:
+ Input: head = [1], pos = -1
+ Output: false
+ Explanation: There is no cycle in the linked list.
+
+ ## 21. Merge Two Sorted Lists
+ https://leetcode.com/problems/merge-two-sorted-lists/description/
+
+ You are given the heads of two sorted linked lists list1 and list2.
+
+ Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
+
+ Return the head of the merged linked list.
+
+ Example 1:
+ Input: list1 = [1,2,4], list2 = [1,3,4]
+ Output: [1,1,2,3,4,4]
+
+ Example 2:
+ Input: list1 = [], list2 = []
+ Output: []
+
+ Example 3:
+ Input: list1 = [], list2 = [0]
+ Output: [0]
+ 
+  ## 23. Merge k Sorted Lists
+ https://leetcode.com/problems/merge-k-sorted-lists/description/
+
+ You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+
+ Merge all the linked-lists into one sorted linked-list and return it.
+
+ Example 1:
+ Input: lists = [[1,4,5],[1,3,4],[2,6]]
+ Output: [1,1,2,3,4,4,5,6]
+ Explanation: The linked-lists are:
+ [
+   1->4->5,
+   1->3->4,
+   2->6
+ ]
+ merging them into one sorted list:
+ 1->1->2->3->4->4->5->6
+
+ Example 2:
+ Input: lists = []
+ Output: []
+
+ Example 3:
+ Input: lists = [[]]
+ Output: []
