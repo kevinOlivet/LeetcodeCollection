@@ -978,3 +978,83 @@ Various Leetcode playgrounds: Backtracking, Stacks, DynamicProgramming, Blind75
  Example 3:
  Input: lists = [[]]
  Output: []
+
+ ## 19. Remove Nth Node From End of List
+ https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/
+
+ Given the head of a linked list, remove the nth node from the end of the list and return its head.
+
+ Example 1:
+ Input: head = [1,2,3,4,5], n = 2
+ Output: [1,2,3,5]
+
+ Example 2:
+ Input: head = [1], n = 1
+ Output: []
+
+ Example 3:
+ Input: head = [1,2], n = 1
+ Output: [1]
+ 
+  ## 143. Reorder List
+ https://leetcode.com/problems/reorder-list/description/
+
+ You are given the head of a singly linked-list. The list can be represented as:
+
+ L0 → L1 → … → Ln - 1 → Ln
+ Reorder the list to be on the following form:
+
+ L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
+ You may not modify the values in the list's nodes. Only nodes themselves may be changed.
+
+ Example 1:
+ Input: head = [1,2,3,4]
+ Output: [1,4,2,3]
+
+ Example 2:
+ Input: head = [1,2,3,4,5]
+ Output: [1,5,2,4,3]
+ 
+ ## 73. Set Matrix Zeroes
+ https://leetcode.com/problems/set-matrix-zeroes/description/
+
+ NOTE: - the trick is to use Constant space
+
+ Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
+
+ You must do it in place.
+
+ Example 1:
+ Input: matrix = [[1,1,1],[1,0,1],[1,1,1]]
+ Output: [[1,0,1],[0,0,0],[1,0,1]]
+
+ Example 2:
+ Input: matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
+ Output: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]
+
+ ## 54. Spiral Matrix
+ https://leetcode.com/problems/spiral-matrix/description/
+
+ Given an m x n matrix, return all elements of the matrix in spiral order.
+
+ Example 1:
+ Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
+ Output: [1,2,3,6,9,8,7,4,5]
+
+ Example 2:
+ Input: matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
+ Output: [1,2,3,4,8,12,11,10,9,5,6,7]
+ 
+  ## 48. Rotate Image
+ https://leetcode.com/problems/rotate-image/description/
+
+ You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
+ You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
+
+ Example 1:
+ Input: matrix = [[1,2,3],[4,5,6],[7,8,9]]
+ Output: [[7,4,1],[8,5,2],[9,6,3]]
+
+ Example 2:
+ Input: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
+ Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]

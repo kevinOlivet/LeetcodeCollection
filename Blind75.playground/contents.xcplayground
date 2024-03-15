@@ -44,5 +44,11 @@
         <page name='206ReverseLinkedList'/>
         <page name='141LinkedListCycle'/>
         <page name='21MergeTwoSortedLists'/>
+        <page name='23MergeKSortedLists'/>
+        <page name='19RemoveNthNodeFromEndOfList'/>
+        <page name='143ReorderList'/>
+        <page name='73SetMatrixZeroes'/>
+        <page name='54SpiralMatrix'/>
+        <page name='48RotateImage'/>
     </pages>
 </playground>
