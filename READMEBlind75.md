@@ -1058,3 +1058,90 @@ Various Leetcode playgrounds: Backtracking, Stacks, DynamicProgramming, Blind75
  Example 2:
  Input: matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
  Output: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]
+
+ ## 79. Word Search
+ https://leetcode.com/problems/word-search/description/
+
+ Given an m x n grid of characters board and a string word, return true if word exists in the grid.
+
+ The word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.
+
+ Example 1:
+ Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"
+ Output: true
+
+ Example 2:
+ Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "SEE"
+ Output: true
+
+ Example 3:
+ Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCB"
+ Output: false
+
+ ## 3. Longest Substring Without Repeating Characters
+ https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+
+ Given a string s, find the length of the longest
+ substring without repeating characters.
+
+ Example 1:
+ Input: s = "abcabcbb"
+ Output: 3
+ Explanation: The answer is "abc", with the length of 3.
+
+ Example 2:
+ Input: s = "bbbbb"
+ Output: 1
+ Explanation: The answer is "b", with the length of 1.
+
+ Example 3:
+ Input: s = "pwwkew"
+ Output: 3
+ Explanation: The answer is "wke", with the length of 3.
+
+ Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+
+ ## 424. Longest Repeating Character Replacement
+ https://leetcode.com/problems/longest-repeating-character-replacement/description/
+
+ You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.
+
+ Return the length of the longest substring containing the same letter you can get after performing the above operations.
+
+ Example 1:
+ Input: s = "ABAB", k = 2
+ Output: 4
+ Explanation: Replace the two 'A's with two 'B's or vice versa.
+
+ Example 2:
+ Input: s = "AABABBA", k = 1
+ Output: 4
+ Explanation: Replace the one 'A' in the middle with 'B' and form "AABBBBA".
+ The substring "BBBB" has the longest repeating letters, which is 4.
+ There may exists other ways to achieve this answer too.
+
+## 76. Minimum Window Substring
+ https://leetcode.com/problems/minimum-window-substring/description/
+
+ Given two strings s and t of lengths m and n respectively, return the minimum window substring
+  of s such that every character in t (including duplicates) is included in the window. 
+ If there is no such substring, return the empty string "".
+
+ The testcases will be generated such that the answer is unique.
+
+ Example 1:
+ Input: s = "ADOBECODEBANC", t = "ABC"
+ Output: "BANC"
+ Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
+
+ Example 2:
+ Input: s = "a", t = "a"
+ Output: "a"
+ Explanation: The entire string s is the minimum window.
+
+ Example 3:
+ Input: s = "a", t = "aa"
+ Output: ""
+ Explanation: Both 'a's from t must be included in the window.
+ Since the largest window of s only has one 'a', return empty string.
+ */

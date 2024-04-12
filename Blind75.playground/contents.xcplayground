@@ -50,5 +50,9 @@
         <page name='73SetMatrixZeroes'/>
         <page name='54SpiralMatrix'/>
         <page name='48RotateImage'/>
+        <page name='79WordSearch'/>
+        <page name='3LongestSubstringWithoutRepeatingCharacters'/>
+        <page name='424LongestRepeatingCharacterReplacement'/>
+        <page name='76MinimumWindowSubstring'/>
     </pages>
 </playground>
