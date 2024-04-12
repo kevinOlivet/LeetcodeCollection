@@ -1145,3 +1145,137 @@ Various Leetcode playgrounds: Backtracking, Stacks, DynamicProgramming, Blind75
  Explanation: Both 'a's from t must be included in the window.
  Since the largest window of s only has one 'a', return empty string.
  */
+
+ ## 49. Group Anagrams
+ https://leetcode.com/problems/group-anagrams/description/
+ // NOTE: quick way to map letters to an array index!!
+
+ Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+
+ An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+ Example 1:
+ Input: strs = ["eat","tea","tan","ate","nat","bat"]
+ Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+
+ Example 2:
+ Input: strs = [""]
+ Output: [[""]]
+
+ Example 3:
+ Input: strs = ["a"]
+ Output: [["a"]]
+
+ ## 20. Valid Parentheses
+ https://leetcode.com/problems/valid-parentheses/description/
+
+ Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+ An input string is valid if:
+
+ Open brackets must be closed by the same type of brackets.
+ Open brackets must be closed in the correct order.
+ Every close bracket has a corresponding open bracket of the same type.
+
+ Example 1:
+ Input: s = "()"
+ Output: true
+
+ Example 2:
+ Input: s = "()[]{}"
+ Output: true
+
+ Example 3:
+ Input: s = "(]"
+ Output: false
+
+ ## 125. Valid Palindrome
+ https://leetcode.com/problems/valid-palindrome/description/
+
+ A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+ Given a string s, return true if it is a palindrome, or false otherwise.
+
+ Example 1:
+ Input: s = "A man, a plan, a canal: Panama"
+ Output: true
+ Explanation: "amanaplanacanalpanama" is a palindrome.
+
+ Example 2:
+ Input: s = "race a car"
+ Output: false
+ Explanation: "raceacar" is not a palindrome.
+
+ Example 3:
+ Input: s = " "
+ Output: true
+ Explanation: s is an empty string "" after removing non-alphanumeric characters.
+ Since an empty string reads the same forward and backward, it is a palindrome.
+
+ ## 5. Longest Palindromic Substring
+ https://leetcode.com/problems/longest-palindromic-substring/description/
+
+ Given a string s, return the longest palindromic substring in s.
+
+ Example 1:
+ Input: s = "babad"
+ Output: "bab"
+ Explanation: "aba" is also a valid answer.
+
+ Example 2:
+ Input: s = "cbbd"
+ Output: "bb"
+
+ ## 647. Palindromic Substrings
+ https://leetcode.com/problems/palindromic-substrings/description/
+
+ Given a string s, return the number of palindromic substrings in it.
+
+ A string is a palindrome when it reads the same backward as forward.
+
+ A substring is a contiguous sequence of characters within the string.
+
+ Example 1:
+ Input: s = "abc"
+ Output: 3
+ Explanation: Three palindromic strings: "a", "b", "c".
+
+ Example 2:
+ Input: s = "aaa"
+ Output: 6
+ Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
+
+ ## 659 · Encode and Decode Strings
+ https://www.lintcode.com/problem/659/
+ NOTE: THIS PROBLEM IS PREMIUM ON LEETCODE SO IT'S SOLVED ON LINTCODE INSTEAD
+
+ Design an algorithm to encode a list of strings to a string. The encoded string is then sent over the network and is decoded back to the original list of strings.
+
+ Please implement encode and decode
+
+ Example1
+ Input: ["lint","code","love","you"]
+ Output: ["lint","code","love","you"]
+ Explanation:
+ One possible encode method is: "lint:;code:;love:;you"
+
+ Example2
+ Input: ["we", "say", ":", "yes"]
+ Output: ["we", "say", ":", "yes"]
+ Explanation:
+ One possible encode method is: "we:;say:;:::;yes"
+
+ ## 104. Maximum Depth of Binary Tree
+ https://leetcode.com/problems/maximum-depth-of-binary-tree/description/
+
+ Given the root of a binary tree, return its maximum depth.
+
+ A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+
+ Example 1:
+ Input: root = [3,9,20,null,null,15,7]
+ Output: 3
+
+ Example 2:
+ Input: root = [1,null,2]
+ Output: 2

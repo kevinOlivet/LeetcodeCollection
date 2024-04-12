@@ -54,5 +54,12 @@
         <page name='3LongestSubstringWithoutRepeatingCharacters'/>
         <page name='424LongestRepeatingCharacterReplacement'/>
         <page name='76MinimumWindowSubstring'/>
+        <page name='49GroupAnagrams'/>
+        <page name='20ValidParentheses'/>
+        <page name='125ValidPalindrome'/>
+        <page name='647PalindromicSubstrings'/>
+        <page name='659EncodeAndDecodeStrings'/>
+        <page name='5LongestPalindromicSubstring'/>
+        <page name='140MaximumDepthOfBinaryTree'/>
     </pages>
 </playground>
