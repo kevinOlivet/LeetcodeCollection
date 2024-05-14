@@ -1279,3 +1279,120 @@ Various Leetcode playgrounds: Backtracking, Stacks, DynamicProgramming, Blind75
  Example 2:
  Input: root = [1,null,2]
  Output: 2
+
+ ## 100. Same Tree
+ https://leetcode.com/problems/same-tree/description/
+
+ Given the roots of two binary trees p and q, write a function to check if they are the same or not.
+
+ Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
+
+ Example 1:
+ Input: p = [1,2,3], q = [1,2,3]
+ Output: true
+
+ Example 2:
+ Input: p = [1,2], q = [1,null,2]
+ Output: false
+
+ Example 3:
+ Input: p = [1,2,1], q = [1,1,2]
+ Output: false
+
+ ## 226. Invert Binary Tree
+ https://leetcode.com/problems/invert-binary-tree/description/
+
+ Given the root of a binary tree, invert the tree, and return its root.
+
+ Example 1:
+ Input: root = [4,2,7,1,3,6,9]
+ Output: [4,7,2,9,6,3,1]
+
+ Example 2:
+ Input: root = [2,1,3]
+ Output: [2,3,1]
+
+ Example 3:
+ Input: root = []
+ Output: []
+ 
+## 124. Binary Tree Maximum Path Sum
+ https://leetcode.com/problems/binary-tree-maximum-path-sum/description/
+
+ A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them. A node can only appear in the sequence at most once. Note that the path does not need to pass through the root.
+
+ The path sum of a path is the sum of the node's values in the path.
+
+ Given the root of a binary tree, return the maximum path sum of any non-empty path.
+
+ Example 1:
+ Input: root = [1,2,3]
+ Output: 6
+ Explanation: The optimal path is 2 -> 1 -> 3 with a path sum of 2 + 1 + 3 = 6.
+
+ Example 2:
+ Input: root = [-10,9,20,null,null,15,7]
+ Output: 42
+ Explanation: The optimal path is 15 -> 20 -> 7 with a path sum of 15 + 20 + 7 = 42. 
+
+ ## 102. Binary Tree Level Order Traversal
+ https://leetcode.com/problems/binary-tree-level-order-traversal/description/
+
+ Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).
+
+ Example 1:
+ Input: root = [3,9,20,null,null,15,7]
+ Output: [[3],[9,20],[15,7]]
+
+ Example 2:
+ Input: root = [1]
+ Output: [[1]]
+
+ Example 3:
+ Input: root = []
+ Output: []
+
+ ## 297. Serialize and Deserialize Binary Tree
+ https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/
+
+ Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.
+
+ Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.
+
+ Clarification: The input/output format is the same as how LeetCode serializes a binary tree. You do not necessarily need to follow this format, so please be creative and come up with different approaches yourself.
+
+ Example 1:
+ Input: root = [1,2,3,null,null,4,5]
+ Output: [1,2,3,null,null,4,5]
+
+ Example 2:
+ Input: root = []
+ Output: []
+
+ ## 572. Subtree of Another Tree
+ https://leetcode.com/problems/subtree-of-another-tree/description/
+
+ Given the roots of two binary trees root and subRoot, return true if there is a subtree of root with the same structure and node values of subRoot and false otherwise.
+
+ A subtree of a binary tree tree is a tree that consists of a node in tree and all of this node's descendants. The tree tree could also be considered as a subtree of itself.
+
+ Example 1:
+ Input: root = [3,4,5,1,2], subRoot = [4,1,2]
+ Output: true
+
+ Example 2:
+ Input: root = [3,4,5,1,2,null,null,null,null,0], subRoot = [4,1,2]
+ Output: false
+
+ ## 105. Construct Binary Tree from Preorder and Inorder Traversal
+ https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/
+
+ Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.
+
+ Example 1:
+ Input: preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]
+ Output: [3,9,20,null,null,15,7]
+
+ Example 2:
+ Input: preorder = [-1], inorder = [-1]
+ Output: [-1]

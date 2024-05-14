@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+<playground version='6.0' target-platform='macos' buildActiveScheme='true' importAppTypes='true'>
     <pages>
         <page name='1TwoSum'/>
         <page name='121BestTimeToBuySellStock'/>
@@ -60,6 +60,13 @@
         <page name='647PalindromicSubstrings'/>
         <page name='659EncodeAndDecodeStrings'/>
         <page name='5LongestPalindromicSubstring'/>
-        <page name='140MaximumDepthOfBinaryTree'/>
+        <page name='100SameTree'/>
+        <page name='104MaximumDepthOfBinaryTree'/>
+        <page name='226InvertBinaryTree'/>
+        <page name='124BinaryTreeMaximumPathSum'/>
+        <page name='102BinaryTreeLevelOrderTraversal'/>
+        <page name='297SerializeAndDeserializeBinaryTree'/>
+        <page name='572SubtreeOfAnotherTree'/>
+        <page name='105ConstructBinaryTreeFromPreorderAndInorderTraversal'/>
     </pages>
 </playground>
