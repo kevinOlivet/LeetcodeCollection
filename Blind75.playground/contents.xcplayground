@@ -68,5 +68,13 @@
         <page name='297SerializeAndDeserializeBinaryTree'/>
         <page name='572SubtreeOfAnotherTree'/>
         <page name='105ConstructBinaryTreeFromPreorderAndInorderTraversal'/>
+        <page name='98ValidateBinarySearchTree'/>
+        <page name='230KthSmallestElementInBST'/>
+        <page name='235LowestCommonAncestorOfBST'/>
+        <page name='208ImplementTrie'/>
+        <page name='211DesignAddAndSearchWordsDataStructure'/>
+        <page name='212WordSearch2'/>
+        <page name='Untitled Page'/>
+        <page name='Untitled Page 2'/>
     </pages>
 </playground>

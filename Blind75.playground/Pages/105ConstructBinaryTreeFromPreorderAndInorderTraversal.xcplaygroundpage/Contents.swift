@@ -40,7 +40,7 @@ func buildTree(_ preorder: [Int], _ inorder: [Int]) -> TreeNode? {
 
 
 let result = buildTree([3,9,20,15,7], [9,3,15,20,7])
-//print(result)
-//
-//let result1 = buildTree([-1], [-1])
-//print(result1)
+print(result)
+
+let result1 = buildTree([-1], [-1])
+print(result1)

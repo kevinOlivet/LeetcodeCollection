@@ -1396,3 +1396,129 @@ Various Leetcode playgrounds: Backtracking, Stacks, DynamicProgramming, Blind75
  Example 2:
  Input: preorder = [-1], inorder = [-1]
  Output: [-1]
+
+ ## 98. Validate Binary Search Tree
+ https://leetcode.com/problems/validate-binary-search-tree/description/
+
+ Given the root of a binary tree, determine if it is a valid binary search tree (BST).
+
+ A valid BST is defined as follows:
+
+ The left subtree of a node contains only nodes with keys less than the node's key.
+ The right subtree of a node contains only nodes with keys greater than the node's key.
+ Both the left and right subtrees must also be binary search trees.
+
+ Example 1:
+ Input: root = [2,1,3]
+ Output: true
+
+ Example 2:
+ Input: root = [5,1,4,null,null,3,6]
+ Output: false
+ Explanation: The root node's value is 5 but its right child's value is 4.
+
+ ## 230. Kth Smallest Element in a BST
+ https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/
+
+ Given the root of a binary search tree, and an integer k, return the kth smallest value (1-indexed) of all the values of the nodes in the tree.
+
+ Example 1:
+ Input: root = [3,1,4,null,2], k = 1
+ Output: 1
+
+ Example 2:
+ Input: root = [5,3,6,2,4,null,null,1], k = 3
+ Output: 3
+
+ ## 235. Lowest Common Ancesotr of a Binary Search Tree
+ https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/
+
+ Given a binary search tree (BST), find the lowest common ancestor (LCA) node of two given nodes in the BST.
+
+ According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+
+ Example 1:
+ Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
+ Output: 6
+ Explanation: The LCA of nodes 2 and 8 is 6.
+
+ Example 2:
+ Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4
+ Output: 2
+ Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself according to the LCA definition.
+
+ Example 3:
+ Input: root = [2,1], p = 2, q = 1
+ Output: 2
+
+ ## 208. Implement Trie (Prefix Tree)
+ https://leetcode.com/problems/implement-trie-prefix-tree/description/
+
+ A trie (pronounced as "try") or prefix tree is a tree data structure used to efficiently store and retrieve keys in a dataset of strings. There are various applications of this data structure, such as autocomplete and spellchecker.
+
+ Implement the Trie class:
+
+ Trie() Initializes the trie object.
+ void insert(String word) Inserts the string word into the trie.
+ boolean search(String word) Returns true if the string word is in the trie (i.e., was inserted before), and false otherwise.
+ boolean startsWith(String prefix) Returns true if there is a previously inserted string word that has the prefix prefix, and false otherwise.
+
+ Example 1:
+ Input
+ ["Trie", "insert", "search", "search", "startsWith", "insert", "search"]
+ [[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]
+ Output
+ [null, null, true, false, true, null, true]
+
+ Explanation
+ Trie trie = new Trie();
+ trie.insert("apple");
+ trie.search("apple");   // return True
+ trie.search("app");     // return False
+ trie.startsWith("app"); // return True
+ trie.insert("app");
+ trie.search("app");     // return True
+
+ ## 211. Design Add and Search Words Data Structure
+ https://leetcode.com/problems/design-add-and-search-words-data-structure/description/
+
+ Design a data structure that supports adding new words and finding if a string matches any previously added string.
+
+ Implement the WordDictionary class:
+
+ WordDictionary() Initializes the object.
+ void addWord(word) Adds word to the data structure, it can be matched later.
+ bool search(word) Returns true if there is any string in the data structure that matches word or false otherwise. word may contain dots '.' where dots can be matched with any letter.
+
+ Example:
+
+ Input
+ ["WordDictionary","addWord","addWord","addWord","search","search","search","search"]
+ [[],["bad"],["dad"],["mad"],["pad"],["bad"],[".ad"],["b.."]]
+ Output
+ [null,null,null,null,false,true,true,true]
+
+ Explanation
+ WordDictionary wordDictionary = new WordDictionary();
+ wordDictionary.addWord("bad");
+ wordDictionary.addWord("dad");
+ wordDictionary.addWord("mad");
+ wordDictionary.search("pad"); // return False
+ wordDictionary.search("bad"); // return True
+ wordDictionary.search(".ad"); // return True
+ wordDictionary.search("b.."); // return True
+
+ ## 212. Word Search 2
+ https://leetcode.com/problems/word-search-ii/description/
+
+ Given an m x n board of characters and a list of strings words, return all words on the board.
+
+ Each word must be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.
+
+ Example 1:
+ Input: board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], words = ["oath","pea","eat","rain"]
+ Output: ["eat","oath"]
+
+ Example 2:
+ Input: board = [["a","b"],["c","d"]], words = ["abcb"]
+ Output: []
