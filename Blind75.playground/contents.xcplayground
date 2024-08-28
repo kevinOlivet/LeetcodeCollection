@@ -74,7 +74,9 @@
         <page name='208ImplementTrie'/>
         <page name='211DesignAddAndSearchWordsDataStructure'/>
         <page name='212WordSearch2'/>
+        <page name='347TopKFrequentElements'/>
+        <page name='295FindMedianFromDataStream'/>
+        <page name='242ValidAnagram'/>
         <page name='Untitled Page'/>
-        <page name='Untitled Page 2'/>
     </pages>
 </playground>

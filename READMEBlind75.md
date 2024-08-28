@@ -1522,3 +1522,80 @@ Various Leetcode playgrounds: Backtracking, Stacks, DynamicProgramming, Blind75
  Example 2:
  Input: board = [["a","b"],["c","d"]], words = ["abcb"]
  Output: []
+
+ ## 347. Top K Frequent Elements
+ https://leetcode.com/problems/top-k-frequent-elements/description/
+
+ Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
+
+ Example 1:
+ Input: nums = [1,1,1,2,2,3], k = 2
+ Output: [1,2]
+
+ Example 2:
+ Input: nums = [1], k = 1
+ Output: [1]
+
+ Constraints:
+ 1 <= nums.length <= 105
+ -104 <= nums[i] <= 104
+ k is in the range [1, the number of unique elements in the array].
+ It is guaranteed that the answer is unique.
+
+ Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
+
+ ## 295. Find Median from Data Stream
+ https://leetcode.com/problems/find-median-from-data-stream/description/
+
+ The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value, and the median is the mean of the two middle values.
+
+ For example, for arr = [2,3,4], the median is 3.
+ For example, for arr = [2,3], the median is (2 + 3) / 2 = 2.5.
+ Implement the MedianFinder class:
+
+ MedianFinder() initializes the MedianFinder object.
+ void addNum(int num) adds the integer num from the data stream to the data structure.
+ double findMedian() returns the median of all elements so far. Answers within 10-5 of the actual answer will be accepted.
+
+ Example 1:
+ Input
+ ["MedianFinder", "addNum", "addNum", "findMedian", "addNum", "findMedian"]
+ [[], [1], [2], [], [3], []]
+ Output
+ [null, null, null, 1.5, null, 2.0]
+
+ Explanation
+ MedianFinder medianFinder = new MedianFinder();
+ medianFinder.addNum(1);    // arr = [1]
+ medianFinder.addNum(2);    // arr = [1, 2]
+ medianFinder.findMedian(); // return 1.5 (i.e., (1 + 2) / 2)
+ medianFinder.addNum(3);    // arr[1, 2, 3]
+ medianFinder.findMedian(); // return 2.0
+ 
+ ## 242. Valid Anagram
+ https://leetcode.com/problems/valid-anagram/description/
+
+ Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+ An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+ Example 1:
+ Input: s = "anagram", t = "nagaram"
+ Output: true
+
+ Example 2:
+ Input: s = "rat", t = "car"
+ Output: false
+
+ ## 371. Sum of Two Integers
+ https://leetcode.com/problems/sum-of-two-integers/description/
+
+ Given two integers a and b, return the sum of the two integers without using the operators + and -.
+
+ Example 1:
+ Input: a = 1, b = 2
+ Output: 3
+
+ Example 2:
+ Input: a = 2, b = 3
+ Output: 5
