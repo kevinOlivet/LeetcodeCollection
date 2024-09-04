@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='303RangeSumQueryImmutable'/>
+        <page name='525ContiguousArray'/>
+        <page name='560SubarraySumEqualsK'/>
+        <page name='167TwoSum2InputArrayIsSorted'/>
+        <page name='15ThreeSum'/>
+        <page name='11ContainerWithMostWater'/>
+    </pages>
+</playground>
