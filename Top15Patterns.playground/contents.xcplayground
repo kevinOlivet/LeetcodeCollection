@@ -7,5 +7,9 @@
         <page name='167TwoSum2InputArrayIsSorted'/>
         <page name='15ThreeSum'/>
         <page name='11ContainerWithMostWater'/>
+        <page name='643MaximumAverageSubarray1'/>
+        <page name='03LongestSubstringWithoutRepeatingCharacters'/>
+        <page name='76MinimumWindowSubstring'/>
+        <page name='424LongestRepeatingCharacterReplacement'/>
     </pages>
 </playground>

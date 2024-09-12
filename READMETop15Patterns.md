@@ -130,3 +130,89 @@ Various Leetcode playgrounds:
  Example 2:
  Input: height = [1,1]
  Output: 1
+
+
+# Sliding Window pattern
+
+ ## 643. Maximum Average Subarray I
+ https://leetcode.com/problems/maximum-average-subarray-i/description/
+
+ You are given an integer array nums consisting of n elements, and an integer k.
+
+ Find a contiguous subarray whose length is equal to k that has the maximum average value and return this value. Any answer with a calculation error less than 10-5 will be accepted.
+
+ Example 1:
+ Input: nums = [1,12,-5,-6,50,3], k = 4
+ Output: 12.75000
+ Explanation: Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75
+
+ Example 2:
+ Input: nums = [5], k = 1
+ Output: 5.00000
+
+ ## 3. Longest Substring Without Repeating Characters
+ https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
+
+ Given a string s, find the length of the longest
+ substring
+  without repeating characters.
+
+ Example 1:
+ Input: s = "abcabcbb"
+ Output: 3
+ Explanation: The answer is "abc", with the length of 3.
+
+ Example 2:
+ Input: s = "bbbbb"
+ Output: 1
+ Explanation: The answer is "b", with the length of 1.
+
+ Example 3:
+ Input: s = "pwwkew"
+ Output: 3
+ Explanation: The answer is "wke", with the length of 3.
+ Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+
+ ## 76. Minimum Window Substring
+ https://leetcode.com/problems/minimum-window-substring/description/
+
+ Given two strings s and t of lengths m and n respectively, return the minimum window
+ substring
+  of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
+
+ The testcases will be generated such that the answer is unique.
+
+ Example 1:
+ Input: s = "ADOBECODEBANC", t = "ABC"
+ Output: "BANC"
+ Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
+
+ Example 2:
+ Input: s = "a", t = "a"
+ Output: "a"
+ Explanation: The entire string s is the minimum window.
+
+ Example 3:
+ Input: s = "a", t = "aa"
+ Output: ""
+ Explanation: Both 'a's from t must be included in the window.
+ Since the largest window of s only has one 'a', return empty string.
+
+ ## 424. Longest Repeating Character Replacement
+ https://leetcode.com/problems/longest-repeating-character-replacement/description/
+
+ You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.
+
+ Return the length of the longest substring containing the same letter you can get after performing the above operations.
+
+ Example 1:
+ Input: s = "ABAB", k = 2
+ Output: 4
+ Explanation: Replace the two 'A's with two 'B's or vice versa.
+
+ Example 2:
+ Input: s = "AABABBA", k = 1
+ Output: 4
+ Explanation: Replace the one 'A' in the middle with 'B' and form "AABBBBA".
+ The substring "BBBB" has the longest repeating letters, which is 4.
+ There may exists other ways to achieve this answer too.
