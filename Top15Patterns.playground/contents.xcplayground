@@ -11,5 +11,7 @@
         <page name='03LongestSubstringWithoutRepeatingCharacters'/>
         <page name='76MinimumWindowSubstring'/>
         <page name='424LongestRepeatingCharacterReplacement'/>
+        <page name='141LinkedListCycle'/>
+        <page name='202HappyNumber'/>
     </pages>
 </playground>

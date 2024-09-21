@@ -216,3 +216,79 @@ Various Leetcode playgrounds:
  Explanation: Replace the one 'A' in the middle with 'B' and form "AABBBBA".
  The substring "BBBB" has the longest repeating letters, which is 4.
  There may exists other ways to achieve this answer too.
+
+# Fast and slow pointer pattern
+
+ ## 141. Linked List Cycle
+ https://leetcode.com/problems/linked-list-cycle/description/
+
+ Given head, the head of a linked list, determine if the linked list has a cycle in it.
+
+ There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer is connected to. Note that pos is not passed as a parameter.
+
+ Return true if there is a cycle in the linked list. Otherwise, return false.
+
+ Example 1:
+ Input: head = [3,2,0,-4], pos = 1
+ Output: true
+ Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).
+
+ Example 2:
+ Input: head = [1,2], pos = 0
+ Output: true
+ Explanation: There is a cycle in the linked list, where the tail connects to the 0th node.
+
+ Example 3:
+ Input: head = [1], pos = -1
+ Output: false
+ Explanation: There is no cycle in the linked list.
+
+ ## 202. Happy Number
+ https://leetcode.com/problems/happy-number/description/
+ 
+ Uses Floyd's cycle detection algorithm
+
+ Write an algorithm to determine if a number n is happy.
+
+ A happy number is a number defined by the following process:
+
+ Starting with any positive integer, replace the number by the sum of the squares of its digits.
+ Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
+ Those numbers for which this process ends in 1 are happy.
+ Return true if n is a happy number, and false if not.
+
+ Example 1:
+ Input: n = 19
+ Output: true
+ Explanation:
+ 12 + 92 = 82
+ 82 + 22 = 68
+ 62 + 82 = 100
+ 12 + 02 + 02 = 1
+
+ Example 2:
+ Input: n = 2
+ Output: false
+
+ ## 287. Find the Duplicate Number
+ https://leetcode.com/problems/find-the-duplicate-number/description/
+ 
+ Uses Floyd's cycle detection algorithm
+
+ Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive.
+
+ There is only one repeated number in nums, return this repeated number.
+
+ You must solve the problem without modifying the array nums and using only constant extra space.
+
+ Example 1:
+ Input: nums = [1,3,4,2,2]
+ Output: 2
+
+ Example 2:
+ Input: nums = [3,1,3,4,2]
+ Output: 3
+
+ Example 3:
+ Input: nums = [3,3,3,3,3]
+ Output: 3
