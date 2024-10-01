@@ -1,7 +1,7 @@
 # LeetcodeCollection: Top 15 Patterns
 Various Leetcode playgrounds: 
 
-# Prefix Sum Pattern
+# 1 Prefix Sum Pattern
  ## 303. Range Sum Query - Immutable
  https://leetcode.com/problems/range-sum-query-immutable/description/
 
@@ -57,7 +57,7 @@ Various Leetcode playgrounds:
  Output: 2
 
 
-# Two Pointers Pattern
+# 2. Two Pointers Pattern
  ## 167. Two Sum II - Input Array Is Sorted
  https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/
 
@@ -132,7 +132,7 @@ Various Leetcode playgrounds:
  Output: 1
 
 
-# Sliding Window pattern
+# 3. Sliding Window pattern
 
  ## 643. Maximum Average Subarray I
  https://leetcode.com/problems/maximum-average-subarray-i/description/
@@ -217,7 +217,7 @@ Various Leetcode playgrounds:
  The substring "BBBB" has the longest repeating letters, which is 4.
  There may exists other ways to achieve this answer too.
 
-# Fast and slow pointer pattern
+# 4. Fast and slow pointer pattern
 
  ## 141. Linked List Cycle
  https://leetcode.com/problems/linked-list-cycle/description/
@@ -292,3 +292,57 @@ Various Leetcode playgrounds:
  Example 3:
  Input: nums = [3,3,3,3,3]
  Output: 3
+
+# 5. Linked List In-place Reversal Pattern
+
+ ## 206. Reverse Linked List
+ https://leetcode.com/problems/reverse-linked-list/description/
+
+ Given the head of a singly linked list, reverse the list, and return the reversed list.
+
+ Example 1:
+ Input: head = [1,2,3,4,5]
+ Output: [5,4,3,2,1]
+
+ Example 2:
+ Input: head = [1,2]
+ Output: [2,1]
+
+ Example 3:
+ Input: head = []
+ Output: []
+ 
+  ## 92. Reverse Linked List II
+ https://leetcode.com/problems/reverse-linked-list-ii/description/
+
+ Given the head of a singly linked list and two integers left and right where left <= right, reverse the nodes of the list from position left to position right, and return the reversed list.
+
+ Example 1:
+ Input: head = [1,2,3,4,5], left = 2, right = 4
+ Output: [1,4,3,2,5]
+
+ Example 2:
+ Input: head = [5], left = 1, right = 1
+ Output: [5]
+
+ ## 24. Swap Nodes in Pairs
+ https://leetcode.com/problems/swap-nodes-in-pairs/description/
+
+ Given a linked list, swap every two adjacent nodes and return its head. You must solve the problem without modifying the values in the list's nodes (i.e., only nodes themselves may be changed.)
+
+ Example 1:
+ Input: head = [1,2,3,4]
+ Output: [2,1,4,3]
+ Explanation:
+
+ Example 2:
+ Input: head = []
+ Output: []
+
+ Example 3:
+ Input: head = [1]
+ Output: [1]
+
+ Example 4:
+ Input: head = [1,2,3]
+ Output: [2,1,3]

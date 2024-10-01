@@ -13,5 +13,9 @@
         <page name='424LongestRepeatingCharacterReplacement'/>
         <page name='141LinkedListCycle'/>
         <page name='202HappyNumber'/>
+        <page name='287FindTheDuplicateNumber'/>
+        <page name='206ReverseLinkedList'/>
+        <page name='92ReverseLinkedList2'/>
+        <page name='24SwapNodesInPairs'/>
     </pages>
 </playground>
