@@ -346,3 +346,63 @@ Various Leetcode playgrounds:
  Example 4:
  Input: head = [1,2,3]
  Output: [2,1,3]
+
+# 6 Monotonic Stack Pattern
+
+ ## 496. Next Greater Element I
+ https://leetcode.com/problems/next-greater-element-i/description/
+
+ The next greater element of some element x in an array is the first greater element that is to the right of x in the same array.
+
+ You are given two distinct 0-indexed integer arrays nums1 and nums2, where nums1 is a subset of nums2.
+
+ For each 0 <= i < nums1.length, find the index j such that nums1[i] == nums2[j] and determine the next greater element of nums2[j] in nums2. If there is no next greater element, then the answer for this query is -1.
+
+ Return an array ans of length nums1.length such that ans[i] is the next greater element as described above.
+
+ Example 1:
+ Input: nums1 = [4,1,2], nums2 = [1,3,4,2]
+ Output: [-1,3,-1]
+ Explanation: The next greater element for each value of nums1 is as follows:
+ - 4 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
+ - 1 is underlined in nums2 = [1,3,4,2]. The next greater element is 3.
+ - 2 is underlined in nums2 = [1,3,4,2]. There is no next greater element, so the answer is -1.
+
+ Example 2:
+ Input: nums1 = [2,4], nums2 = [1,2,3,4]
+ Output: [3,-1]
+ Explanation: The next greater element for each value of nums1 is as follows:
+ - 2 is underlined in nums2 = [1,2,3,4]. The next greater element is 3.
+ - 4 is underlined in nums2 = [1,2,3,4]. There is no next greater element, so the answer is -1.
+
+ ## 739. Daily Temperatures
+ https://leetcode.com/problems/daily-temperatures/description/
+
+ Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.
+
+ Example 1:
+ Input: temperatures = [73,74,75,71,69,72,76,73]
+ Output: [1,1,4,2,1,1,0,0]
+
+ Example 2:
+ Input: temperatures = [30,40,50,60]
+ Output: [1,1,1,0]
+
+ Example 3:
+ Input: temperatures = [30,60,90]
+ Output: [1,1,0]
+
+ ## 84. Largest Rectangle in Histogram
+ https://leetcode.com/problems/largest-rectangle-in-histogram/description/
+
+ Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.
+
+ Example 1:
+ Input: heights = [2,1,5,6,2,3]
+ Output: 10
+ Explanation: The above is a histogram where width of each bar is 1.
+ The largest rectangle is shown in the red area, which has an area = 10 units.
+
+ Example 2:
+ Input: heights = [2,4]
+ Output: 4

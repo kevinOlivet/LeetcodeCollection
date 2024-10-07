@@ -23,18 +23,43 @@ import Foundation
  */
 
 func maxArea(_ height: [Int]) -> Int {
-    var l = 0
-    var r = height.count - 1
+//    var l = 0
+//    var r = height.count - 1
+//    var result = 0
+//    while l < r {
+//        let area = (r - l) * min(height[l], height[r])
+//        result = max(result, area)
+//        if height[l] <= height[r] {
+//            l += 1
+//        } else {
+//            r -= 1
+//        }
+//    }
+//    return result
+    // This array will hold tuples of (height, index).
+    var monotonicStack: [(height: Int, index: Int)] = []
     var result = 0
-    while l < r {
-        let area = (r - l) * min(height[l], height[r])
-        result = max(result, area)
-        if height[l] <= height[r] {
-            l += 1
-        } else {
-            r -= 1
+    for (index, height) in height.enumerated() {
+        var previousIndex = index
+
+        // When the current bar is lower than the previous one,
+        // calculate the area that can be taken using this bar
+        // and remove it afterwards.
+        while let last = monotonicStack.last, last.height >= height {
+            previousIndex = last.index
+            result = max(result, (index - last.index) * last.height)
+            monotonicStack.popLast()
         }
+        monotonicStack.append((height, previousIndex))
     }
+
+    // At this point monotonic stack contains bars that only
+    // increase in height. Pop them one by one and calculate
+    // the area that can be created.
+    while let last = monotonicStack.popLast() {
+        result = max(result, (height.count - last.index) * last.height)
+    }
+
     return result
 }
 

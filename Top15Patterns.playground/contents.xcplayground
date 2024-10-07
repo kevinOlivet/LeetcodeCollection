@@ -17,5 +17,8 @@
         <page name='206ReverseLinkedList'/>
         <page name='92ReverseLinkedList2'/>
         <page name='24SwapNodesInPairs'/>
+        <page name='496NextGreaterElement'/>
+        <page name='739DailyTemperatures'/>
+        <page name='84LargestRectangleInHistogram'/>
     </pages>
 </playground>
