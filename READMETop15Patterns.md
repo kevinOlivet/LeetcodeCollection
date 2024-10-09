@@ -347,7 +347,7 @@ Various Leetcode playgrounds:
  Input: head = [1,2,3]
  Output: [2,1,3]
 
-# 6 Monotonic Stack Pattern
+# 6. Monotonic Stack Pattern
 
  ## 496. Next Greater Element I
  https://leetcode.com/problems/next-greater-element-i/description/
@@ -406,3 +406,54 @@ Various Leetcode playgrounds:
  Example 2:
  Input: heights = [2,4]
  Output: 4
+
+# 7. Top K Elements Pattern
+
+ ## 215. Kth Largest Element in an Array
+ https://leetcode.com/problems/kth-largest-element-in-an-array/description/
+
+ Given an integer array nums and an integer k, return the kth largest element in the array.
+
+ Note that it is the kth largest element in the sorted order, not the kth distinct element.
+
+ Can you solve it without sorting?
+
+ Example 1:
+ Input: nums = [3,2,1,5,6,4], k = 2
+ Output: 5
+
+ Example 2:
+ Input: nums = [3,2,3,1,2,4,5,5,6], k = 4
+ Output: 4
+
+ ## 347. Top K Frequent Elements
+ https://leetcode.com/problems/top-k-frequent-elements/description/
+
+ Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.
+
+ Example 1:
+ Input: nums = [1,1,1,2,2,3], k = 2
+ Output: [1,2]
+
+ Example 2:
+ Input: nums = [1], k = 1
+ Output: [1]
+
+ ## 373. Find K Pairs with Smallest Sums
+ https://leetcode.com/problems/find-k-pairs-with-smallest-sums/description/
+
+ You are given two integer arrays nums1 and nums2 sorted in non-decreasing order and an integer k.
+
+ Define a pair (u, v) which consists of one element from the first array and one element from the second array.
+
+ Return the k pairs (u1, v1), (u2, v2), ..., (uk, vk) with the smallest sums.
+
+ Example 1:
+ Input: nums1 = [1,7,11], nums2 = [2,4,6], k = 3
+ Output: [[1,2],[1,4],[1,6]]
+ Explanation: The first 3 pairs are returned from the sequence: [1,2],[1,4],[1,6],[7,2],[7,4],[11,2],[7,6],[11,4],[11,6]
+
+ Example 2:
+ Input: nums1 = [1,1,2], nums2 = [1,2,3], k = 2
+ Output: [[1,1],[1,1]]
+ Explanation: The first 2 pairs are returned from the sequence: [1,1],[1,1],[1,2],[2,1],[1,2],[2,2],[1,3],[1,3],[2,3]

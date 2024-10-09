@@ -20,5 +20,8 @@
         <page name='496NextGreaterElement'/>
         <page name='739DailyTemperatures'/>
         <page name='84LargestRectangleInHistogram'/>
+        <page name='215KthLargestElementInAnArray'/>
+        <page name='347TopKFrequentElements'/>
+        <page name='373FindKPairsWithSmallestSums'/>
     </pages>
 </playground>
