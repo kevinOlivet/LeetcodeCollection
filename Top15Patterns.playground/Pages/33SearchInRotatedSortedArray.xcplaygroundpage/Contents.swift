@@ -37,28 +37,17 @@ func search(_ nums: [Int], _ target: Int) -> Int {
         }
 
         if nums[l] <= nums[m] { // left sorted portion
-//            if target > nums[m] || target < nums[l] {
-//                l = m + 1
-//            } else {
-//                r = m - 1
-//            }
-            if target <= nums[m] && target >= nums[l] {
-                r = m - 1
-            } else {
+            if target > nums[m] || target < nums[l] {
                 l = m + 1
+            } else {
+                r = m - 1
             }
         } else { // right sorted portion
-//            if target < nums[m] || target > nums[r] {
-//                r = m - 1
-//            } else {
-//                l = m + 1
-//            }
-            if target > nums[m] && target < nums[r] {
-                l = m + 1
-            } else {
+            if target < nums[m] || target > nums[r] {
                 r = m - 1
+            } else {
+                l = m + 1
             }
-
         }
     }
     return -1
