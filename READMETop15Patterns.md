@@ -519,6 +519,23 @@ Various Leetcode playgrounds:
 
 # Modified Binary Search Pattern
 
+ ## 704. Binary Search
+ https://leetcode.com/problems/binary-search/description/
+
+ Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
+
+ You must write an algorithm with O(log n) runtime complexity.
+
+ Example 1:
+ Input: nums = [-1,0,3,5,9,12], target = 9
+ Output: 4
+ Explanation: 9 exists in nums and its index is 4
+
+ Example 2:
+ Input: nums = [-1,0,3,5,9,12], target = 2
+ Output: -1
+ Explanation: 2 does not exist in nums so return -1
+
  ## 33. Search in Rotated Sorted Array
  https://leetcode.com/problems/search-in-rotated-sorted-array/description/
  
@@ -695,3 +712,97 @@ Various Leetcode playgrounds:
  Example 3:
  Input: root = []
  Output: []
+
+# Depth First Search Pattern (DFS)
+
+ ## 113. Path Sum II
+ https://leetcode.com/problems/path-sum-ii/description/
+ NOTE: Very similar to 257 Binary Tree Paths
+
+ Given the root of a binary tree and an integer targetSum, return all root-to-leaf paths where the sum of the node values in the path equals targetSum. Each path should be returned as a list of the node values, not node references.
+
+ A root-to-leaf path is a path starting from the root and ending at any leaf node. A leaf is a node with no children.
+
+ Example 1:
+ Input: root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22
+ Output: [[5,4,11,2],[5,8,4,5]]
+ Explanation: There are two paths whose sum equals targetSum:
+ 5 + 4 + 11 + 2 = 22
+ 5 + 8 + 4 + 5 = 22
+
+ Example 2:
+ Input: root = [1,2,3], targetSum = 5
+ Output: []
+
+ Example 3:
+ Input: root = [1,2], targetSum = 0
+ Output: []
+
+ ## 133. Clone Graph
+ https://leetcode.com/problems/clone-graph/description/
+
+ Given a reference of a node in a connected undirected graph.
+
+ Return a deep copy (clone) of the graph.
+
+ Each node in the graph contains a value (int) and a list (List[Node]) of its neighbors.
+
+ class Node {
+     public int val;
+     public List<Node> neighbors;
+ }
+
+ Test case format:
+
+ For simplicity, each node's value is the same as the node's index (1-indexed). For example, the first node with val == 1, the second node with val == 2, and so on. The graph is represented in the test case using an adjacency list.
+
+ An adjacency list is a collection of unordered lists used to represent a finite graph. Each list describes the set of neighbors of a node in the graph.
+
+ The given node will always be the first node with val = 1. You must return the copy of the given node as a reference to the cloned graph.
+
+ Example 1:
+
+    1 - 2
+    |   |
+    4 - 3
+
+ Input: adjList = [[2,4],[1,3],[2,4],[1,3]]
+ Output: [[2,4],[1,3],[2,4],[1,3]]
+ Explanation: There are 4 nodes in the graph.
+ 1st node (val = 1)'s neighbors are 2nd node (val = 2) and 4th node (val = 4).
+ 2nd node (val = 2)'s neighbors are 1st node (val = 1) and 3rd node (val = 3).
+ 3rd node (val = 3)'s neighbors are 2nd node (val = 2) and 4th node (val = 4).
+ 4th node (val = 4)'s neighbors are 1st node (val = 1) and 3rd node (val = 3).
+
+ Example 2:
+ Input: adjList = [[]]
+ Output: [[]]
+ Explanation: Note that the input contains one empty list. The graph consists of only one node with val = 1 and it does not have any neighbors.
+
+ Example 3:
+ Input: adjList = []
+ Output: []
+ Explanation: This an empty graph, it does not have any nodes.
+
+ ## 210. Course Schedule II
+ https://leetcode.com/problems/course-schedule-ii/description/
+
+ There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.
+
+ For example, the pair [0, 1], indicates that to take course 0 you have to first take course 1.
+ Return the ordering of courses you should take to finish all courses. If there are many valid answers, return any of them. If it is impossible to finish all courses, return an empty array.
+
+ Example 1:
+ Input: numCourses = 2, prerequisites = [[1,0]]
+ Output: [0,1]
+ Explanation: There are a total of 2 courses to take. To take course 1 you should have finished course 0. So the correct course order is [0,1].
+
+ Example 2:
+ Input: numCourses = 4, prerequisites = [[1,0],[2,0],[3,1],[3,2]]
+ Output: [0,2,1,3]
+ Explanation: There are a total of 4 courses to take. To take course 3 you should have finished both courses 1 and 2. Both courses 1 and 2 should be taken after you finished course 0.
+ So one correct course order is [0,1,2,3]. Another correct ordering is [0,2,1,3].
+
+ Example 3:
+ Input: numCourses = 1, prerequisites = []
+ Output: [0]
