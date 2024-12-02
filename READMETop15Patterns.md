@@ -517,7 +517,7 @@ Various Leetcode playgrounds:
  Output: 0
  Explanation: You don't need to remove any of the intervals since they're already non-overlapping.
 
-# Modified Binary Search Pattern
+# 9 Modified Binary Search Pattern
 
  ## 704. Binary Search
  https://leetcode.com/problems/binary-search/description/
@@ -616,7 +616,7 @@ Various Leetcode playgrounds:
  ], target = 20
  Output: false
 
-# Binary Tree Traversal Pattern
+# 10 Binary Tree Traversal Pattern
 
  ## 257. Binary Tree Paths
  https://leetcode.com/problems/binary-tree-paths/description/
@@ -713,7 +713,7 @@ Various Leetcode playgrounds:
  Input: root = []
  Output: []
 
-# Depth First Search Pattern (DFS)
+# 11 Depth First Search Pattern (DFS)
 
  ## 113. Path Sum II
  https://leetcode.com/problems/path-sum-ii/description/
@@ -807,7 +807,7 @@ Various Leetcode playgrounds:
  Input: numCourses = 1, prerequisites = []
  Output: [0]
 
-# Breadth First Search Pattern (BFS)
+# 12 Breadth First Search Pattern (BFS)
 
  ## 994. Rotting Oranges
  https://leetcode.com/problems/rotting-oranges/description/
@@ -854,3 +854,120 @@ Various Leetcode playgrounds:
  Input: beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log"]
  Output: 0
  Explanation: The endWord "cog" is not in wordList, therefore there is no valid transformation sequence.
+
+# 13 Matrix Traversal Pattern
+
+ ## 733. Flood Fill
+ https://leetcode.com/problems/flood-fill/description/
+
+ You are given an image represented by an m x n grid of integers image, where image[i][j] represents the pixel value of the image. You are also given three integers sr, sc, and color. Your task is to perform a flood fill on the image starting from the pixel image[sr][sc].
+
+ To perform a flood fill:
+
+ Begin with the starting pixel and change its color to color.
+ Perform the same process for each pixel that is directly adjacent (pixels that share a side with the original pixel, either horizontally or vertically) and shares the same color as the starting pixel.
+ Keep repeating this process by checking neighboring pixels of the updated pixels and modifying their color if it matches the original color of the starting pixel.
+ The process stops when there are no more adjacent pixels of the original color to update.
+ Return the modified image after performing the flood fill.
+
+ Example 1:
+ Input: image = [[1,1,1],[1,1,0],[1,0,1]], sr = 1, sc = 1, color = 2
+ Output: [[2,2,2],[2,2,0],[2,0,1]]
+
+ Explanation:
+ From the center of the image with position (sr, sc) = (1, 1) (i.e., the red pixel), all pixels connected by a path of the same color as the starting pixel (i.e., the blue pixels) are colored with the new color.
+
+ Note the bottom corner is not colored 2, because it is not horizontally or vertically connected to the starting pixel.
+
+ Example 2:
+ Input: image = [[0,0,0],[0,0,0]], sr = 0, sc = 0, color = 0
+ Output: [[0,0,0],[0,0,0]]
+
+ Explanation:
+ The starting pixel is already colored with 0, which is the same as the target color. Therefore, no changes are made to the image.
+
+ ## 200. Number of Islands
+ https://leetcode.com/problems/number-of-islands/description/
+
+ Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.
+
+ An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.
+
+ Example 1:
+ Input: grid = [
+   ["1","1","1","1","0"],
+   ["1","1","0","1","0"],
+   ["1","1","0","0","0"],
+   ["0","0","0","0","0"]
+ ]
+ Output: 1
+
+ Example 2:
+ Input: grid = [
+   ["1","1","0","0","0"],
+   ["1","1","0","0","0"],
+   ["0","0","1","0","0"],
+   ["0","0","0","1","1"]
+ ]
+ Output: 3
+
+ ## 130. Surrounded Regions
+ https://leetcode.com/problems/surrounded-regions/description/
+
+ You are given an m x n matrix board containing letters 'X' and 'O', capture regions that are surrounded:
+
+ Connect: A cell is connected to adjacent cells horizontally or vertically.
+ Region: To form a region connect every 'O' cell.
+ Surround: The region is surrounded with 'X' cells if you can connect the region with 'X' cells and none of the region cells are on the edge of the board.
+ A surrounded region is captured by replacing all 'O's with 'X's in the input matrix board.
+
+ Example 1:
+ Input: board = [["X","X","X","X"],["X","O","O","X"],["X","X","O","X"],["X","O","X","X"]]
+ Output: [["X","X","X","X"],["X","X","X","X"],["X","X","X","X"],["X","O","X","X"]]
+
+ Explanation:
+ In the above diagram, the bottom region is not captured because it is on the edge of the board and cannot be surrounded.
+
+ Example 2:
+ Input: board = [["X"]]
+ Output: [["X"]]
+
+ ## 695. Max Area of Island
+ https://leetcode.com/problems/max-area-of-island/description/
+
+ You are given an m x n binary matrix grid. An island is a group of 1's (representing land) connected 4-directionally (horizontal or vertical.) You may assume all four edges of the grid are surrounded by water.
+
+ The area of an island is the number of cells with a value 1 in the island.
+
+ Return the maximum area of an island in grid. If there is no island, return 0.
+
+ Example 1:
+ Input: grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]
+ Output: 6
+ Explanation: The answer is not 11, because the island must be connected 4-directionally.
+
+ Example 2:
+ Input: grid = [[0,0,0,0,0,0,0,0]]
+ Output: 0
+
+ ## 463. Island Perimeter
+ https://leetcode.com/problems/island-perimeter/description/
+
+ You are given row x col grid representing a map where grid[i][j] = 1 represents land and grid[i][j] = 0 represents water.
+
+ Grid cells are connected horizontally/vertically (not diagonally). The grid is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells).
+
+ The island doesn't have "lakes", meaning the water inside isn't connected to the water around the island. One cell is a square with side length 1. The grid is rectangular, width and height don't exceed 100. Determine the perimeter of the island.
+
+ Example 1:
+ Input: grid = [[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]
+ Output: 16
+ Explanation: The perimeter is the 16 yellow stripes in the image above.
+
+ Example 2:
+ Input: grid = [[1]]
+ Output: 4
+
+ Example 3:
+ Input: grid = [[1,0]]
+ Output: 4
