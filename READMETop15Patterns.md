@@ -971,3 +971,57 @@ Various Leetcode playgrounds:
  Example 3:
  Input: grid = [[1,0]]
  Output: 4
+
+# 14 Backtracking Pattern
+
+ ## 46. Permutations
+ https://leetcode.com/problems/permutations/description/
+
+ Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
+
+ Example 1:
+ Input: nums = [1,2,3]
+ Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
+
+ Example 2:
+ Input: nums = [0,1]
+ Output: [[0,1],[1,0]]
+
+ Example 3:
+ Input: nums = [1]
+ Output: [[1]]
+
+ ## 78. Subsets
+ https://leetcode.com/problems/subsets/
+
+ Given an integer array nums of unique elements, return all possible
+ subsets
+  (the power set).
+
+ The solution set must not contain duplicate subsets. Return the solution in any order.
+
+ Example 1:
+ Input: nums = [1,2,3]
+ Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
+
+ Example 2:
+ Input: nums = [0]
+ Output: [[],[0]]
+
+ ## 51. N-Queens
+ https://leetcode.com/problems/n-queens/description/
+
+ The n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other.
+
+ Given an integer n, return all distinct solutions to the n-queens puzzle. You may return the answer in any order.
+
+ Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space, respectively.
+
+ Example 1:
+ Input: n = 4
+ Output: [[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]
+ Explanation: There exist two distinct solutions to the 4-queens puzzle as shown above
+
+ Example 2:
+ Input: n = 1
+ Output: [["Q"]]
