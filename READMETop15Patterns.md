@@ -1025,3 +1025,162 @@ Various Leetcode playgrounds:
  Example 2:
  Input: n = 1
  Output: [["Q"]]
+
+# 14 Dynamic Programming Pattern
+
+ ## 70. Climbing Stairs
+ https://leetcode.com/problems/climbing-stairs/description/
+ 15. Dynamic Programming Pattern
+
+ You are climbing a staircase. It takes n steps to reach the top.
+
+ Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+ Example 1:
+ Input: n = 2
+ Output: 2
+ Explanation: There are two ways to climb to the top.
+ 1. 1 step + 1 step
+ 2. 2 steps
+
+ Example 2:
+ Input: n = 3
+ Output: 3
+ Explanation: There are three ways to climb to the top.
+ 1. 1 step + 1 step + 1 step
+ 2. 1 step + 2 steps
+ 3. 2 steps + 1 step
+
+ ## 746. Min Cost Climbing Stairs
+ https://leetcode.com/problems/min-cost-climbing-stairs/description/
+ 15 Dynamic Programming
+
+ You are given an integer array cost where cost[i] is the cost of ith step on a staircase. Once you pay the cost, you can either climb one or two steps.
+
+ You can either start from the step with index 0, or the step with index 1.
+
+ Return the minimum cost to reach the top of the floor.
+
+ Example 1:
+ Input: cost = [10,15,20]
+ Output: 15
+ Explanation: You will start at index 1.
+ - Pay 15 and climb two steps to reach the top.
+ The total cost is 15.
+
+ Example 2:
+ Input: cost = [1,100,1,1,1,100,1,1,100,1]
+ Output: 6
+ Explanation: You will start at index 0.
+ - Pay 1 and climb two steps to reach index 2.
+ - Pay 1 and climb two steps to reach index 4.
+ - Pay 1 and climb two steps to reach index 6.
+ - Pay 1 and climb one step to reach index 7.
+ - Pay 1 and climb two steps to reach index 9.
+ - Pay 1 and climb one step to reach the top.
+ The total cost is 6.
+
+ ## 322. Coin Change
+ https://leetcode.com/problems/coin-change/description/
+
+ 15 Dynamic Programming
+
+ You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.
+
+ Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.
+
+ You may assume that you have an infinite number of each kind of coin.
+
+ Example 1:
+ Input: coins = [1,2,5], amount = 11
+ Output: 3
+ Explanation: 11 = 5 + 5 + 1
+
+ Example 2:
+ Input: coins = [2], amount = 3
+ Output: -1
+
+ Example 3:
+ Input: coins = [1], amount = 0
+ Output: 0
+
+ ## 1143. Longest Common Subsequence
+ https://leetcode.com/problems/longest-common-subsequence/description/
+
+ Given two strings text1 and text2, return the length of their longest common subsequence. If there is no common subsequence, return 0.
+
+ A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.
+
+ For example, "ace" is a subsequence of "abcde".
+ A common subsequence of two strings is a subsequence that is common to both strings.
+
+ Example 1:
+ Input: text1 = "abcde", text2 = "ace"
+ Output: 3
+ Explanation: The longest common subsequence is "ace" and its length is 3.
+
+ Example 2:
+ Input: text1 = "abc", text2 = "abc"
+ Output: 3
+ Explanation: The longest common subsequence is "abc" and its length is 3.
+
+ Example 3:
+ Input: text1 = "abc", text2 = "def"
+ Output: 0
+ Explanation: There is no such common subsequence, so the result is 0.
+
+ ## 300. Longest Increasing Subsequence
+ https://leetcode.com/problems/longest-increasing-subsequence/description/
+ 15 Dynamic Programming pattern
+ 
+ Given an integer array nums, return the length of the longest strictly increasing
+ subsequence
+
+ Example 1:
+ Input: nums = [10,9,2,5,3,7,101,18]
+ Output: 4
+ Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.
+
+ Example 2:
+ Input: nums = [0,1,0,3,2,3]
+ Output: 4
+
+ Example 3:
+ Input: nums = [7,7,7,7,7,7,7]
+ Output: 1
+
+ ## 416. Partition Equal Subset Sum
+ https://leetcode.com/problems/partition-equal-subset-sum/description/
+
+ Given an integer array nums, return true if you can partition the array into two subsets such that the sum of the elements in both subsets is equal or false otherwise.
+
+ Example 1:
+ Input: nums = [1,5,11,5]
+ Output: true
+ Explanation: The array can be partitioned as [1, 5, 5] and [11].
+
+ Example 2:
+ Input: nums = [1,2,3,5]
+ Output: false
+ Explanation: The array cannot be partitioned into equal sum subsets.
+
+ ## 312. Burst Balloons
+ https://leetcode.com/problems/burst-balloons/description/
+ 15 Dynamic Programming Pattern
+
+ You are given n balloons, indexed from 0 to n - 1. Each balloon is painted with a number on it represented by an array nums. You are asked to burst all the balloons.
+
+ If you burst the ith balloon, you will get nums[i - 1] * nums[i] * nums[i + 1] coins. If i - 1 or i + 1 goes out of bounds of the array, then treat it as if there is a balloon with a 1 painted on it.
+
+ Return the maximum coins you can collect by bursting the balloons wisely.
+
+ Example 1:
+ Input: nums = [3,1,5,8]
+ Output: 167
+ Explanation:
+ nums = [3,1,5,8] --> [3,5,8] --> [3,8] --> [8] --> []
+ coins =  3*1*5    +   3*5*8   +  1*3*8  + 1*8*1 = 167
+
+ Example 2:
+ Input: nums = [1,5]
+ Output: 10
