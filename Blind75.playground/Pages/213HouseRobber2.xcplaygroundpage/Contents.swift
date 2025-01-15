@@ -27,28 +27,28 @@ import Foundation
  */
 
 func rob(_ nums: [Int]) -> Int {
-    guard nums.count > 1 else { return nums.first! }
-    var rob1 = 0
-    var rob2 = 0
+    guard nums.count > 1 else { return nums[0] }
+    var prev1 = 0
+    var current1 = 0
 
-    for n in 0..<(nums.count - 1) {
-        let temp = max(nums[n] + rob1, rob2)
-        rob1 = rob2
-        rob2 = temp
+    for i in 0..<(nums.count - 1) {
+//        let temp = max(nums[i] + prev1, current1)
+//        prev1 = current1
+//        current1 = temp
+        (prev1, current1) = (current1, max(current1, nums[i] + prev1))
     }
-    let startTotal = rob2
 
-    rob1 = 0
-    rob2 = 0
+    var prev2 = 0
+    var current2 = 0
 
-    for n in 1..<nums.count {
-        let temp = max(nums[n] + rob1, rob2)
-        rob1 = rob2
-        rob2 = temp
+    for i in 1..<nums.count {
+//        let temp = max(nums[i] + prev2, current2)
+//        prev2 = current2
+//        current2 = temp
+        (prev2, current2) = (current2, max(current2, nums[i] + prev2))
     }
-    let endTotal = rob2
 
-    return max(startTotal, endTotal)
+    return max(current1, current2)
 }
 
 let result = rob([2,3,2]) // 3

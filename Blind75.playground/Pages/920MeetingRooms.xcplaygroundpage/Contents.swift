@@ -38,6 +38,18 @@ func canAttendMeetings(_ intervals: [Interval]) -> Bool {
         }
     }
     return true
+    
+    // This also works. Same technique in 435NonOverlappingIntervals and is more versitile maybe
+//    let intervals = intervals.sorted(by: { $0.start < $1.end } )
+//    var prevEnd = intervals[0].end
+//    for i in 1..<intervals.count {
+//        if prevEnd <= intervals[i].start {
+//            prevEnd = intervals[i].end
+//        } else {
+//            return false
+//        }
+//    }
+//    return true
 }
 
 let result = canAttendMeetings([Interval(0,30), Interval(5,10), Interval(15,20)]) // false

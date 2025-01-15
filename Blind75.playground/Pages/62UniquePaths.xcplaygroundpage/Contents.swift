@@ -28,14 +28,12 @@ import Foundation
 
 func uniquePaths(_ m: Int, _ n: Int) -> Int {
     var dp = Array(repeating: Array(repeating: 1, count: n), count: m)
-
-    for i in (0..<m-1).reversed() {
-        for j in (0..<n-1).reversed() {
-//            if i < m - 1 && j < n - 1 {
-                let down = dp[i + 1][j]
-                let right = dp[i][j + 1]
-                dp[i][j] = down + right
-//            }
+    
+    for r in (0..<m-1).reversed() {
+        for c in (0..<n-1).reversed() {
+            let down = dp[r + 1][c]
+            let right = dp[r][c + 1]
+            dp[r][c] = down + right
         }
     }
     return dp[0][0]

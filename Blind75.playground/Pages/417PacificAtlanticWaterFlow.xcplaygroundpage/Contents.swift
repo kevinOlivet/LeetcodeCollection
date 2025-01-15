@@ -39,47 +39,91 @@ import Foundation
  */
 
 func pacificAtlantic(_ heights: [[Int]]) -> [[Int]] {
-    let ROWS = heights.count
-    let COLS = heights[0].count
-    var pac = Set<[Int]>()
-    var atl = Set<[Int]>()
-
-    func dfs(r: Int, c: Int, visit: inout Set<[Int]>, prevHeight: Int) {
-        if visit.contains([r,c]) || r == ROWS || r < 0 || c == COLS || c < 0 || heights[r][c] < prevHeight { return }
-
-        visit.insert([r,c])
-
-        dfs(r: r + 1, c: c, visit: &visit, prevHeight: heights[r][c])
-        dfs(r: r - 1, c: c, visit: &visit, prevHeight: heights[r][c])
-        dfs(r: r, c: c + 1, visit: &visit, prevHeight: heights[r][c])
-        dfs(r: r, c: c - 1, visit: &visit, prevHeight: heights[r][c])
+//    let ROWS = heights.count
+//    let COLS = heights[0].count
+//    var pac = Set<[Int]>()
+//    var atl = Set<[Int]>()
+//
+//    func dfs(r: Int, c: Int, visit: inout Set<[Int]>, prevHeight: Int) {
+//        if visit.contains([r,c]) || r == ROWS || r < 0 || c == COLS || c < 0 || heights[r][c] < prevHeight { return }
+//
+//        visit.insert([r,c])
+//
+//        dfs(r: r + 1, c: c, visit: &visit, prevHeight: heights[r][c])
+//        dfs(r: r - 1, c: c, visit: &visit, prevHeight: heights[r][c])
+//        dfs(r: r, c: c + 1, visit: &visit, prevHeight: heights[r][c])
+//        dfs(r: r, c: c - 1, visit: &visit, prevHeight: heights[r][c])
+//    }
+//
+//    // Set top row and bottom to visited state. Top to Pacific, bottom to Atlantic
+//    for c in 0..<COLS {
+//        dfs(r: 0, c: c, visit: &pac, prevHeight: heights[0][c])
+//        dfs(r: ROWS - 1, c: c, visit: &atl, prevHeight: heights[ROWS - 1][c])
+//    }
+//
+//    // Set Leftmost column and rightmost column to visited state. Left to Pacific, right to Atlantic
+//    for r in 0..<ROWS {
+//        dfs(r: r, c: 0, visit: &pac, prevHeight: heights[r][0])
+//        dfs(r: r, c: COLS - 1, visit: &atl, prevHeight: heights[r][COLS - 1])
+//    }
+//
+//    var result = [[Int]]()
+//
+//    for r in 0..<ROWS {
+//        for c in 0..<COLS {
+//            if pac.contains([r,c]) && atl.contains([r,c]) {
+//                result.append([r,c])
+//            }
+//        }
+//    }
+//    return result
+    
+    var grid = Array(repeating: Array(repeating: "", count: heights[0].count), count: heights.count)
+    
+    func dfs(_ r: Int, _ c: Int, _ prevR: Int, _ prevC: Int, _ pacific: Bool) {
+        let ocean = pacific ? "p" : "a"
+        if (r < 0 || r == heights.count) || (c < 0 || c == heights[0].count) ||
+            grid[r][c].contains(ocean) || heights[r][c] < heights[prevR][prevC] { return }
+        grid[r][c].append(ocean)
+        dfs(r+1, c, r, c, pacific)
+        dfs(r-1, c, r, c, pacific)
+        dfs(r, c+1, r, c, pacific)
+        dfs(r, c-1, r, c, pacific)
+    }
+    
+    for r in 0..<heights.count {
+        for c in 0..<heights[0].count {
+            if r == 0 || c == 0 {
+                dfs(r, c, r, c, true)
+            }
+        }
     }
 
-    // Set top row and bottom to visited state. Top to Pacific, bottom to Atlantic
-    for c in 0..<COLS {
-        dfs(r: 0, c: c, visit: &pac, prevHeight: heights[0][c])
-        dfs(r: ROWS - 1, c: c, visit: &atl, prevHeight: heights[ROWS - 1][c])
-    }
-
-    // Set Leftmost column and rightmost column to visited state. Left to Pacific, right to Atlantic
-    for r in 0..<ROWS {
-        dfs(r: r, c: 0, visit: &pac, prevHeight: heights[r][0])
-        dfs(r: r, c: COLS - 1, visit: &atl, prevHeight: heights[r][COLS - 1])
+    for r in 0..<heights.count {
+        for c in 0..<heights[0].count {
+            if r == heights.count - 1 || c == heights[0].count - 1 {
+                dfs(r, c, r, c, false)
+            }
+        }
     }
 
     var result = [[Int]]()
-
-    for r in 0..<ROWS {
-        for c in 0..<COLS {
-            if pac.contains([r,c]) && atl.contains([r,c]) {
+    for r in 0..<heights.count {
+        for c in 0..<heights[0].count {
+            if grid[r][c] == "pa" {
                 result.append([r,c])
             }
         }
     }
+
     return result
 }
 
-let result = pacificAtlantic([[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]])
+let result = pacificAtlantic([[1,2,2,3,5],
+                              [3,2,3,4,4],
+                              [2,4,5,3,1],
+                              [6,7,1,4,5],
+                              [5,1,1,2,4]])
 print(result) // [[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]
 
 let result1 = pacificAtlantic([[1]])

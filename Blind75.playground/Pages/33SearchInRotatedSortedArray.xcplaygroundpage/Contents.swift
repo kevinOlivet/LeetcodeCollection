@@ -69,3 +69,6 @@ print(result1)
 
 let result2 = search([1], 0) // -1
 print(result2)
+
+let result3 = search([1,3], 3) // 1
+print(result3)

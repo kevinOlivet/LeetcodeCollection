@@ -44,45 +44,37 @@ func mergeKLists(_ lists: [ListNode?]) -> ListNode? {
         var mergedLists = [ListNode?]()
         for i in stride(from: 0, to: lists.count, by: 2) {
             let l1 = lists[i]
-            let l2: ListNode? = i + 1 < lists.count ? lists[i + 1] : nil
+            let l2 = i + 1 < lists.count ? lists[i + 1] : nil
             mergedLists.append(mergeTwoLists(l1, l2))
         }
         lists = mergedLists
     }
-
-        func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
-
-            var list1 = list1
-            var list2 = list2
-
-            let dummy: ListNode = ListNode()
-            var tail: ListNode? = dummy
-
-            while list1 != nil && list2 != nil {
-                if list1!.val < list2!.val {
-                    tail!.next = list1
-                    list1 = list1!.next
-                } else {
-                    tail!.next = list2
-                    list2 = list2!.next
-                }
-                tail = tail!.next
-            }
-
-            if list1 != nil {
-                tail!.next = list1
-            }
-            if list2 != nil {
-                tail!.next = list2
-            }
-
-            return dummy.next
-        }
     return lists[0]
-    
+}
+
+func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
+    var list1 = list1
+    var list2 = list2
+    let dummy: ListNode = ListNode()
+    var tail: ListNode? = dummy
+    while list1 != nil && list2 != nil {
+        if list1!.val < list2!.val {
+            tail!.next = list1
+            list1 = list1!.next
+        } else {
+            tail!.next = list2
+            list2 = list2!.next
+        }
+        tail = tail!.next
+    }
+    if list1 != nil { tail!.next = list1 }
+    if list2 != nil { tail!.next = list2 }
+    return dummy.next
 }
 
 let oneNode = ListNode(1)
 let twoNode = ListNode(2)
 let result = mergeKLists([oneNode, twoNode])
 print(result!.val)
+
+

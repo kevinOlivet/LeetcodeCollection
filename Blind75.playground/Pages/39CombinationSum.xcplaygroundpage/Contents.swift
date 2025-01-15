@@ -44,12 +44,12 @@ func combinationSum(_ candidates: [Int], _ target: Int) -> [[Int]] {
             return
         }
 
-        var tempCurrent = current
-        tempCurrent.append(candidates[i])
+        var current = current
+        current.append(candidates[i])
 
-        backtrack(i: i, current: tempCurrent, total: total + candidates[i])
-        tempCurrent.popLast()
-        backtrack(i: i + 1, current: tempCurrent, total: total)
+        backtrack(i: i, current: current, total: total + candidates[i])
+        current.popLast()
+        backtrack(i: i + 1, current: current, total: total)
 
     }
 
@@ -59,7 +59,10 @@ func combinationSum(_ candidates: [Int], _ target: Int) -> [[Int]] {
 
 }
 
-let result = combinationSum([2,3,5], 9) // [[2,2,2,2],[2,3,3],[3,5]]
+let result0 = combinationSum([2,3,6,7], 7) // [[2,2,3],[7]]
+print(result0)
+
+let result = combinationSum([2,3,5], 9) // [[2, 2, 2, 3], [2, 2, 5], [3, 3, 3]]
 print(result)
 
 let result1 = combinationSum([2,3,5], 8) // [[2,2,2,2],[2,3,3],[3,5]]

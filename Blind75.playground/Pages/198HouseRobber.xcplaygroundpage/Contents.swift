@@ -24,15 +24,29 @@ import Foundation
  */
 
 func rob(_ nums: [Int]) -> Int {
-    var rob1 = 0
-    var rob2 = 0
+    var prev = 0
+    var current = 0
 
     for n in nums {
-        let temp = max(n + rob1, rob2)
-        rob1 = rob2
-        rob2 = temp
+//        let temp = max(n + prev, current)
+//        prev = current
+//        current = temp
+        (prev, current) = (current, max(current, n + prev))
     }
-    return rob2
+    return current
+//    if nums.count == 1 {
+//        return nums[0]
+//    }
+//    if nums.count == 2 {
+//        return max(nums[0], nums[1])
+//    }
+//    var dp = Array(repeating: 0, count: nums.count)
+//    dp[0] = nums[0]
+//    dp[1] = max(nums[0], nums[1])
+//    for i in 2..<nums.count {
+//        dp[i] = max(dp[i - 1], nums[i] + dp[i-2])
+//    }
+//    return dp.last ?? 0
 }
 
 let result = rob([1,2,3,1]) // 4

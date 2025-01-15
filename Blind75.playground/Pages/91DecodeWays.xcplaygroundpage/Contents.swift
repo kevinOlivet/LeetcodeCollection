@@ -48,10 +48,10 @@ func numDecodings2(_ s: String) -> Int {
             dp[i] = dp[i + 1]
         }
 
-        if (i + 1 < s.count) && (s[i] == "1" || s[i] == "2" && Array("0123456").contains(s[i + 1])) {
-            dp[i]! += dp[i + 2]!
+        if (i + 1 < s.count) &&
+            (s[i] == "1" || s[i] == "2" && Array("0123456").contains(s[i + 1])) {
+                dp[i]! += dp[i + 2]!
         }
-        print(dp)
     }
     return dp[0] ?? 0
 }
@@ -82,8 +82,9 @@ func numDecodings(_ s: String) -> Int {
         }
         var result = dfs(i: i + 1)
 
-        if (i + 1 < s.count) && (s[i] == "1" || s[i] == "2" && Array("123456").contains(s[i + 1])) {
-            result += dfs(i: i + 2)
+        if (i + 1 < s.count) &&
+            (s[i] == "1" || s[i] == "2" && Array("123456").contains(s[i + 1])) {
+                result += dfs(i: i + 2)
         }
         dp[i] = result
         return result

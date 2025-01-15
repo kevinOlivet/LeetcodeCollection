@@ -31,38 +31,38 @@ public class ListNode {
 
 func reorderList(_ head: ListNode?) {
     guard head != nil else { return }
-    var slow = head
-    var fast = head?.next
-
+    
     // find middle
+    var slow = head
+    var fast = head
     while fast != nil && fast?.next != nil {
         slow = slow?.next
         fast = fast?.next?.next
     }
 
     // split it
-    var second = slow?.next
-    // prev holder
+    var current = slow?.next
     slow?.next = nil
-    var prev: ListNode? = slow?.next
 
-    while second != nil {
-        let temp = second?.next
-        second?.next = prev
-        prev = second
-        second = temp
+    // reverse list
+    var prev: ListNode?
+    while current != nil {
+        let next = current?.next
+        current?.next = prev
+        prev = current
+        current = next
     }
 
     // merge the two halves
-    var first = head
+    var firstHalf = head
     var secondHalf = prev
     while secondHalf != nil {
-        let temp1 = first?.next
-        let temp2 = secondHalf?.next
-        first?.next = secondHalf
-        secondHalf?.next = temp1
-        first = temp1
-        secondHalf = temp2
+        let firstNext = firstHalf?.next
+        let secondNext = secondHalf?.next
+        firstHalf?.next = secondHalf
+        secondHalf?.next = firstNext
+        firstHalf = firstNext
+        secondHalf = secondNext
     }
 }
 

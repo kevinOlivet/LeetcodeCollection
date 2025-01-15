@@ -22,18 +22,12 @@ import Foundation
 // Dynamic Programming Solution
 func canJump(_ nums: [Int]) -> Bool {
     var dp = Array(repeating: false, count: nums.count)
-    dp[nums.count - 1] = true
-
+    dp[dp.count - 1] = true
     for i in (0..<nums.count).reversed() {
-        for j in (0...nums[i]).reversed() {
-            if (i + j) >= (nums.count) {
-                dp[i] = true
-                break
-            }
-            if dp[i+j] {
-                dp[i] = true
-                break
-            }
+        let n = nums[i]
+        let bound = min(dp.count-1, i+n)
+        if dp[i...bound].contains(true) {
+            dp[i] = true
         }
     }
     return dp[0]

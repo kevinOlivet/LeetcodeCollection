@@ -53,6 +53,21 @@ func minMeetingRooms(_ intervals: Array<Interval>) -> Int {
     }
 
     return result
+    
+    // MAYBE this works too. Same technique as 435NonOverlappingIntervals
+//    var result = 1
+//    let intervals = intervals.sorted(by: { $0.start < $1.end })
+//    var prevEnd = intervals[0].end
+//
+//    for i in 1..<intervals.count {
+//        if prevEnd <= intervals[i].start {
+//            prevEnd = intervals[i].end
+//        } else {
+//            result += 1
+//            prevEnd = min(prevEnd, intervals[i].end)
+//        }
+//    }
+//    return result
 }
 
 let result = minMeetingRooms([Interval(0,30),Interval(5,10),Interval(15,20)]) // 2

@@ -36,31 +36,34 @@ func mergeTwoLists(_ list1: ListNode?, _ list2: ListNode?) -> ListNode? {
     var list1 = list1
     var list2 = list2
 
-    let dummy: ListNode = ListNode()
-    var tail: ListNode? = dummy
+    let dummy = ListNode()
+    var tail = dummy
 
     while list1 != nil && list2 != nil {
         if list1!.val < list2!.val {
-            tail!.next = list1
+            tail.next = list1
             list1 = list1!.next
         } else {
-            tail!.next = list2
+            tail.next = list2
             list2 = list2!.next
         }
-        tail = tail!.next
+        tail = tail.next!
     }
 
     if list1 != nil {
-        tail!.next = list1
+        tail.next = list1
     }
     if list2 != nil {
-        tail!.next = list2
+        tail.next = list2
     }
 
     return dummy.next
 }
 
-let oneNode = ListNode(1)
-let twoNode = ListNode(2)
+let three = ListNode(3)
+let oneNode = ListNode(1, three)
+
+let four = ListNode(4)
+let twoNode = ListNode(2, four)
 let result = mergeTwoLists(oneNode, twoNode)
 print(result!.val)
