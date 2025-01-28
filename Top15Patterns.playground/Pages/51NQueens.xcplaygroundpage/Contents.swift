@@ -38,6 +38,7 @@ func solveNQueens(_ n: Int) -> [[String]] {
                 temp.append(joinedRow)
             }
             result.append(temp)
+//            result.append(board.map({ $0.joined(separator: "")}))
             return
         }
 

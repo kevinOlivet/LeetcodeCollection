@@ -26,23 +26,18 @@ func countSubstrings(_ s: String) -> Int {
     var result = 0
 
     for i in 0..<s.count {
-        
         // odd
-        var left = i
-        var right = i
-        while left >= 0 && right < s.count && s[left] == s[right] {
-            result += 1
-            left -= 1
-            right += 1
-        }
-
+        countPali(i, i)
         // even
-        left = i
-        right = i + 1
-        while left >= 0 && right < s.count && s[left] == s[right] {
+        countPali(i, i + 1)
+    }
+    func countPali(_ l: Int, _ r: Int) {
+        var l = l
+        var r = r
+        while l >= 0 && r < s.count && s[l] == s[r] {
             result += 1
-            left -= 1
-            right += 1
+            l -= 1
+            r += 1
         }
     }
     return result

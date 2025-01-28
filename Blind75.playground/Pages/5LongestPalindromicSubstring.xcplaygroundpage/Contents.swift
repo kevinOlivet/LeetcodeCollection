@@ -18,38 +18,34 @@ import Foundation
 
 func longestPalindrome(_ s: String) -> String {
     var s = Array(s)
-
-    var result = ""
-    var resultLength = 0
+    var result = [Character]()
 
     for i in 0..<s.count {
-        // odd length
+        // odd length palindrome
         var left = i
         var right = i
 
         while left >= 0 && right < s.count && s[left] == s[right] {
-            if (right - left + 1) > resultLength {
-                result = String(s[left...right])
-                resultLength = right - left + 1
+            if (right - left + 1) > result.count {
+                result = Array(s[left...right])
             }
             left -= 1
             right += 1
         }
 
-        // even length
+        // even length palindrome
         left = i
         right = i + 1
 
         while left >= 0 && right < s.count && s[left] == s[right] {
-            if (right - left + 1) > resultLength {
-                result = String(s[left...right])
-                resultLength = right - left + 1
+            if (right - left + 1) > result.count {
+                result = Array(s[left...right])
             }
             left -= 1
             right += 1
         }
     }
-    return result
+    return String(result)
 }
 
 let result = longestPalindrome("babad") // "bab"
@@ -57,3 +53,9 @@ print(result)
 
 let result1 = longestPalindrome("cbbd") // "bb"
 print(result1)
+
+let result2 = longestPalindrome("ac") // "a"
+print(result2)
+
+let result3 = longestPalindrome("abb") // "bb"
+print(result3)

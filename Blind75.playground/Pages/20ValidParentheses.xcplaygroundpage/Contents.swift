@@ -26,19 +26,17 @@ import Foundation
  */
 
 func isValid(_ s: String) -> Bool {
-
     let s = Array(s)
-    var dict: [Character: Character] = [")": "(", "}": "{", "]": "["]
+    let dict: [Character: Character] = [")": "(", "}": "{", "]": "["]
     var stack = [Character]()
 
     for c in s {
-        if !stack.isEmpty && stack.last! == dict[c] {
+        if let top = stack.last, dict[c] == top {
             stack.popLast()
         } else {
             stack.append(c)
         }
     }
-
     return stack.isEmpty
 }
 

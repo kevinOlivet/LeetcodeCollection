@@ -54,6 +54,8 @@ func maxPathSum(_ root: TreeNode?) -> Int {
         // compute max path sum WITH split
         result[0] = max(result[0], root.val + leftMax + rightMax)
 
+        // eturn value not same as result.
+        // return value is WITHOUT spliting
         return root.val + max(leftMax, rightMax)
     }
 

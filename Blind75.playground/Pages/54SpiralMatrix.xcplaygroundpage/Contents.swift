@@ -44,14 +44,15 @@ func spiralOrder(_ matrix: [[Int]]) -> [Int] {
         }
 
         // get bottom row reversed
-        for i in stride(from: right - 1, to: left - 1, by: -1) {
+        for i in (left..<right).reversed() {
+//        for i in stride(from: right - 1, to: left - 1, by: -1) {
             result.append(matrix[bottom - 1][i])
         }
         bottom -= 1
 
         // get left column reversed
-
-        for i in stride(from: bottom - 1, to: top - 1, by: -1) {
+        for i in (top..<bottom).reversed() {
+//        for i in stride(from: bottom - 1, to: top - 1, by: -1) {
             result.append(matrix[i][left])
         }
         left += 1

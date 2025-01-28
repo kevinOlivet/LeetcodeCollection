@@ -34,6 +34,39 @@ func maxDepth(_ root: TreeNode?) -> Int {
     guard let root = root else { return 0 }
     return 1 + max(maxDepth(root.left), maxDepth(root.right))
 }
+//func maxDepth(_ root: TreeNode?) -> Int {
+//    guard let root = root else { return 0 }
+//    var q = [root]
+//    var result = 0
+//    while !q.isEmpty {
+//        for i in 0..<q.count {
+//            let node = q.removeFirst()
+//            if let left = node.left {
+//                q.append(left)
+//            }
+//            if let right = node.right {
+//                q.append(right)
+//            }
+//        }
+//        result += 1
+//    }
+//    return result
+//}
+
+//func maxDepth(_ root: TreeNode?) -> Int {
+//    var result = 0
+//    var counter = 0
+//    func dfs(_ node: TreeNode?) {
+//        guard let node = node else { return }
+//        counter += 1
+//        result = max(result, counter)
+//        dfs(node.left)
+//        dfs(node.right)
+//        counter -= 1
+//    }
+//    dfs(root)
+//    return result
+//}
 
 //            3
 //          /   \

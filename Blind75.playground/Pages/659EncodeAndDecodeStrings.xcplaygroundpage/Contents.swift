@@ -40,10 +40,8 @@ func encode(_ strs: [String]) -> String {
  * @param str: A string
  * @return: decodes a single string to a list of strings
  */
-
 func decode(_ str: String) -> [String] {
     let str = Array(str)
-
     var result = [String]()
     var i = 0
 

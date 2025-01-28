@@ -22,60 +22,38 @@ import Foundation
  */
 
 func exist(_ board: [[Character]], _ word: String) -> Bool {
-        var wordArray = Array(word)
-        let rows = board.count
-        let cols = board[0].count
+    let word = Array(word)
+    var set = Set<String>()
 
-        var totalCount = (first: 0, last: 0)
-        for i in 0..<rows {
-            for j in 0..<cols {
-                if board[i][j] == wordArray.first! {
-                    totalCount.first += 1
-                }
-                if board[i][j] == wordArray.last! {
-                    totalCount.last += 1
-                }
-            }
+    func dfs(r: Int, c: Int, i: Int) -> Bool {
+        if i == word.count { return true }
+
+        if r < 0 || c < 0 ||
+            r >= board.count || c >= board[0].count ||
+            board[r][c] != word[i] ||
+            set.contains("\(r), \(c)") {
+            return false
         }
-        if totalCount.last < totalCount.first {
-            wordArray = Array(word.reversed())
-        }
+        set.insert("\(r), \(c)")
 
-        var path = Set<String>()
+        let result = (dfs(r: r + 1, c: c, i: i + 1) ||
+                      dfs(r: r - 1, c: c, i: i + 1) ||
+                      dfs(r: r, c: c + 1, i: i + 1) ||
+                      dfs(r: r, c: c - 1, i: i + 1))
+        set.remove("\(r), \(c)")
 
-        func dfs(r: Int, c: Int, i: Int) -> Bool {
-            if i == word.count {
+        return result
+    }
+
+    for r in 0..<board.count {
+        for c in 0..<board[0].count {
+            if dfs(r: r, c: c, i: 0) {
                 return true
             }
-
-            let stringCoord = "\(r), \(c)"
-
-            if r < 0 || c < 0 || r >= rows || c >= cols || board[r][c] != wordArray[i] || path.contains(stringCoord) {
-                return false
-            }
-
-            path.insert(stringCoord)
-
-            let result = (dfs(r: r + 1, c: c, i: i + 1) ||
-                        dfs(r: r - 1, c: c, i: i + 1) ||
-                        dfs(r: r, c: c + 1, i: i + 1) ||
-                        dfs(r: r, c: c - 1, i: i + 1))
-
-            path.remove(stringCoord)
-
-            return result
         }
-
-        for r in 0..<rows {
-            for c in 0..<cols {
-                if dfs(r: r, c: c, i: 0) {
-                    return true
-                }
-            }
-        }
-
-        return false
     }
+    return false
+}
 
 let result = exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], "ABCCED") // true
 print(result)
@@ -87,3 +65,6 @@ print(result1)
 
 let result2 = exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], "ABCB") // false
 print(result2)
+
+let result3 = exist([["a","b"],["c","d"]], "cdba") //
+print(result3)

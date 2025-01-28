@@ -17,23 +17,19 @@ import Foundation
  */
 
 func rotate(_ matrix: inout [[Int]]) {
-    var left = 0
-    var right = matrix.count - 1
-
-    while left < right {
-        for i in 0..<(right - left) {
-            var top = left
-            var bottom = right
-
-            let topLeft = matrix[top][left + i]
-
-            matrix[top][left + i] = matrix[bottom - i][left]
-            matrix[bottom - i][left] = matrix[bottom][right - i]
-            matrix[bottom][right - i] = matrix[top + i][right]
-            matrix[top + i][right] = topLeft
+    // Transpose ie. mirror across the diagonal center or rows become columns
+    for i in 0..<matrix.count {
+        for j in i + 1..<matrix.count { // the plus one here is unneeded
+            (matrix[i][j], matrix[j][i]) =
+            (matrix[j][i], matrix[i][j])
         }
-        right -= 1
-        left += 1
+    }
+    // Reflection ie. mirror across the vertical center
+    for i in 0..<matrix.count {
+        for j in 0..<matrix.count/2 {
+            (matrix[i][j], matrix[i][matrix.count - 1 - j]) =
+            (matrix[i][matrix.count - 1 - j], matrix[i][j])
+        }
     }
 }
 
