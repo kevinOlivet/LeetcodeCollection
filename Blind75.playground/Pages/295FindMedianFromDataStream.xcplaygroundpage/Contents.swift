@@ -30,10 +30,10 @@ import Foundation
  medianFinder.findMedian(); // return 2.0
  */
 
-
 class MedianFinder {
 
     var holder: [Int]
+    var updateNeeded = true
 
     init() {
         holder = [Int]()
@@ -41,16 +41,34 @@ class MedianFinder {
 
     func addNum(_ num: Int) {
         holder.append(num)
+        updateNeeded = true
     }
 
     func findMedian() -> Double {
+        update()
+        if holder.isEmpty { return 0 }
+        if holder.count < 2 { return Double(holder[0]) }
         if holder.count % 2 == 0 {
-            return (Double(holder[holder.count/2]) + Double(holder[(holder.count/2) + 1]))/2
+            return (Double(holder[(holder.count/2) - 1]) + Double(holder[(holder.count/2)]))/2
         } else {
-            return Double(holder[(holder.count/2) + 1])
+            return Double(holder[(holder.count/2)])
+        }
+    }
+
+    func update() {
+        if updateNeeded {
+            holder.sort()
+            updateNeeded = false
         }
     }
 }
+
+/**
+ * Your MedianFinder object will be instantiated and called as such:
+ * let obj = MedianFinder()
+ * obj.addNum(num)
+ * let ret_2: Double = obj.findMedian()
+ */
 
 let obj = MedianFinder()
 obj.addNum(1)

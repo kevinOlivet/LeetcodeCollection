@@ -50,7 +50,7 @@ func minWindow(_ s: String, _ t: String) -> String {
         let c = s[right]
         window[c] = window[c, default: 0] + 1
 
-        if countT.keys.contains(c) && window[c]! == countT[c]! {
+        if let found = countT[c], window[c]! == found {
             have += 1
         }
 
@@ -61,20 +61,15 @@ func minWindow(_ s: String, _ t: String) -> String {
                 resultLength = (right - left + 1)
             }
             // pop from the left of our window
-            window[s[left]] = window[s[left]]! - 1
-            if countT.keys.contains(s[left]) && window[s[left]]! < countT[s[left]]! {
+            let prevC = s[left]
+            window[prevC]! -= 1
+            if let found = countT[prevC], window[s[left]]! < found {
                 have -= 1
             }
             left += 1
         }
     }
-    left = result[0]
-    let right = result[1]
-    if resultLength == Int.max {
-        return ""
-    } else {
-        return String(s[left...right])
-    }
+    return resultLength == Int.max ? "" : String(s[result[0]...result[1]])
 }
 
 let result = minWindow("ADOBECODEBANC", "ABC") // BANC

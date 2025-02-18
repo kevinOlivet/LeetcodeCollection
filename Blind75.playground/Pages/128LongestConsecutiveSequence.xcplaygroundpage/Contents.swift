@@ -18,21 +18,19 @@ import Foundation
  */
 
 func longestConsecutive(_ nums: [Int]) -> Int {
-    var numsSet = Set(nums)
-    var maxFound = 1
+    var nums = Set(nums)
+    var result = 0
 
-    for num in numsSet {
-        if !numsSet.contains(num - 1) {
-            var currentLength = 0
-            var currentNum = num
-            while numsSet.contains(currentNum) {
-                currentLength += 1
-                currentNum += 1
+    for n in nums {
+        if !nums.contains(n - 1) {
+            var length = 0
+            while nums.contains(n + length) {
+                length += 1
             }
-            maxFound = max(currentLength, maxFound)
+            result = max(result, length)
         }
     }
-    return maxFound
+    return result
 }
 
 let result = longestConsecutive([100,4,200,1,3,2]) // 4

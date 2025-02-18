@@ -20,12 +20,10 @@ import Foundation
 class TrieNode {
     var children: [Character: TrieNode]!
     var endOfWord: Bool!
-
     init() {
         children = [Character: TrieNode]()
         endOfWord = false
     }
-
     func addWord(_ word: String) {
         var current = self
         for c in word {
@@ -40,46 +38,35 @@ class TrieNode {
 
 func findWords(_ board: [[Character]], _ words: [String]) -> [String] {
     var root = TrieNode()
-
     for w in words {
         root.addWord(w)
     }
-
-    let rows = board.count
-    let cols = board[0].count
-
     var result = Set<String>()
-    var visited = Set<[Int]>()
-
+    var set = Set<[Int]>()
     func dfs(r: Int, c: Int, node: TrieNode, word: String) {
-        if r < 0 || c < 0 ||
-            r == rows || c == cols ||
+        if (r < 0 || r == board.count) ||
+            (c < 0 || c == board[0].count) ||
             !node.children.keys.contains(board[r][c]) ||
-            visited.contains([r, c]) {
+            set.contains([r, c]) {
             return
         }
-
-        visited.insert([r, c])
+        set.insert([r, c])
         let node = node.children[board[r][c]]!
         var word = word
         word.append(board[r][c])
         if node.endOfWord {
             result.insert(word)
         }
-
         dfs(r: r + 1, c: c, node: node, word: word)
         dfs(r: r - 1, c: c, node: node, word: word)
         dfs(r: r, c: c + 1, node: node, word: word)
         dfs(r: r, c: c - 1, node: node, word: word)
-
-        visited.remove([r, c])
+        set.remove([r, c])
     }
-
-    for r in 0..<rows {
-        for c in 0..<cols {
+    for r in 0..<board.count {
+        for c in 0..<board[0].count {
             dfs(r: r, c: c, node: root, word: "")
         }
     }
-
     return Array(result)
 }

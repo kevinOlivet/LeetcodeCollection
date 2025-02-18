@@ -42,16 +42,13 @@ class TrieNode {
 }
 
 class WordDictionary {
-
     var root: TrieNode!
-
     init() {
         root = TrieNode()
     }
 
     func addWord(_ word: String) {
         var current = root!
-
         for c in word {
             if current.children[c] == nil {
                 current.children[c] = TrieNode()
@@ -62,15 +59,11 @@ class WordDictionary {
     }
 
     func search(_ word: String) -> Bool {
-
+        let word = Array(word)
         func dfs(j: Int, node: TrieNode?) -> Bool {
             var current = node!
-            let word = Array(word)
-
             for i in j..<word.count {
-
                 let c = word[i]
-
                 if c == "." {
                     for child in current.children.values {
                         if dfs(j: i + 1, node: child) {

@@ -36,7 +36,9 @@ public class TreeNode {
     }
 }
 
-func lowestCommonAncestor(_ root: TreeNode?, _ p: TreeNode?, _ q: TreeNode?) -> TreeNode? {
+func lowestCommonAncestor(_ root: TreeNode?,
+                          _ p: TreeNode?,
+                          _ q: TreeNode?) -> TreeNode? {
 
     var current = root
 

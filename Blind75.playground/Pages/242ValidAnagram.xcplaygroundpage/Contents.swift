@@ -17,12 +17,41 @@ import Foundation
  Output: false
  */
 
+//func isAnagram(_ s: String, _ t: String) -> Bool {
+//    guard s.count == t.count else { return false }
+//    var s = Array(s).sorted()
+//    var t = Array(t).sorted()
+//    return s == t
+//}
+
 func isAnagram(_ s: String, _ t: String) -> Bool {
     guard s.count == t.count else { return false }
-    var s = Array(s).sorted()
-    var t = Array(t).sorted()
-    return s == t
+    var countDict = [Character: Int]()
+    for c in s {
+        countDict[c, default: 0] += 1
+    }
+    for c in t {
+        if let found = countDict[c], found != 0 {
+            countDict[c]! -= 1
+        } else {
+            return false
+        }
+    }
+    return countDict.values.allSatisfy( { $0 == 0 })
 }
+
+//func isAnagram(_ s: String, _ t: String) -> Bool {
+//    guard s.count == t.count else { return false }
+//    let s = Array(s)
+//    let t = Array(t)
+//    var countDictS = [Character: Int]()
+//    var countDictT = [Character: Int]()
+//    for i in 0..<s.count {
+//        countDictS[s[i], default: 0] += 1
+//        countDictT[t[i], default: 0] += 1
+//    }
+//    return countDictS == countDictT
+//}
 
 let result = isAnagram("anagram", "nagaram")
 print(result)

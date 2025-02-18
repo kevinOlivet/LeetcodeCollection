@@ -36,9 +36,9 @@ public class TreeNode {
 
 func maxPathSum(_ root: TreeNode?) -> Int {
 
-    if root == nil { return 0 }
+    guard let root = root else { return 0 }
 
-    var result = [root!.val]
+    var result = root.val
 
     // return max path sum WITHOUT split
     func dfs(_ root: TreeNode?) -> Int {
@@ -52,15 +52,15 @@ func maxPathSum(_ root: TreeNode?) -> Int {
         rightMax = max(rightMax, 0)
 
         // compute max path sum WITH split
-        result[0] = max(result[0], root.val + leftMax + rightMax)
+        result = max(result, root.val + leftMax + rightMax)
 
-        // eturn value not same as result.
+        // return value not same as result.
         // return value is WITHOUT spliting
         return root.val + max(leftMax, rightMax)
     }
 
     dfs(root)
-    return result[0]
+    return result
 }
 
 //            3

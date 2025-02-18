@@ -44,7 +44,8 @@ func isValidBST(_ root: TreeNode?) -> Bool {
             return false
         }
 
-        return (valid(node.left, left, node.val) && valid(node.right, node.val, right))
+        return (valid(node.left, left, node.val) &&
+                valid(node.right, node.val, right))
     }
 
     return valid(root, -Int.max, Int.max)

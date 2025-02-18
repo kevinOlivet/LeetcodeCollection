@@ -42,11 +42,11 @@ func isSubtree(_ root: TreeNode?, _ subRoot: TreeNode?) -> Bool {
     return isSubtree(root?.left, subRoot) || isSubtree(root?.right, subRoot)
 }
 
-func isSameTree(_ root1: TreeNode?, _ root2: TreeNode?) -> Bool {
-    if root1 == nil && root2 == nil { return true }
-    if root1 == nil || root2 == nil { return false }
-    if root1?.val != root2?.val { return false }
-    return isSameTree(root1?.left, root2?.left) && isSameTree(root1?.right, root2?.right)
+func isSameTree(_ p: TreeNode?, _ q: TreeNode?) -> Bool {
+    if p == nil && q == nil { return true }
+    if p == nil || q == nil { return false }
+    if p?.val != q?.val { return false }
+    return isSameTree(p?.left, q?.left) && isSameTree(p?.right, q?.right)
 }
 
 //            3
