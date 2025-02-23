@@ -20,26 +20,26 @@ func generateParenthesis(_ n: Int) -> [String] {
     var result = [String]()
     var current = [""]
 
-    func backtrack(openCount: Int, closedCount: Int) {
-        if openCount == n && closedCount == n {
+    func backtrack(open: Int, closed: Int) {
+        if open == n && closed == n {
             result.append(current.joined(separator: ""))
             return
         }
 
-        if openCount < n {
+        if open < n {
             current.append("(")
-            backtrack(openCount: openCount + 1, closedCount: closedCount)
+            backtrack(open: open + 1, closed: closed)
             current.popLast()
         }
 
-        if closedCount < openCount {
+        if closed < open {
             current.append(")")
-            backtrack(openCount: openCount, closedCount: closedCount + 1)
+            backtrack(open: open, closed: closed + 1)
             current.popLast()
         }
     }
 
-    backtrack(openCount: 0, closedCount: 0)
+    backtrack(open: 0, closed: 0)
     return result
 }
 

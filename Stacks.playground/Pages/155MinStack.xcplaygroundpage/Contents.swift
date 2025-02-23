@@ -39,27 +39,27 @@ import Foundation
 
 class MinStack {
 
-    var holder: [Int]!
-    var minStack: [Int]!
+    var stack: [Int]
+    var minStack: [Int]
 
     init() {
-        holder = [Int]()
+        stack = [Int]()
         minStack = [Int]()
     }
 
     func push(_ val: Int) {
-        holder.append(val)
-        let newMin = minStack.last ?? val
-        minStack.append(min(newMin, val))
+        stack.append(val)
+        let newMin = min(minStack.last ?? val, val)
+        minStack.append(newMin)
     }
 
     func pop() {
-        holder.popLast()
+        stack.popLast()
         minStack.popLast()
     }
 
     func top() -> Int {
-        return holder.last ?? 0
+        return stack.last ?? 0
     }
 
     func getMin() -> Int {

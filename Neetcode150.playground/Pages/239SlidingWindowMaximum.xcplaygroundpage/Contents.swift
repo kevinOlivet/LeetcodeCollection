@@ -28,21 +28,21 @@ import Foundation
 
 func maxSlidingWindow(_ nums: [Int], _ k: Int) -> [Int] {
     var result = [Int]()
-    var q = [Int]()
+    var stack = [Int]()
     var l = 0
     var r = 0
     while r < nums.count {
-        // pop smaller values from q
-        while let top = q.last, nums[top] < nums[r] {
-            q.popLast()
+        // pop smaller values from stack
+        while let top = stack.last, nums[r] > top {
+            stack.popLast()
         }
-        q.append(r)
-        // remove Left val from window
-        if l > q[0] {
-            q.removeFirst()
-        }
-        if (r + 1) >= k {
-            result.append(nums[q[0]])
+        stack.append(nums[r])
+        // remove left val from window
+        if (r - l + 1) == k {
+            result.append(stack[0])
+            if nums[l] == stack[0] {
+                stack.removeFirst()
+            }
             l += 1
         }
         r += 1

@@ -42,26 +42,22 @@ func evalRPN(_ tokens: [String]) -> Int {
 
     var stack = [Int]()
 
-    for token in tokens {
-        var result: Int!
-        if token == "+" {
-            result = stack[stack.count - 2] + stack[stack.count - 1]
-            stack.popLast()
-            stack.popLast()
-        } else if token == "-" {
-            result = stack[stack.count - 2] - stack[stack.count - 1]
-            stack.popLast()
-            stack.popLast()
-        } else if token == "*" {
-            result = stack[stack.count - 2] * stack[stack.count - 1]
-            stack.popLast()
-            stack.popLast()
-        } else if token == "/" {
-            result = stack[stack.count - 2] / stack[stack.count - 1]
-            stack.popLast()
-            stack.popLast()
+    for c in tokens {
+        var result: Int
+        if c == "+" {
+            result = stack.popLast()! + stack.popLast()!
+        } else if c == "-" {
+            let b = stack.popLast()!
+            let a = stack.popLast()!
+            result = a - b
+        } else if c == "*" {
+            result = stack.popLast()! * stack.popLast()!
+        } else if c == "/" {
+            let b = stack.popLast()!
+            let a = stack.popLast()!
+            result = a / b
         } else {
-            result = Int(token)!
+            result = Int(c)!
         }
         stack.append(result)
     }

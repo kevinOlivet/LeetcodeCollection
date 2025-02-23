@@ -48,7 +48,7 @@ func minWindow(_ s: String, _ t: String) -> String {
 
     for right in 0..<s.count {
         let c = s[right]
-        window[c] = window[c, default: 0] + 1
+        window[c, default: 0] += 1
 
         if let found = countT[c], window[c]! == found {
             have += 1
