@@ -18,28 +18,28 @@ import Foundation
  */
 
 func largestRectangleArea(_ heights: [Int]) -> Int {
-    // This array will hold tuples of (height, index).
-    var monotonicStack: [(height: Int, index: Int)] = []
+    // This array will hold tuples of (index, height).
+    var stack = [(index: Int, height: Int)]()
     var result = 0
-    for (index, height) in heights.enumerated() {
-        var previousIndex = index
+    for (i, h) in heights.enumerated() {
+        var start = i
 
         // When the current bar is lower than the previous one,
         // calculate the area that can be taken using this bar
         // and remove it afterwards.
-        while let last = monotonicStack.last, last.height >= height {
-            previousIndex = last.index
-            result = max(result, (index - last.index) * last.height)
-            monotonicStack.popLast()
+        while let top = stack.last, top.height > h {
+            start = top.index
+            result = max(result, (i - top.index) * top.height)
+            stack.popLast()
         }
-        monotonicStack.append((height, previousIndex))
+        stack.append((start, h))
     }
 
     // At this point monotonic stack contains bars that only
     // increase in height. Pop them one by one and calculate
     // the area that can be created.
-    while let last = monotonicStack.popLast() {
-        result = max(result, (heights.count - last.index) * last.height)
+    while let top = stack.popLast() {
+        result = max(result, (heights.count - top.index) * top.height)
     }
 
     return result

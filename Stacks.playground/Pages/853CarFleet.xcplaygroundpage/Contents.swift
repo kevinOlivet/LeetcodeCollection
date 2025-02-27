@@ -40,14 +40,14 @@ import Foundation
 
 func carFleet(_ target: Int, _ position: [Int], _ speed: [Int]) -> Int {
 
-    let pair = zip(position, speed).sorted { ($0.0, $0.1) > ($1.0, $1.1) }
+    let pair = zip(position, speed).sorted { $0.0 > $1.0 }
 
     var stack = [Double]()
 
     for (p, s) in pair {
-        stack.append(Double(target - p) / Double(s))
-        if stack.count >= 2 && stack[stack.count - 1] <= stack[stack.count - 2] {
-            stack.popLast()
+        let timeToTarget = Double(target - p) / Double(s)
+        if timeToTarget > stack.last ?? 0.0 {
+            stack.append(timeToTarget)
         }
     }
 
