@@ -4831,3 +4831,201 @@ Algorithms of the Neetcode 150 not covered elsewhere
  Example 2:
  Input: head = [1,2,3,4,5], k = 3
  Output: [3,2,1,4,5]
+
+ ## 543. Diameter of Binary Tree
+ https://leetcode.com/problems/diameter-of-binary-tree/description/
+
+ Given the root of a binary tree, return the length of the diameter of the tree.
+
+ The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
+
+ The length of a path between two nodes is represented by the number of edges between them.
+
+ Example 1:
+ Input: root = [1,2,3,4,5]
+ Output: 3
+ Explanation: 3 is the length of the path [4,2,1,3] or [5,2,1,3].
+
+ Example 2:
+ Input: root = [1,2]
+ Output: 1
+
+ ## 110. Balanced Binary Tree
+ https://leetcode.com/problems/balanced-binary-tree/description/
+
+ Given a binary tree, determine if it is height-balanced.
+
+ Example 1:
+ Input: root = [3,9,20,null,null,15,7]
+ Output: true
+
+ Example 2:
+ Input: root = [1,2,2,3,3,null,null,4,4]
+ Output: false
+
+ Example 3:
+ Input: root = []
+ Output: true
+
+ ## 199. Binary Tree Right Side View
+ Given the root of a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
+
+ Example 1:
+ Input: root = [1,2,3,null,5,null,4]
+ Output: [1,3,4]
+ Explanation:
+
+ Example 2:
+ Input: root = [1,2,3,4,null,null,null,5]
+ Output: [1,3,4,5]
+ Explanation:
+
+ Example 3:
+ Input: root = [1,null,3]
+ Output: [1,3]
+
+ Example 4:
+ Input: root = []
+ Output: []
+
+ ## 1448. Count Good Nodes in Binary Tree
+ https://leetcode.com/problems/count-good-nodes-in-binary-tree/description/
+
+ Given a binary tree root, a node X in the tree is named good if in the path from root to X there are no nodes with a value greater than X.
+
+ Return the number of good nodes in the binary tree.
+
+ Example 1:
+ Input: root = [3,1,4,3,null,1,5]
+ Output: 4
+ Explanation: Nodes in blue are good.
+ Root Node (3) is always a good node.
+ Node 4 -> (3,4) is the maximum value in the path starting from the root.
+ Node 5 -> (3,4,5) is the maximum value in the path
+ Node 3 -> (3,1,3) is the maximum value in the path.
+
+ Example 2:
+ Input: root = [3,3,null,4,2]
+ Output: 3
+ Explanation: Node 2 -> (3, 3, 2) is not good, because "3" is higher than it.
+
+ Example 3:
+ Input: root = [1]
+ Output: 1
+ Explanation: Root is considered as good.
+
+ ## 703. Kth Largest Element in a Stream
+ https://leetcode.com/problems/kth-largest-element-in-a-stream/description/
+
+ You are part of a university admissions office and need to keep track of the kth highest test score from applicants in real-time. This helps to determine cut-off marks for interviews and admissions dynamically as new applicants submit their scores.
+
+ You are tasked to implement a class which, for a given integer k, maintains a stream of test scores and continuously returns the kth highest test score after a new score has been submitted. More specifically, we are looking for the kth highest score in the sorted list of all scores.
+
+ Implement the KthLargest class:
+
+ KthLargest(int k, int[] nums) Initializes the object with the integer k and the stream of test scores nums.
+ int add(int val) Adds a new test score val to the stream and returns the element representing the kth largest element in the pool of test scores so far.
+
+ Example 1:
+ Input:
+ ["KthLargest", "add", "add", "add", "add", "add"]
+ [[3, [4, 5, 8, 2]], [3], [5], [10], [9], [4]]
+
+ Output: [null, 4, 5, 5, 8, 8]
+
+ Explanation:
+ KthLargest kthLargest = new KthLargest(3, [4, 5, 8, 2]);
+ kthLargest.add(3); // return 4
+ kthLargest.add(5); // return 5
+ kthLargest.add(10); // return 5
+ kthLargest.add(9); // return 8
+ kthLargest.add(4); // return 8
+
+ Example 2:
+ Input:
+ ["KthLargest", "add", "add", "add", "add"]
+ [[4, [7, 7, 7, 7, 8, 3]], [2], [10], [9], [9]]
+
+ Output: [null, 7, 7, 7, 8]
+
+ Explanation:
+
+ KthLargest kthLargest = new KthLargest(4, [7, 7, 7, 7, 8, 3]);
+ kthLargest.add(2); // return 7
+ kthLargest.add(10); // return 7
+ kthLargest.add(9); // return 7
+ kthLargest.add(9); // return 8
+
+ ## 1046. Last Stone Weight
+ https://leetcode.com/problems/last-stone-weight/description/
+
+ You are given an array of integers stones where stones[i] is the weight of the ith stone.
+
+ We are playing a game with the stones. On each turn, we choose the heaviest two stones and smash them together. Suppose the heaviest two stones have weights x and y with x <= y. The result of this smash is:
+
+ If x == y, both stones are destroyed, and
+ If x != y, the stone of weight x is destroyed, and the stone of weight y has new weight y - x.
+ At the end of the game, there is at most one stone left.
+
+ Return the weight of the last remaining stone. If there are no stones left, return 0.
+
+ Example 1:
+ Input: stones = [2,7,4,1,8,1]
+ Output: 1
+ Explanation:
+ We combine 7 and 8 to get 1 so the array converts to [2,4,1,1,1] then,
+ we combine 2 and 4 to get 2 so the array converts to [2,1,1,1] then,
+ we combine 2 and 1 to get 1 so the array converts to [1,1,1] then,
+ we combine 1 and 1 to get 0 so the array converts to [1] then that's the value of the last stone.
+
+ Example 2:
+ Input: stones = [1]
+ Output: 1
+
+ ## 973. K Closest Points to Origin
+ https://leetcode.com/problems/k-closest-points-to-origin/description/
+
+ Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane and an integer k, return the k closest points to the origin (0, 0).
+
+ The distance between two points on the X-Y plane is the Euclidean distance (i.e., √(x1 - x2)2 + (y1 - y2)2).
+
+ You may return the answer in any order. The answer is guaranteed to be unique (except for the order that it is in).
+
+ Example 1:
+ Input: points = [[1,3],[-2,2]], k = 1
+ Output: [[-2,2]]
+ Explanation:
+ The distance between (1, 3) and the origin is sqrt(10).
+ The distance between (-2, 2) and the origin is sqrt(8).
+ Since sqrt(8) < sqrt(10), (-2, 2) is closer to the origin.
+ We only want the closest k = 1 points from the origin, so the answer is just [[-2,2]].
+
+ Example 2:
+ Input: points = [[3,3],[5,-1],[-2,4]], k = 2
+ Output: [[3,3],[-2,4]]
+ Explanation: The answer [[-2,4],[3,3]] would also be accepted.
+
+ ## 621. Task Scheduler
+ https://leetcode.com/problems/task-scheduler/description/
+
+ You are given an array of CPU tasks, each labeled with a letter from A to Z, and a number n. Each CPU interval can be idle or allow the completion of one task. Tasks can be completed in any order, but there's a constraint: there has to be a gap of at least n intervals between two tasks with the same label.
+
+ Return the minimum number of CPU intervals required to complete all tasks.
+
+ Example 1:
+ Input: tasks = ["A","A","A","B","B","B"], n = 2
+ Output: 8
+ Explanation: A possible sequence is: A -> B -> idle -> A -> B -> idle -> A -> B.
+ After completing task A, you must wait two intervals before doing A again. The same applies to task B. In the 3rd interval, neither A nor B can be done, so you idle. By the 4th interval, you can do A again as 2 intervals have passed.
+
+ Example 2:
+ Input: tasks = ["A","C","A","B","D","B"], n = 1
+ Output: 6
+ Explanation: A possible sequence is: A -> B -> C -> D -> A -> B.
+ With a cooling interval of 1, you can repeat a task after just one other task.
+
+ Example 3:
+ Input: tasks = ["A","A","A", "B","B","B"], n = 3
+ Output: 10
+ Explanation: A possible sequence is: A -> B -> idle -> idle -> A -> B -> idle -> idle -> A -> B.
+ There are only two types of tasks, A and B, which need to be separated by 3 intervals. This leads to idling twice between repetitions of these tasks.

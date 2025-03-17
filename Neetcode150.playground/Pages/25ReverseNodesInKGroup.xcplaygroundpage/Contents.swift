@@ -28,6 +28,16 @@ public class ListNode {
 }
 
 
+//func getNextGroupFirst(curr: ListNode?, k: Int) -> ListNode? {
+//    var k = k
+//    var curr = curr
+//    while curr != nil && k > 0 {
+//        curr = curr!.next
+//        k -= 1
+//    }
+//    return curr
+//}
+
 func getKth(curr: ListNode?, k: Int) -> ListNode? {
     var k = k
     var curr = curr
@@ -39,23 +49,58 @@ func getKth(curr: ListNode?, k: Int) -> ListNode? {
 }
 
 func reverseKGroup(_ head: ListNode?, _ k: Int) -> ListNode? {
+//    let dummy = ListNode(0, head)
+//    var groupFirst = dummy
+//    while let kth = getNextGroupFirst(curr: groupFirst, k: k) {
+//        let nextGroupFirst = kth.next
+//        // reverse linked list
+//        var prev = kth.next
+//        var curr = groupFirst.next
+//        while curr !== nextGroupFirst {
+//            let next = curr?.next
+//            curr?.next = prev
+//            prev = curr
+//            curr = next
+//        }
+//        let next = groupFirst.next!
+//        groupFirst.next = kth
+//        groupFirst = next
+//    }
+//    return dummy.next
+
     let dummy = ListNode(0, head)
     var groupPrev = dummy
+
+    print("1: ", groupPrev.val)
     while let kth = getKth(curr: groupPrev, k: k) {
+        print("2: ", groupPrev.val)
         let groupNext = kth.next
+
         // reverse group
         var prev = kth.next
         var curr = groupPrev.next
+        
         while curr !== groupNext {
             let next = curr?.next
             curr?.next = prev
             prev = curr
             curr = next
         }
+
+        print("3: ", groupPrev.val)
         let next = groupPrev.next!
         groupPrev.next = kth
         groupPrev = next
+        print("4: ", groupPrev.val)
     }
     return dummy.next
 }
 
+let five = ListNode(5)
+let four = ListNode(4, five)
+let three = ListNode(3, four)
+let two = ListNode(2, three)
+let one = ListNode(1, two)
+
+let result = reverseKGroup(one, 2)
+print(result!.val)
