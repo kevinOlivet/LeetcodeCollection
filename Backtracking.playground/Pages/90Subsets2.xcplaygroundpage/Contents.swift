@@ -20,19 +20,13 @@ import Foundation
  */
 
 func subsetsWithDup(_ nums: [Int]) -> [[Int]] {
-
+    let nums = nums.sorted()
     var result = [[Int]]()
-
     var current = [Int]()
-    var used = Set<[Int]>()
 
     func backtrack(i: Int) {
         if i >= nums.count {
-            let currentSorted = current.sorted()
-            if !used.contains(currentSorted) {
-                result.append(currentSorted)
-                used.insert(currentSorted)
-            }
+            result.append(current)
             return
         }
 
@@ -40,6 +34,10 @@ func subsetsWithDup(_ nums: [Int]) -> [[Int]] {
         backtrack(i: i + 1)
 
         current.popLast()
+        var i = i
+        while i + 1 < nums.count && nums[i] == nums[i + 1] {
+            i += 1
+        }
         backtrack(i: i + 1)
     }
 

@@ -31,31 +31,26 @@ import Foundation
 
 func combinationSum2(_ candidates: [Int], _ target: Int) -> [[Int]] {
     let candidates = candidates.sorted()
-
     var result = [[Int]]()
-
-    func backtrack(position: Int, current: [Int], total: Int) {
+    func backtrack(pos: Int, cur: [Int], total: Int) {
         if total == target {
-            result.append(current)
+            result.append(cur)
             return
         }
-
-        if position >= candidates.count || total > target { return }
-
+        if total > target { return }
         var prev = -1
-        for i in position..<candidates.count {
+        for i in pos..<candidates.count {
             if candidates[i] == prev {
                 continue
             }
-            var tempCurrent = current
-            tempCurrent.append(candidates[i])
-            backtrack(position: i + 1, current: tempCurrent, total: total + candidates[i])
-            tempCurrent.popLast()
+            var cur = cur
+            cur.append(candidates[i])
+            backtrack(pos: i + 1, cur: cur, total: total + candidates[i])
+            cur.popLast()
             prev = candidates[i]
         }
     }
-
-    backtrack(position: 0, current: [], total: 0)
+    backtrack(pos: 0, cur: [], total: 0)
     return result
 }
 

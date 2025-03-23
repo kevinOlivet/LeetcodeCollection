@@ -22,28 +22,28 @@ import Foundation
  */
 
 func letterCombinations(_ digits: String) -> [String] {
-    let arrayDigits = Array(digits)
-    let dict: [Character: String] = ["1": "", "2": "abc", "3":"def", "4":"ghi", "5":"jkl", "6":"mno", "7":"pqrs", "8":"tuv", "9":"wxyz", "0": ""]
-
+    if digits.isEmpty { return [] }
+    let digits = Array(digits)
     var result = [String]()
+    let dict: [Character: String] = ["2": "abc",
+                                     "3":"def",
+                                     "4":"ghi",
+                                     "5":"jkl",
+                                     "6":"mno",
+                                     "7":"pqrs",
+                                     "8":"tuv",
+                                     "9":"wxyz"]
 
-    func backtrack(i: Int, curStr: String) {
-        if curStr.count == arrayDigits.count {
-            result.append(curStr)
+    func backtrack(i: Int, current: String) {
+        if i == digits.count {
+            result.append(current)
             return
         }
-
-        for c in dict[arrayDigits[i]]! {
-            let arrayC = Array(arrayLiteral: c)
-            backtrack(i: i + 1, curStr: curStr + arrayC)
-
+        for c in dict[digits[i], default: ""] {
+            backtrack(i: i + 1, current: current + String(c))
         }
     }
-
-    if !arrayDigits.isEmpty {
-        backtrack(i: 0, curStr: "")
-    }
-
+    backtrack(i: 0, current: "")
     return result
 }
 

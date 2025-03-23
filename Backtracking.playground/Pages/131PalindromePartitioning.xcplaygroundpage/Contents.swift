@@ -20,27 +20,24 @@ import Foundation
  */
 
 func partition(_ s: String) -> [[String]] {
-    let arrayS = Array(s)
-
+    let s = Array(s)
     var result = [[String]]()
-    var subset = [String]()
+    var current = [String]()
 
     func backtrack(i: Int) {
-        if i >= s.count {
-            result.append(subset)
+        if i == s.count {
+            result.append(current)
             return
         }
-
         for j in i..<s.count {
             if isPalindrome(s: s, l: i, r: j) {
-                let newPart = String(arrayS[i...j])
-                subset.append(newPart)
+                let newPart = String(s[i...j])
+                current.append(newPart)
                 backtrack(i: j + 1)
-                subset.popLast()
+                current.popLast()
             }
         }
     }
-
     backtrack(i: 0)
     return result
 }
