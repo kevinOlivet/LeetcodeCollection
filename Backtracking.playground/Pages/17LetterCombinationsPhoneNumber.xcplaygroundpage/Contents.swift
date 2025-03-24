@@ -25,6 +25,7 @@ func letterCombinations(_ digits: String) -> [String] {
     if digits.isEmpty { return [] }
     let digits = Array(digits)
     var result = [String]()
+    var current = ""
     let dict: [Character: String] = ["2": "abc",
                                      "3":"def",
                                      "4":"ghi",
@@ -34,16 +35,18 @@ func letterCombinations(_ digits: String) -> [String] {
                                      "8":"tuv",
                                      "9":"wxyz"]
 
-    func backtrack(i: Int, current: String) {
+    func backtrack(i: Int) {
         if i == digits.count {
             result.append(current)
             return
         }
         for c in dict[digits[i], default: ""] {
-            backtrack(i: i + 1, current: current + String(c))
+            current.append(c)
+            backtrack(i: i + 1)
+            current.popLast()
         }
     }
-    backtrack(i: 0, current: "")
+    backtrack(i: 0)
     return result
 }
 
