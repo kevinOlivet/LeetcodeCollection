@@ -61,7 +61,7 @@ class Twitter {
         follows[followerId, default: []].insert(followeeId)
     }
     func unfollow(_ followerId: Int, _ followeeId: Int) {
-        follows[followeeId, default: []].remove(followeeId)
+        follows[followerId, default: []].remove(followeeId)
     }
 }
 

@@ -565,3 +565,65 @@ Algorithms not covered elsewhere
  [0,-1],
  [1,2]
  ]
+
+ ## 178. Graph Valid Tree
+ Leetcode requires subscription for it so the link is to Neetcode page
+ https://neetcode.io/problems/valid-tree
+
+ Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.
+
+ Example 1:
+ Input:
+ n = 5
+ edges = [[0, 1], [0, 2], [0, 3], [1, 4]]
+ Output:
+ true
+
+ Example 2:
+ Input:
+ n = 5
+ edges = [[0, 1], [1, 2], [2, 3], [1, 3], [1, 4]]
+ Output:
+ false
+
+ Note:
+ You can assume that no duplicate edges will appear in edges. Since all edges are undirected, [0, 1] is the same as [1, 0] and thus will not appear together in edges.
+
+ ## 323. Number of Connected Components in an Undirected Graph
+ Leetcode requires subscription for this so link is to NeetCode
+ https://neetcode.io/problems/count-connected-components
+
+ There is an undirected graph with n nodes. There is also an edges array, where edges[i] = [a, b] means that there is an edge between node a and node b in the graph.
+
+ The nodes are numbered from 0 to n - 1.
+
+ Return the total number of connected components in that graph.
+
+ Example 1:
+ Input:
+ n=3
+ edges=[[0,1], [0,2]]
+ Output: 1
+
+ Example 2:
+ Input:
+ n=6
+ edges=[[0,1], [1,2], [2,3], [4,5]]
+ Output: 2
+
+ ## 684. Redundant Connection
+ https://leetcode.com/problems/redundant-connection/description/
+
+ In this problem, a tree is an undirected graph that is connected and has no cycles.
+
+ You are given a graph that started as a tree with n nodes labeled from 1 to n, with one additional edge added. The added edge has two different vertices chosen from 1 to n, and was not an edge that already existed. The graph is represented as an array edges of length n where edges[i] = [ai, bi] indicates that there is an edge between nodes ai and bi in the graph.
+
+ Return an edge that can be removed so that the resulting graph is a tree of n nodes. If there are multiple answers, return the answer that occurs last in the input.
+
+ Example 1:
+ Input: edges = [[1,2],[1,3],[2,3]]
+ Output: [2,3]
+
+ Example 2:
+ Input: edges = [[1,2],[2,3],[3,4],[1,4],[1,5]]
+ Output: [1,4]

@@ -56,39 +56,32 @@ import Foundation
 
 func wallsAndGates(_ rooms: [[Int]]) -> [[Int]] {
     var rooms = rooms
-    var set = Set<[Int]>()
     var q = [(r: Int, c: Int)]()
-
-    func addRoom(r: Int, c: Int) {
-        if (r < 0 || r == rooms.count) ||
-            (c < 0 || c == rooms[0].count) ||
-            set.contains([r, c]) || rooms[r][c] == -1 {
-            return
-        }
-        set.insert([r, c])
-        q.append((r, c))
-    }
-
     for r in 0..<rooms.count {
         for c in 0..<rooms[0].count {
             if rooms[r][c] == 0 {
                 q.append((r, c))
-                set.insert([r, c])
             }
         }
     }
-
-    var dist = 0
+    var distance = 0
+    let directions = [(1,0), (-1, 0), (0, 1), (0, -1)]
     while !q.isEmpty {
+        distance += 1
         for i in 0..<q.count {
             let (r, c) = q.removeFirst()
-            rooms[r][c] = dist
-            addRoom(r: r + 1, c: c)
-            addRoom(r: r - 1, c: c)
-            addRoom(r: r, c: c + 1)
-            addRoom(r: r, c: c - 1)
+            for (dr, dc) in directions {
+                let row = dr + r
+                let col = dc + c
+                if (row < 0 || row == rooms.count) ||
+                    (col < 0 || col == rooms[0].count) ||
+                    rooms[row][col] != 2147483647 {
+                    continue
+                }
+                rooms[row][col] = distance
+                q.append((row, col))
+            }
         }
-        dist += 1
     }
     return rooms
 }
