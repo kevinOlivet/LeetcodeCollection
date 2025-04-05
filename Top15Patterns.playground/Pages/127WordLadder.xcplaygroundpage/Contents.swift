@@ -24,8 +24,7 @@ import Foundation
 
 func ladderLength(_ beginWord: String, _ endWord: String, _ wordList: [String]) -> Int {
     if !wordList.contains(endWord) { return 0 }
-    var wordList = wordList
-    wordList.append(beginWord)
+    let wordList = wordList + [beginWord]
 
     var adj = [String: [String]]()
 
@@ -36,7 +35,7 @@ func ladderLength(_ beginWord: String, _ endWord: String, _ wordList: [String]) 
             adj[pattern, default: []].append(String(word))
         }
     }
-    var visit: Set<String> = [beginWord]
+    var visited: Set<String> = [beginWord]
     var queue = [beginWord]
     var result = 1
 
@@ -49,11 +48,10 @@ func ladderLength(_ beginWord: String, _ endWord: String, _ wordList: [String]) 
             let wordArray = Array(word)
             for j in 0..<wordArray.count {
                 let pattern: String = wordArray[..<j] + "*" + wordArray[(j + 1)...]
-                for neiWord in adj[pattern] ?? [] {
-                    if !visit.contains(neiWord) {
-                        visit.insert(neiWord)
-                        queue.append(neiWord)
-                    }
+                for nei in adj[pattern] ?? [] {
+                    if visited.contains(nei) { continue }
+                    visited.insert(nei)
+                    queue.append(nei)
                 }
             }
         }

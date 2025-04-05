@@ -23,11 +23,13 @@ import Foundation
 
 func findItinerary(_ tickets: [[String]]) -> [String] {
 
-    let sortedTickets = tickets.sorted { ($0.first!, $0.last!) < ($1.first!, $1.last!) }
+    let tickets = tickets.sorted { ($0[0], $0[1]) < ($1[0], $1[1]) }
 
     var adj = [String: [String]]()
-    for ticket in sortedTickets {
-        adj[ticket[0]] == nil ? adj[ticket[0]] = [ticket[1]] : adj[ticket[0]]?.append(ticket[1])
+    for tic in tickets {
+        let src = tic[0]
+        let dst = tic[1]
+        adj[src, default: []].append(dst)
     }
 
     var result = ["JFK"]

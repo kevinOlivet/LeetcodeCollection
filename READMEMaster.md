@@ -5173,3 +5173,102 @@ Algorithms of the Neetcode 150 not covered elsewhere
  Example 2:
  Input: edges = [[1,2],[2,3],[3,4],[1,4],[1,5]]
  Output: [1,4]
+
+ ## 743. Network Delay Time
+ https://leetcode.com/problems/network-delay-time/description/
+ NOTE: Doesn't use neetcode Dijkstra's Algorithm,
+    Uses Bellman-Ford Algorithm
+
+ You are given a network of n nodes, labeled from 1 to n. You are also given times, a list of travel times as directed edges times[i] = (ui, vi, wi), where ui is the source node, vi is the target node, and wi is the time it takes for a signal to travel from source to target.
+
+ We will send a signal from a given node k. Return the minimum time it takes for all the n nodes to receive the signal. If it is impossible for all the n nodes to receive the signal, return -1.
+
+ Example 1:
+ Input: times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2
+ Output: 2
+
+ Example 2:
+ Input: times = [[1,2,1]], n = 2, k = 1
+ Output: 1
+
+ Example 3:
+ Input: times = [[1,2,1]], n = 2, k = 2
+ Output: -1
+
+ ## 1584. Min Cost to Connect All Points
+ https://leetcode.com/problems/min-cost-to-connect-all-points/description/
+ NOTE: Uses a modified Prim's algorithm
+ MST = Minimum Spanning Tree
+
+ You are given an array points representing integer coordinates of some points on a 2D-plane, where points[i] = [xi, yi].
+
+ The cost of connecting two points [xi, yi] and [xj, yj] is the manhattan distance between them: |xi - xj| + |yi - yj|, where |val| denotes the absolute value of val.
+
+ Return the minimum cost to make all points connected. All points are connected if there is exactly one simple path between any two points.
+
+ Example 1:
+ Input: points = [[0,0],[2,2],[3,10],[5,2],[7,0]]
+ Output: 20
+ Explanation:
+ We can connect the points as shown above to get the minimum cost of 20.
+ Notice that there is a unique path between every pair of points.
+
+ Example 2:
+ Input: points = [[3,12],[-2,5],[-4,1]]
+ Output: 18
+
+ ## 778. Swim in Rising Water
+ https://leetcode.com/problems/swim-in-rising-water/description/
+
+ You are given an n x n integer matrix grid where each value grid[i][j] represents the elevation at that point (i, j).
+
+ The rain starts to fall. At time t, the depth of the water everywhere is t. You can swim from a square to another 4-directionally adjacent square if and only if the elevation of both squares individually are at most t. You can swim infinite distances in zero time. Of course, you must stay within the boundaries of the grid during your swim.
+
+ Return the least time until you can reach the bottom right square (n - 1, n - 1) if you start at the top left square (0, 0).
+
+ Example 1:
+ Input: grid = [[0,2],[1,3]]
+ Output: 3
+ Explanation:
+ At time 0, you are in grid location (0, 0).
+ You cannot go anywhere else because 4-directionally adjacent neighbors have a higher elevation than t = 0.
+ You cannot reach point (1, 1) until time 3.
+ When the depth of water is 3, we can swim anywhere inside the grid.
+
+ Example 2:
+ Input: grid = [[0,1,2,3,4],[24,23,22,21,5],[12,13,14,15,16],[11,17,18,19,20],[10,9,8,7,6]]
+ Output: 16
+ Explanation: The final route is shown.
+ We need to wait until time 16 so that (0, 0) and (4, 4) are connected.
+
+ ## 269. Alien Dictionary
+ https://neetcode.io/problems/foreign-dictionary
+ NOTE: Leetcode requires subscription so this links to Neetcode website
+ Topological Sort
+
+ There is a foreign language which uses the latin alphabet, but the order among letters is not "a", "b", "c" ... "z" as in English.
+
+ You receive a list of non-empty strings words from the dictionary, where the words are sorted lexicographically based on the rules of this new language.
+
+ Derive the order of letters in this language. If the order is invalid, return an empty string. If there are multiple valid order of letters, return any of them.
+
+ A string a is lexicographically smaller than a string b if either of the following is true:
+
+ The first letter where they differ is smaller in a than in b.
+ There is no index i such that a[i] != b[i] and a.length < b.length.
+
+ Example 1:
+ Input: ["z","o"]
+ Output: "zo"
+ Explanation:
+ From "z" and "o", we know 'z' < 'o', so return "zo".
+
+ Example 2:
+ Input: ["hrn","hrf","er","enn","rfnn"]
+ Output: "hernf"
+ Explanation:
+ from "hrn" and "hrf", we know 'n' < 'f'
+ from "hrf" and "er", we know 'h' < 'e'
+ from "er" and "enn", we know get 'r' < 'n'
+ from "enn" and "rfnn" we know 'e'<'r'
+ so one possibile solution is "hernf"
