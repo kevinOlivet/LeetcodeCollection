@@ -755,3 +755,51 @@ Algorithms not covered elsewhere
  Explanation:
  The graph is shown above.
  The optimal path with no stops from city 0 to 2 is marked in red and has cost 500.
+
+ ## 115. Distinct Subsequences
+ https://leetcode.com/problems/distinct-subsequences/description/
+
+ Given two strings s and t, return the number of distinct subsequences of s which equals t.
+
+ The test cases are generated so that the answer fits on a 32-bit signed integer.
+
+ Example 1:
+ Input: s = "rabbbit", t = "rabbit"
+ Output: 3
+ Explanation:
+ As shown below, there are 3 ways you can generate "rabbit" from s.
+ rabbbit
+ rabbbit
+ rabbbit
+
+ Example 2:
+ Input: s = "babgbag", t = "bag"
+ Output: 5
+ Explanation:
+ As shown below, there are 5 ways you can generate "bag" from s.
+ babgbag
+ babgbag
+ babgbag
+ babgbag
+ babgbag
+
+ ## 329. Longest Increasing Path in a Matrix
+ https://leetcode.com/problems/longest-increasing-path-in-a-matrix/description/
+
+ Given an m x n integers matrix, return the length of the longest increasing path in matrix.
+
+ From each cell, you can either move in four directions: left, right, up, or down. You may not move diagonally or move outside the boundary (i.e., wrap-around is not allowed).
+
+ Example 1:
+ Input: matrix = [[9,9,4],[6,6,8],[2,1,1]]
+ Output: 4
+ Explanation: The longest increasing path is [1, 2, 6, 9].
+
+ Example 2:
+ Input: matrix = [[3,4,5],[3,2,6],[2,2,1]]
+ Output: 4
+ Explanation: The longest increasing path is [3, 4, 5, 6]. Moving diagonally is not allowed.
+
+ Example 3:
+ Input: matrix = [[1]]
+ Output: 1

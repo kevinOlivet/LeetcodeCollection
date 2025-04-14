@@ -71,9 +71,7 @@ func reverseKGroup(_ head: ListNode?, _ k: Int) -> ListNode? {
     let dummy = ListNode(0, head)
     var groupPrev = dummy
 
-    print("1: ", groupPrev.val)
     while let kth = getKth(curr: groupPrev, k: k) {
-        print("2: ", groupPrev.val)
         let groupNext = kth.next
 
         // reverse group
@@ -87,11 +85,9 @@ func reverseKGroup(_ head: ListNode?, _ k: Int) -> ListNode? {
             curr = next
         }
 
-        print("3: ", groupPrev.val)
         let next = groupPrev.next!
         groupPrev.next = kth
         groupPrev = next
-        print("4: ", groupPrev.val)
     }
     return dummy.next
 }

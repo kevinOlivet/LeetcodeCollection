@@ -40,20 +40,24 @@ print("---- Bottom Up Dynamic Programming solution_______")
 func isInterleave(_ s1: String, _ s2: String, _ s3: String) -> Bool {
     if s1.count + s2.count != s3.count { return false }
 
-    var s1 = Array(s1)
-    var s2 = Array(s2)
-    var s3 = Array(s3)
+    let s1 = Array(s1)
+    let s2 = Array(s2)
+    let s3 = Array(s3)
 
-    var dp = Array(repeating: Array(repeating: false, count: s2.count + 1), count: s1.count + 1)
+    var dp = Array(repeating: Array(repeating: false, count: s2.count + 1),
+                   count: s1.count + 1)
     dp[s1.count][s2.count] = true
 
-    for i in (0...s1.count).reversed() {
-        for j in (0...s2.count).reversed() {
-            if i < s1.count && s1[i] == s3[i + j] && dp[i + 1][j] {
-                dp[i][j] = true
+    for r in (0...s1.count).reversed() {
+        for c in (0...s2.count).reversed() {
+            // Add r and c to get s3 index
+            // If use r then check down is true
+            if r < s1.count && s1[r] == s3[r + c] && dp[r + 1][c] {
+                dp[r][c] = true
             }
-            if j < s2.count && s2[j] == s3[i + j] && dp[i][j + 1] {
-                dp[i][j] = true
+            // If use c then check right is true
+            if c < s2.count && s2[c] == s3[r + c] && dp[r][c + 1] {
+                dp[r][c] = true
             }
         }
     }
@@ -74,6 +78,7 @@ print("---- Recursive solution_______")
 
 // Recursive solution
 func isInterleave2(_ s1: String, _ s2: String, _ s3: String) -> Bool {
+    if s1.count + s2.count != s3.count { return false }
     var dp = [[Int]: Bool]()
     let s1 = Array(s1)
     let s2 = Array(s2)
@@ -83,8 +88,8 @@ func isInterleave2(_ s1: String, _ s2: String, _ s3: String) -> Bool {
         if i == s1.count && j == s2.count {
             return true
         }
-        if dp.keys.contains([i, j]) {
-            return dp[[i,j]]!
+        if let found = dp[[i,j]] {
+            return found
         }
 
         if i < s1.count && s1[i] == s3[i + j] && dfs(i: i + 1, j: j) {

@@ -29,25 +29,25 @@ import Foundation
 func findTargetSumWays(_ nums: [Int], _ target: Int) -> Int {
     var dp = [[Int]: Int]()
 
-    func backtrack(index: Int, total: Int) -> Int {
+    // index, total
+    func backtrack(i: Int, t: Int) -> Int {
         // Base case
-        if index == nums.count {
-            return total == target ? 1 : 0
+        if i == nums.count {
+            return t == target ? 1 : 0
         }
 
         // found in dp dict so no need to look again (caching)
-        if dp.keys.contains([index, total]) {
-            return dp[[index, total]]!
+        if let found = dp[[i, t]] {
+            return found
         }
 
         // recursion
-        dp[[index, total]] = (backtrack(index: index + 1, total: total + nums[index])) +
-                             (backtrack(index: index + 1, total: total - nums[index]))
-//        print(dp)
-        return dp[[index, total]]!
+        dp[[i, t]] = backtrack(i: i + 1, t: t + nums[i]) +
+                     backtrack(i: i + 1, t: t - nums[i])
+        return dp[[i, t]]!
     }
 
-    return backtrack(index: 0, total: 0)
+    return backtrack(i: 0, t: 0)
 }
 
 let result = findTargetSumWays([1,1,1,1,1], 3) // 5
