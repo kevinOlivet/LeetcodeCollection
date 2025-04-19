@@ -26,26 +26,30 @@ var greeting = "Hello, playground"
 
 func longestIncreasingPath(_ matrix: [[Int]]) -> Int {
     var dp = [[Int]: Int]()
-
     func dfs(_ r: Int, _ c: Int, _ prevVal: Int) -> Int {
         if (r < 0 || r == matrix.count) ||
             (c < 0 || c == matrix[0].count) ||
-            matrix[r][c] <= prevVal { return 0 }
-        if let found = dp[[r, c]] { return found }
-        var result = 1
-        result = max(result, 1 + dfs(r + 1, c, matrix[r][c]))
-        result = max(result, 1 + dfs(r - 1, c, matrix[r][c]))
-        result = max(result, 1 + dfs(r, c + 1, matrix[r][c]))
-        result = max(result, 1 + dfs(r, c - 1, matrix[r][c]))
-        dp[[r, c]] = result
-        return result
+            matrix[r][c] <= prevVal {
+                return 0
+        }
+        if let found = dp[[r,c]] { return found }
+
+        let cur = matrix[r][c]
+        let up = dfs(r - 1, c, cur)
+        let down = dfs(r + 1, c, cur)
+        let left = dfs(r, c - 1, cur)
+        let right = dfs(r, c + 1, cur)
+
+        dp[[r,c]] = 1 + max(up, down, left, right)
+        return dp[[r,c]]!
     }
+    var result = 0
     for r in 0..<matrix.count {
         for c in 0..<matrix[0].count {
-            dfs(r,c, -1)
+            result = max(result, dfs(r, c, -Int.max))
         }
     }
-    return dp.values.max()!
+    return result
 }
 
 let result = longestIncreasingPath([[9,9,4],[6,6,8],[2,1,1]]) // 4

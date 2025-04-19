@@ -22,22 +22,38 @@ import Foundation
  Output: 2
  */
 
-func jump(_ nums: [Int]) -> Int {
-    var dp = Array(repeating: 10000, count: nums.count)
-    dp[nums.count - 1] = 0
+//func jump(_ nums: [Int]) -> Int {
+//    var dp = Array(repeating: 10000, count: nums.count)
+//    dp[nums.count - 1] = 0
+//
+//    for i in (0..<nums.count-1).reversed() {
+//        for j in (0...nums[i]).reversed() {
+//            if i + j >= nums.count - 1 {
+//                dp[i] = 0
+//                break
+//            }
+//            dp[i] = min(dp[i], dp[i+j])
+//        }
+//        dp[i] += 1
+//    }
+//    return dp[0]
+//}
 
-    for i in (0..<nums.count-1).reversed() {
-        print(dp)
-        for j in (0...nums[i]).reversed() {
-            if i + j >= nums.count - 1 {
-                dp[i] = 0
-                break
-            }
-            dp[i] = min(dp[i], dp[i+j])
+// Greedy most efficient
+func jump(_ nums: [Int]) -> Int {
+    var result = 0
+    var l = 0
+    var r = 0
+    while r < nums.count - 1 {
+        var farthest = 0
+        for i in l...r {
+            farthest = max(farthest, i + nums[i])
         }
-        dp[i] += 1
+        l = r + 1
+        r = farthest
+        result += 1
     }
-    return dp[0]
+    return result
 }
 
 let result = jump([2,3,1,1,4]) // 2

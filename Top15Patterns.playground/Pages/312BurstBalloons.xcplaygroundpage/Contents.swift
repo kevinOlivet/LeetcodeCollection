@@ -24,6 +24,7 @@ import Foundation
  */
 
 func maxCoins(_ nums: [Int]) -> Int {
+
     let nums = [1] + nums + [1] // Add buffers
     var dp = [[Int]: Int]()
 
@@ -35,15 +36,15 @@ func maxCoins(_ nums: [Int]) -> Int {
             return found
         }
 
-        dp[[l, r]] = 0
-        for i in l..<r+1 {
+        for i in l...r {
             var coins = nums[l - 1] * nums[i] * nums[r + 1]
-            coins += dfs(l, i - 1) + dfs(i + 1, r)
+            // left moves 1 inward, right moves 1 inward
+            coins += dfs(i + 1, r) + dfs(l, i - 1)
             dp[[l, r]] = max(dp[[l, r]] ?? 0, coins)
         }
-        return dp[[l, r]] ?? 0
+        return dp[[l, r]]!
     }
-
+    // To account for buffers
     return dfs(1, nums.count - 2)
 }
 

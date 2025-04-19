@@ -3889,7 +3889,7 @@ Various Leetcode playgrounds: Backtracking, Stacks, DynamicProgramming, Blind75
  Output: false
  Explanation: You will always arrive at index 3 no matter what. Its maximum jump length is 0, which makes it impossible to reach the last index.
 
-## 45. Jump Game II
+## 45. Jump Game II, Jump Game 2
  https://leetcode.com/problems/jump-game-ii/description/
 
  You are given a 0-indexed array of integers nums of length n. You are initially positioned at nums[0].
@@ -5349,3 +5349,32 @@ Algorithms of the Neetcode 150 not covered elsewhere
  Example 3:
  Input: matrix = [[1]]
  Output: 1
+
+ ## 72. Edit Distance
+ https://leetcode.com/problems/edit-distance/description/
+
+ Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2.
+
+ You have the following three operations permitted on a word:
+
+ Insert a character
+ Delete a character
+ Replace a character
+
+ Example 1:
+ Input: word1 = "horse", word2 = "ros"
+ Output: 3
+ Explanation:
+ horse -> rorse (replace 'h' with 'r')
+ rorse -> rose (remove 'r')
+ rose -> ros (remove 'e')
+
+ Example 2:
+ Input: word1 = "intention", word2 = "execution"
+ Output: 5
+ Explanation:
+ intention -> inention (remove 't')
+ inention -> enention (replace 'i' with 'e')
+ enention -> exention (replace 'n' with 'x')
+ exention -> exection (replace 'n' with 'c')
+ exection -> execution (insert 'u')

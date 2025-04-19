@@ -30,34 +30,28 @@ import Foundation
 func isMatch(_ s: String, _ p: String) -> Bool {
     var s = Array(s)
     var p = Array(p)
-
-    var cache = [[Int]: Bool]()
-
+    var dp = [[Int]: Bool]()
     func dfs(i: Int, j: Int) -> Bool {
-
-        if cache.keys.contains([i,j]) {
-            return cache[[i,j]]!
+        if let found = dp[[i,j]] {
+            return found
         }
-        if i >= s.count && j >= p.count {
+        if i == s.count && j == p.count {
             return true
         }
-        if j >= p.count {
+        if j == p.count {
             return false
         }
-
         let match = i < s.count && (s[i] == p[j] || p[j] == ".")
-
-        if (j + 1) < p.count && p[j + 1] == "*" {
-            cache[[i,j]] = dfs(i: i, j: j + 2) || (match && dfs(i: i + 1, j: j))
-            return cache[[i,j]]!
+        if j + 1 < p.count && p[j + 1] == "*" {
+            dp[[i,j]] = dfs(i: i, j: j + 2) || // Don't use *
+                        match && dfs(i: i + 1, j: j) // Use *
+            return dp[[i,j]]!
         }
-
         if match {
-            cache[[i,j]] = dfs(i: i + 1, j: j + 1)
-            return cache[[i,j]]!
+            dp[[i,j]] = dfs(i: i + 1, j: j + 1)
+            return dp[[i,j]]!
         }
-
-        cache[[i,j]] = false
+        dp[[i,j]] = false
         return false
     }
 
