@@ -23,7 +23,7 @@ import Foundation
  Output: -1
  */
 
-func networkDelayTime(times: [[Int]], n: Int, k: Int) -> Int {
+func networkDelayTime(_ times: [[Int]], _ n: Int, _ k: Int) -> Int {
     var travelTime = Array(repeating: Int.max, count: n + 1)
     travelTime[k] = 0
 
