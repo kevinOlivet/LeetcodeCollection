@@ -23,45 +23,18 @@ import Foundation
  */
 
 func myPow(_ x: Double, _ n: Int) -> Double {
-    // ALMOST WORKS! BUT TIMES OUT
-//    func myPowPow(x: Double, n: Int, originalX: Double) -> Double {
-//        if n == 0 {
-//            return 1
-//        } else if n == 1 {
-//            return x
-//        } else if n == -1 {
-//            return -x
-//        } else if n > 1 {
-//            return myPowPow(x: x * originalX, n: n - 1, originalX: originalX)
-//        } else {
-//            return myPowPow(x: x * originalX, n: n + 1, originalX: originalX)
-//        }
-//    }
-//    if n < 0 {
-//        return 1/abs(myPowPow(x: x , n: n, originalX: x))
-//    } else {
-//        return myPowPow(x: x , n: n, originalX: x)
-//    }
 
     func helper(x: Double, n: Int) -> Double {
         if x == 0.0 { return 0 }
         if n == 0 { return 1 }
 
         var result = helper(x: x, n: n/2)
-        result = result * result
-        if n % 2 != 0 {
-            return x * result
-        } else {
-            return result
-        }
+        result *= result
+        return n % 2 == 0 ? result : x * result
     }
 
-    let finalResult = helper(x: x, n: abs(n))
-    if n >= 0 {
-        return finalResult
-    } else {
-        return 1 / finalResult
-    }
+    let result = helper(x: x, n: abs(n))
+    return n >= 0 ? result : 1 / result
 }
 
 let result = myPow(2.0, 10) // 1024.00000

@@ -5458,3 +5458,172 @@ Algorithms of the Neetcode 150 not covered elsewhere
  - Choose the first and third triplets [[2,5,3],[2,3,4],[1,2,5],[5,2,3]]. Update the third triplet to be [max(2,1), max(5,2), max(3,5)] = [2,5,5]. triplets = [[2,5,3],[2,3,4],[2,5,5],[5,2,3]].
  - Choose the third and fourth triplets [[2,5,3],[2,3,4],[2,5,5],[5,2,3]]. Update the fourth triplet to be [max(2,5), max(5,2), max(5,3)] = [5,5,5]. triplets = [[2,5,3],[2,3,4],[2,5,5],[5,5,5]].
  The target triplet [5,5,5] is now an element of triplets.
+
+ ## 763. Partition Labels
+ https://leetcode.com/problems/partition-labels/description/
+
+ You are given a string s. We want to partition the string into as many parts as possible so that each letter appears in at most one part. For example, the string "ababcc" can be partitioned into ["abab", "cc"], but partitions such as ["aba", "bcc"] or ["ab", "ab", "cc"] are invalid.
+
+ Note that the partition is done so that after concatenating all the parts in order, the resultant string should be s.
+
+ Return a list of integers representing the size of these parts.
+
+ Example 1:
+ Input: s = "ababcbacadefegdehijhklij"
+ Output: [9,7,8]
+ Explanation:
+ The partition is "ababcbaca", "defegde", "hijhklij".
+ This is a partition so that each letter appears in at most one part.
+ A partition like "ababcbacadefegde", "hijhklij" is incorrect, because it splits s into less parts.
+
+ Example 2:
+ Input: s = "eccbbbbdec"
+ Output: [10]
+
+ ## 678. Valid Parenthesis String
+ https://leetcode.com/problems/valid-parenthesis-string/description/
+
+ Given a string s containing only three types of characters: '(', ')' and '*', return true if s is valid.
+
+ The following rules define a valid string:
+
+ Any left parenthesis '(' must have a corresponding right parenthesis ')'.
+ Any right parenthesis ')' must have a corresponding left parenthesis '('.
+ Left parenthesis '(' must go before the corresponding right parenthesis ')'.
+ '*' could be treated as a single right parenthesis ')' or a single left parenthesis '(' or an empty string "".
+
+ Example 1:
+ Input: s = "()"
+ Output: true
+
+ Example 2:
+ Input: s = "(*)"
+ Output: true
+
+ Example 3:
+ Input: s = "(*))"
+ Output: true
+
+ ## 1851. Minimum Interval to Include Each Query
+ https://leetcode.com/problems/minimum-interval-to-include-each-query/description/
+
+ You are given a 2D integer array intervals, where intervals[i] = [lefti, righti] describes the ith interval starting at lefti and ending at righti (inclusive). The size of an interval is defined as the number of integers it contains, or more formally righti - lefti + 1.
+
+ You are also given an integer array queries. The answer to the jth query is the size of the smallest interval i such that lefti <= queries[j] <= righti. If no such interval exists, the answer is -1.
+
+ Return an array containing the answers to the queries.
+
+ Example 1:
+ Input: intervals = [[1,4],[2,4],[3,6],[4,4]], queries = [2,3,4,5]
+ Output: [3,3,1,4]
+ Explanation: The queries are processed as follows:
+ - Query = 2: The interval [2,4] is the smallest interval containing 2. The answer is 4 - 2 + 1 = 3.
+ - Query = 3: The interval [2,4] is the smallest interval containing 3. The answer is 4 - 2 + 1 = 3.
+ - Query = 4: The interval [4,4] is the smallest interval containing 4. The answer is 4 - 4 + 1 = 1.
+ - Query = 5: The interval [3,6] is the smallest interval containing 5. The answer is 6 - 3 + 1 = 4.
+
+ Example 2:
+ Input: intervals = [[2,3],[2,5],[1,8],[20,25]], queries = [2,19,5,22]
+ Output: [2,-1,4,6]
+ Explanation: The queries are processed as follows:
+ - Query = 2: The interval [2,3] is the smallest interval containing 2. The answer is 3 - 2 + 1 = 2.
+ - Query = 19: None of the intervals contain 19. The answer is -1.
+ - Query = 5: The interval [2,5] is the smallest interval containing 5. The answer is 5 - 2 + 1 = 4.
+ - Query = 22: The interval [20,25] is the smallest interval containing 22. The answer is 25 - 20 + 1 = 6.
+
+ ## 66. Plus One
+ https://leetcode.com/problems/plus-one/description/
+
+ You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
+
+ Increment the large integer by one and return the resulting array of digits.
+
+ Example 1:
+ Input: digits = [1,2,3]
+ Output: [1,2,4]
+ Explanation: The array represents the integer 123.
+ Incrementing by one gives 123 + 1 = 124.
+ Thus, the result should be [1,2,4].
+
+ Example 2:
+ Input: digits = [4,3,2,1]
+ Output: [4,3,2,2]
+ Explanation: The array represents the integer 4321.
+ Incrementing by one gives 4321 + 1 = 4322.
+ Thus, the result should be [4,3,2,2].
+
+ Example 3:
+ Input: digits = [9]
+ Output: [1,0]
+ Explanation: The array represents the integer 9.
+ Incrementing by one gives 9 + 1 = 10.
+ Thus, the result should be [1,0].
+
+ ## 43. Multiply Strings
+ https://leetcode.com/problems/multiply-strings/description/
+
+ Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.
+
+ Note: You must not use any built-in BigInteger library or convert the inputs to integer directly.
+
+ Example 1:
+ Input: num1 = "2", num2 = "3"
+ Output: "6"
+
+ Example 2:
+ Input: num1 = "123", num2 = "456"
+ Output: "56088"
+
+ ## 2013. Detect Squares
+ https://leetcode.com/problems/detect-squares/description/
+
+ You are given a stream of points on the X-Y plane. Design an algorithm that:
+
+ Adds new points from the stream into a data structure. Duplicate points are allowed and should be treated as different points.
+ Given a query point, counts the number of ways to choose three points from the data structure such that the three points and the query point form an axis-aligned square with positive area.
+ An axis-aligned square is a square whose edges are all the same length and are either parallel or perpendicular to the x-axis and y-axis.
+
+ Implement the DetectSquares class:
+
+ DetectSquares() Initializes the object with an empty data structure.
+ void add(int[] point) Adds a new point point = [x, y] to the data structure.
+ int count(int[] point) Counts the number of ways to form axis-aligned squares with point point = [x, y] as described above.
+
+ Example 1:
+ Input
+ ["DetectSquares", "add", "add", "add", "count", "count", "add", "count"]
+ [[], [[3, 10]], [[11, 2]], [[3, 2]], [[11, 10]], [[14, 8]], [[11, 2]], [[11, 10]]]
+ Output
+ [null, null, null, null, 1, 0, null, 2]
+
+ Explanation
+ DetectSquares detectSquares = new DetectSquares();
+ detectSquares.add([3, 10]);
+ detectSquares.add([11, 2]);
+ detectSquares.add([3, 2]);
+ detectSquares.count([11, 10]); // return 1. You can choose:
+                                //   - The first, second, and third points
+ detectSquares.count([14, 8]);  // return 0. The query point cannot form a square with any points in the data structure.
+ detectSquares.add([11, 2]);    // Adding duplicate points is allowed.
+ detectSquares.count([11, 10]); // return 2. You can choose:
+                                //   - The first, second, and third points
+                                //   - The first, third, and fourth points
+
+ ## 7. Reverse Integer
+ https://leetcode.com/problems/reverse-integer/description/
+
+ Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
+
+ Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
+
+ Example 1:
+ Input: x = 123
+ Output: 321
+
+ Example 2:
+ Input: x = -123
+ Output: -321
+
+ Example 3:
+ Input: x = 120
+ Output: 21

@@ -19,9 +19,9 @@ import Foundation
  Explanation: Alice's hand can not be rearranged into groups of 4.
  */
 
-func isNStraightHand(_ hand: [Int], _ groupSize: Int) -> Bool {
-    if hand.count % groupSize != 0 { return false }
+func isNStraightHand(hand: [Int], groupSize: Int) -> Bool {
 
+    if hand.count % groupSize != 0 { return false }
     var countDict = [Int: Int]()
     for n in hand {
         countDict[n, default: 0] += 1
@@ -29,8 +29,7 @@ func isNStraightHand(_ hand: [Int], _ groupSize: Int) -> Bool {
 
     var sortedKeys = countDict.keys.sorted(by: >)
 
-    while !sortedKeys.isEmpty {
-        let minValue = sortedKeys.last!
+    while let minValue = sortedKeys.last {
         for i in minValue..<minValue + groupSize {
             if let found = countDict[i], found > 0 {
                 countDict[i]! -= 1
