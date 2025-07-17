@@ -199,3 +199,90 @@ Algorithms not covered elsewhere in the Neetcode 150
  Input: prices = [7,6,4,3,1]
  Output: 0
  Explanation: There is no way to make a positive profit, so we never buy the stock to achieve the maximum profit of 0.
+
+ ## 380. Insert Delete GetRandom O(1)
+ https://leetcode.com/problems/insert-delete-getrandom-o1/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Implement the RandomizedSet class:
+
+ RandomizedSet() Initializes the RandomizedSet object.
+ bool insert(int val) Inserts an item val into the set if not present. Returns true if the item was not present, false otherwise.
+ bool remove(int val) Removes an item val from the set if present. Returns true if the item was present, false otherwise.
+ int getRandom() Returns a random element from the current set of elements (it's guaranteed that at least one element exists when this method is called). Each element must have the same probability of being returned.
+ You must implement the functions of the class such that each function works in average O(1) time complexity.
+
+ Example 1:
+ Input
+ ["RandomizedSet", "insert", "remove", "insert", "getRandom", "remove", "insert", "getRandom"]
+ [[], [1], [2], [2], [], [1], [2], []]
+ Output
+ [null, true, false, true, 2, true, false, 2]
+
+ Explanation
+ RandomizedSet randomizedSet = new RandomizedSet();
+ randomizedSet.insert(1); // Inserts 1 to the set. Returns true as 1 was inserted successfully.
+ randomizedSet.remove(2); // Returns false as 2 does not exist in the set.
+ randomizedSet.insert(2); // Inserts 2 to the set, returns true. Set now contains [1,2].
+ randomizedSet.getRandom(); // getRandom() should return either 1 or 2 randomly.
+ randomizedSet.remove(1); // Removes 1 from the set, returns true. Set now contains [2].
+ randomizedSet.insert(2); // 2 was already in the set, so return false.
+ randomizedSet.getRandom(); // Since 2 is the only number in the set, getRandom() will always return 2.
+
+ ## 135. Candy
+ https://leetcode.com/problems/candy/description/?envType=study-plan-v2&envId=top-interview-150
+
+ There are n children standing in a line. Each child is assigned a rating value given in the integer array ratings.
+
+ You are giving candies to these children subjected to the following requirements:
+
+ Each child must have at least one candy.
+ Children with a higher rating get more candies than their neighbors.
+ Return the minimum number of candies you need to have to distribute the candies to the children.
+
+ Example 1:
+ Input: ratings = [1,0,2]
+ Output: 5
+ Explanation: You can allocate to the first, second and third child with 2, 1, 2 candies respectively.
+
+ Example 2:
+ Input: ratings = [1,2,2]
+ Output: 4
+ Explanation: You can allocate to the first, second and third child with 1, 2, 1 candies respectively.
+ The third child gets 1 candy because it satisfies the above two conditions.
+
+ ## 13. Roman to Integer
+ https://leetcode.com/problems/roman-to-integer/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+
+ Symbol       Value
+ I             1
+ V             5
+ X             10
+ L             50
+ C             100
+ D             500
+ M             1000
+ For example, 2 is written as II in Roman numeral, just two ones added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.
+
+ Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:
+
+ I can be placed before V (5) and X (10) to make 4 and 9.
+ X can be placed before L (50) and C (100) to make 40 and 90.
+ C can be placed before D (500) and M (1000) to make 400 and 900.
+ Given a roman numeral, convert it to an integer.
+
+ Example 1:
+ Input: s = "III"
+ Output: 3
+ Explanation: III = 3.
+
+ Example 2:
+ Input: s = "LVIII"
+ Output: 58
+ Explanation: L = 50, V= 5, III = 3.
+
+ Example 3:
+ Input: s = "MCMXCIV"
+ Output: 1994
+ Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
