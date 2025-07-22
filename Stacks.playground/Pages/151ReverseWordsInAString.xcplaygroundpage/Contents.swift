@@ -30,9 +30,10 @@ import Foundation
 
 
 func reverseWords(_ s: String) -> String {
+
     var result = [String]()
-    var stringArray = s.components(separatedBy: " ").reversed()
-    for word in stringArray {
+    let s = s.components(separatedBy: " ").reversed()
+    for word in s {
         if !word.isEmpty {
             result.append(word)
         }
