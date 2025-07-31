@@ -34,8 +34,20 @@ import Foundation
  */
 
 func convert(_ s: String, _ numRows: Int) -> String {
-
-    return ""
+    if numRows == 1 { return s }
+    let s = Array(s)
+    var result = [Character]()
+    for r in 0..<numRows {
+        let increment = 2 * (numRows - 1)
+        for i in stride(from: r, to: s.count, by: increment) {
+            result.append(s[i])
+            if (r > 0 && r < numRows - 1 &&
+                i + increment - 2 * r < s.count) {
+                result.append(s[i + increment - 2 * r])
+            }
+        }
+    }
+    return String(result)
 }
 
 let result = convert("PAYPALISHIRING", 3) // "PAHNAPLSIIGYIR"

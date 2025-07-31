@@ -400,3 +400,190 @@ Algorithms not covered elsewhere in the Neetcode 150
  Example 3:
  Input: s = "A", numRows = 1
  Output: "A"
+
+ ## 28. Find the Index of the First Occurrence in a String
+ https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+
+ Example 1:
+ Input: haystack = "sadbutsad", needle = "sad"
+ Output: 0
+ Explanation: "sad" occurs at index 0 and 6.
+ The first occurrence is at index 0, so we return 0.
+
+ Example 2:
+ Input: haystack = "leetcode", needle = "leeto"
+ Output: -1
+ Explanation: "leeto" did not occur in "leetcode", so we return -1.
+
+ ## 68. Text Justification
+ https://leetcode.com/problems/text-justification/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given an array of strings words and a width maxWidth, format the text such that each line has exactly maxWidth characters and is fully (left and right) justified.
+
+ You should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces ' ' when necessary so that each line has exactly maxWidth characters.
+
+ Extra spaces between words should be distributed as evenly as possible. If the number of spaces on a line does not divide evenly between words, the empty slots on the left will be assigned more spaces than the slots on the right.
+
+ For the last line of text, it should be left-justified, and no extra space is inserted between words.
+
+ Note:
+
+ A word is defined as a character sequence consisting of non-space characters only.
+ Each word's length is guaranteed to be greater than 0 and not exceed maxWidth.
+ The input array words contains at least one word.
+
+ Example 1:
+ Input: words = ["This", "is", "an", "example", "of", "text", "justification."], maxWidth = 16
+ Output:
+ [
+    "This    is    an",
+    "example  of text",
+    "justification.  "
+ ]
+
+ Example 2:
+ Input: words = ["What","must","be","acknowledgment","shall","be"], maxWidth = 16
+ Output:
+ [
+   "What   must   be",
+   "acknowledgment  ",
+   "shall be        "
+ ]
+ Explanation: Note that the last line is "shall be    " instead of "shall     be", because the last line must be left-justified instead of fully-justified.
+ Note that the second line is also left-justified because it contains only one word.
+
+ Example 3:
+ Input: words = ["Science","is","what","we","understand","well","enough","to","explain","to","a","computer.","Art","is","everything","else","we","do"], maxWidth = 20
+ Output:
+ [
+   "Science  is  what we",
+   "understand      well",
+   "enough to explain to",
+   "a  computer.  Art is",
+   "everything  else  we",
+   "do                  "
+ ]
+
+ ## 392. Is Subsequence
+ https://leetcode.com/problems/is-subsequence/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given two strings s and t, return true if s is a subsequence of t, or false otherwise.
+
+ A subsequence of a string is a new string that is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (i.e., "ace" is a subsequence of "abcde" while "aec" is not).
+
+ Example 1:
+ Input: s = "abc", t = "ahbgdc"
+ Output: true
+
+ Example 2:
+ Input: s = "axc", t = "ahbgdc"
+ Output: false
+
+ ## 209. Minimum Size Subarray Sum
+ https://leetcode.com/problems/minimum-size-subarray-sum/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.
+
+ Example 1:
+ Input: target = 7, nums = [2,3,1,2,4,3]
+ Output: 2
+ Explanation: The subarray [4,3] has the minimal length under the problem constraint.
+
+ Example 2:
+ Input: target = 4, nums = [1,4,4]
+ Output: 1
+
+ Example 3:
+ Input: target = 11, nums = [1,1,1,1,1,1,1,1]
+ Output: 0
+
+ ## 30. Substring with Concatenation of All Words
+ https://leetcode.com/problems/substring-with-concatenation-of-all-words/description/?envType=study-plan-v2&envId=top-interview-150
+
+ You are given a string s and an array of strings words. All the strings of words are of the same length.
+
+ A concatenated string is a string that exactly contains all the strings of any permutation of words concatenated.
+
+ For example, if words = ["ab","cd","ef"], then "abcdef", "abefcd", "cdabef", "cdefab", "efabcd", and "efcdab" are all concatenated strings. "acdbef" is not a concatenated string because it is not the concatenation of any permutation of words.
+ Return an array of the starting indices of all the concatenated substrings in s. You can return the answer in any order.
+
+
+ Example 1:
+ Input: s = "barfoothefoobarman", words = ["foo","bar"]
+ Output: [0,9]
+ Explanation:
+ The substring starting at 0 is "barfoo". It is the concatenation of ["bar","foo"] which is a permutation of words.
+ The substring starting at 9 is "foobar". It is the concatenation of ["foo","bar"] which is a permutation of words.
+
+ Example 2:
+ Input: s = "wordgoodgoodgoodbestword", words = ["word","good","best","word"]
+ Output: []
+ Explanation:
+ There is no concatenated substring.
+
+ Example 3:
+ Input: s = "barfoofoobarthefoobarman", words = ["bar","foo","the"]
+ Output: [6,9,12]
+ Explanation:
+ The substring starting at 6 is "foobarthe". It is the concatenation of ["foo","bar","the"].
+ The substring starting at 9 is "barthefoo". It is the concatenation of ["bar","the","foo"].
+ The substring starting at 12 is "thefoobar". It is the concatenation of ["the","foo","bar"].
+
+ Constraints:
+
+ 1 <= s.length <= 104
+ 1 <= words.length <= 5000
+ 1 <= words[i].length <= 30
+ s and words[i] consist of lowercase English letters.
+
+ ## 472. Concatenated Words
+ https://leetcode.com/problems/concatenated-words/description/
+
+ Given an array of strings words (without duplicates), return all the concatenated words in the given list of words.
+
+ A concatenated word is defined as a string that is comprised entirely of at least two shorter words (not necessarily distinct) in the given array.
+
+ Example 1:
+ Input: words = ["cat","cats","catsdogcats","dog","dogcatsdog","hippopotamuses","rat","ratcatdogcat"]
+ Output: ["catsdogcats","dogcatsdog","ratcatdogcat"]
+ Explanation: "catsdogcats" can be concatenated by "cats", "dog" and "cats";
+ "dogcatsdog" can be concatenated by "dog", "cats" and "dog";
+ "ratcatdogcat" can be concatenated by "rat", "cat", "dog" and "cat".
+
+ Example 2:
+ Input: words = ["cat","dog","catdog"]
+ Output: ["catdog"]
+
+ Constraints:
+ 1 <= words.length <= 104
+ 1 <= words[i].length <= 30
+ words[i] consists of only lowercase English letters.
+ All the strings of words are unique.
+ 1 <= sum(words[i].length) <= 105
+
+ ## 289. Game of Life
+ https://leetcode.com/problems/game-of-life/description/?envType=study-plan-v2&envId=top-interview-150
+
+ According to Wikipedia's article: "The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970."
+
+ The board is made up of an m x n grid of cells, where each cell has an initial state: live (represented by a 1) or dead (represented by a 0). Each cell interacts with its eight neighbors (horizontal, vertical, diagonal) using the following four rules (taken from the above Wikipedia article):
+
+ Any live cell with fewer than two live neighbors dies as if caused by under-population.
+ Any live cell with two or three live neighbors lives on to the next generation.
+ Any live cell with more than three live neighbors dies, as if by over-population.
+ Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
+ The next state of the board is determined by applying the above rules simultaneously to every cell in the current state of the m x n grid board. In this process, births and deaths occur simultaneously.
+
+ Given the current state of the board, update the board to reflect its next state.
+
+ Note that you do not need to return anything.
+
+ Example 1:
+ Input: board = [[0,1,0],[0,0,1],[1,1,1],[0,0,0]]
+ Output: [[0,0,0],[1,0,1],[0,1,1],[0,1,0]]
+
+ Example 2:
+ Input: board = [[1,1],[1,0]]
+ Output: [[1,1],[1,1]]
