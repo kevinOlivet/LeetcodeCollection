@@ -6216,3 +6216,128 @@ Algorithms of the Neetcode 150 not covered elsewhere
  Example 2:
  Input: board = [[1,1],[1,0]]
  Output: [[1,1],[1,1]]
+
+ ## 383. Ransom Note
+ https://leetcode.com/problems/ransom-note/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given two strings ransomNote and magazine, return true if ransomNote can be constructed by using the letters from magazine and false otherwise.
+
+ Each letter in magazine can only be used once in ransomNote.
+
+ Example 1:
+ Input: ransomNote = "a", magazine = "b"
+ Output: false
+
+ Example 2:
+ Input: ransomNote = "aa", magazine = "ab"
+ Output: false
+
+ Example 3:
+ Input: ransomNote = "aa", magazine = "aab"
+ Output: true
+
+ Constraints:
+ 1 <= ransomNote.length, magazine.length <= 105
+ ransomNote and magazine consist of lowercase English letters.
+
+ ## 205. Isomorphic Strings
+ https://leetcode.com/problems/isomorphic-strings/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given two strings s and t, determine if they are isomorphic.
+
+ Two strings s and t are isomorphic if the characters in s can be replaced to get t.
+
+ All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.
+
+ Example 1:
+ Input: s = "egg", t = "add"
+ Output: true
+ Explanation:
+ The strings s and t can be made identical by:
+ Mapping 'e' to 'a'.
+ Mapping 'g' to 'd'.
+
+ Example 2:
+ Input: s = "foo", t = "bar"
+ Output: false
+ Explanation:
+ The strings s and t can not be made identical as 'o' needs to be mapped to both 'a' and 'r'.
+
+ Example 3:
+ Input: s = "paper", t = "title"
+ Output: true
+
+ ## 290. Word Pattern
+ https://leetcode.com/problems/word-pattern/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given a pattern and a string s, find if s follows the same pattern.
+
+ Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s. Specifically:
+
+ Each letter in pattern maps to exactly one unique word in s.
+ Each unique word in s maps to exactly one letter in pattern.
+ No two letters map to the same word, and no two words map to the same letter.
+
+ Example 1:
+ Input: pattern = "abba", s = "dog cat cat dog"
+ Output: true
+ Explanation:
+ The bijection can be established as:
+ 'a' maps to "dog".
+ 'b' maps to "cat".
+
+ Example 2:
+ Input: pattern = "abba", s = "dog cat cat fish"
+ Output: false
+
+ Example 3:
+ Input: pattern = "aaaa", s = "dog cat cat dog"
+ Output: false
+
+ ## 219. Contains Duplicate II, 219. Contains Duplicate 2
+ https://leetcode.com/problems/contains-duplicate-ii/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
+
+ Example 1:
+ Input: nums = [1,2,3,1], k = 3
+ Output: true
+
+ Example 2:
+ Input: nums = [1,0,1,1], k = 1
+ Output: true
+
+ Example 3:
+ Input: nums = [1,2,3,1,2,3], k = 2
+ Output: false
+
+ ## 228. Summary Ranges
+ https://leetcode.com/problems/summary-ranges/description/?envType=study-plan-v2&envId=top-interview-150
+
+ You are given a sorted unique integer array nums.
+
+ A range [a,b] is the set of all integers from a to b (inclusive).
+
+ Return the smallest sorted list of ranges that cover all the numbers in the array exactly. That is, each element of nums is covered by exactly one of the ranges, and there is no integer x such that x is in one of the ranges but not in nums.
+
+ Each range [a,b] in the list should be output as:
+
+ "a->b" if a != b
+ "a" if a == b
+
+ Example 1:
+ Input: nums = [0,1,2,4,5,7]
+ Output: ["0->2","4->5","7"]
+ Explanation: The ranges are:
+ [0,2] --> "0->2"
+ [4,5] --> "4->5"
+ [7,7] --> "7"
+
+ Example 2:
+ Input: nums = [0,2,3,4,6,8,9]
+ Output: ["0","2->4","6","8->9"]
+ Explanation: The ranges are:
+ [0,0] --> "0"
+ [2,4] --> "2->4"
+ [6,6] --> "6"
+ [8,9] --> "8->9"

@@ -29,9 +29,9 @@ import Foundation
  Truth table:
  Original |  New  |  State
     0     |   0   |    0
-    1     |   0   |    1
-    0     |   1   |    2
-    1     |   1   |    3
+    1     |   0   |    10
+    0     |   1   |    20
+    1     |   1   |    30
  */
 
 func gameOfLife(_ board: inout [[Int]]) {
@@ -44,7 +44,7 @@ func gameOfLife(_ board: inout [[Int]]) {
             let col = dc + c
             if row < 0 || row == board.count ||
                 col < 0 || col == board[0].count { continue }
-            if [1, 3].contains(board[row][col]) { nei += 1}
+            if [1, 10, 30].contains(board[row][col]) { nei += 1 }
         }
         return nei
     }
@@ -54,30 +54,34 @@ func gameOfLife(_ board: inout [[Int]]) {
             let nei = countNeightbors(r: r, c: c)
             if board[r][c] == 1 { // If alive
                 if [2, 3].contains(nei) {
-                    board[r][c] = 3 // Stay alive
+                    board[r][c] = 30 // Stay alive
+                } else {
+                    board[r][c] = 10 // Alive -> Dead
                 }
             } else if nei == 3 { // if dead but 3 nei
-                board[r][c] = 2 // Become alive!
+                board[r][c] = 20 // Become alive!
             }
         }
     }
     // Change code to 1 or 0
     for r in 0..<board.count {
         for c in 0..<board[0].count {
-            if board[r][c] == 1 { // was alive now died
+            if board[r][c] == 10 { // was alive now died
                 board[r][c] = 0
-            } else if [2,3].contains(board[r][c]) { // stay alive or become alive
+            } else if [20, 30].contains(board[r][c]) { // stay alive or become alive
                 board[r][c] = 1
             }
         }
     }
 }
 
+
 var board = [[0,1,0],[0,0,1],[1,1,1],[0,0,0]]
 gameOfLife(&board)
 board.forEach({ print($0, terminator: "\n")})
 
 /*
+ Should be:
 [
  [0,0,0],
  [1,0,1],
@@ -92,6 +96,7 @@ gameOfLife(&board1)
 board1.forEach({ print($0, terminator: "\n")})
 
 /*
+ Should be:
 [
  [1,1],
  [1,1]
