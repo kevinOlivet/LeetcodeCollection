@@ -712,3 +712,100 @@ Algorithms not covered elsewhere in the Neetcode 150
  [2,4] --> "2->4"
  [6,6] --> "6"
  [8,9] --> "8->9"
+
+ ## 452. Minimum Number of Arrows to Burst Balloons
+ https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description/?envType=study-plan-v2&envId=top-interview-150
+
+ There are some spherical balloons taped onto a flat wall that represents the XY-plane. The balloons are represented as a 2D integer array points where points[i] = [xstart, xend] denotes a balloon whose horizontal diameter stretches between xstart and xend. You do not know the exact y-coordinates of the balloons.
+
+ Arrows can be shot up directly vertically (in the positive y-direction) from different points along the x-axis. A balloon with xstart and xend is burst by an arrow shot at x if xstart <= x <= xend. There is no limit to the number of arrows that can be shot. A shot arrow keeps traveling up infinitely, bursting any balloons in its path.
+
+ Given the array points, return the minimum number of arrows that must be shot to burst all balloons.
+
+ Example 1:
+ Input: points = [[10,16],[2,8],[1,6],[7,12]]
+ Output: 2
+ Explanation: The balloons can be burst by 2 arrows:
+ - Shoot an arrow at x = 6, bursting the balloons [2,8] and [1,6].
+ - Shoot an arrow at x = 11, bursting the balloons [10,16] and [7,12].
+
+ Example 2:
+ Input: points = [[1,2],[3,4],[5,6],[7,8]]
+ Output: 4
+ Explanation: One arrow needs to be shot for each balloon for a total of 4 arrows.
+
+ Example 3:
+ Input: points = [[1,2],[2,3],[3,4],[4,5]]
+ Output: 2
+ Explanation: The balloons can be burst by 2 arrows:
+ - Shoot an arrow at x = 2, bursting the balloons [1,2] and [2,3].
+ - Shoot an arrow at x = 4, bursting the balloons [3,4] and [4,5].
+
+ ## 92. Reverse Linked List II, Reverse Linked List 2
+ https://leetcode.com/problems/reverse-linked-list-ii/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given the head of a singly linked list and two integers left and right where left <= right, reverse the nodes of the list from position left to position right, and return the reversed list.
+
+ Example 1:
+ Input: head = [1,2,3,4,5], left = 2, right = 4
+ Output: [1,4,3,2,5]
+
+ Example 2:
+ Input: head = [5], left = 1, right = 1
+ Output: [5]
+
+ ## 82. Remove Duplicates from Sorted List II, Remove Duplicates from Sorted List 2
+ https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given the head of a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list. Return the linked list sorted as well.
+
+ Example 1:
+ Input: head = [1,2,3,3,4,4,5]
+ Output: [1,2,5]
+
+ Example 2:
+ Input: head = [1,1,1,2,3]
+ Output: [2,3]
+
+ List is sorted
+
+ ## 61. Rotate List
+ https://leetcode.com/problems/rotate-list/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given the head of a linked list, rotate the list to the right by k places.
+
+ Example 1:
+ Input: head = [1,2,3,4,5], k = 2
+ Output: [4,5,1,2,3]
+
+ Example 2:
+ Input: head = [0,1,2], k = 4
+ Output: [2,0,1]
+
+ ## 86. Partition List
+ https://leetcode.com/problems/partition-list/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given the head of a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.
+
+ You should preserve the original relative order of the nodes in each of the two partitions.
+
+ Example 1:
+ Input: head = [1,4,3,2,5,2], x = 3
+ Output: [1,2,2,4,3,5]
+
+ Example 2:
+ Input: head = [2,1], x = 2
+ Output: [1,2]
+
+ ## 101. Symmetric Tree
+ https://leetcode.com/problems/symmetric-tree/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
+
+ Example 1:
+ Input: root = [1,2,2,3,4,4,3]
+ Output: true
+
+ Example 2:
+ Input: root = [1,2,2,null,3,null,3]
+ Output: false
