@@ -6438,3 +6438,61 @@ Algorithms of the Neetcode 150 not covered elsewhere
  Example 2:
  Input: root = [1,2,2,null,3,null,3]
  Output: false
+
+ ## 106. Construct Binary Tree from Inorder and Postorder Traversal
+ https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given two integer arrays inorder and postorder where inorder is the inorder traversal of a binary tree and postorder is the postorder traversal of the same tree, construct and return the binary tree.
+
+ Example 1:
+ Input: inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]
+ Output: [3,9,20,null,null,15,7]
+
+ Example 2:
+ Input: inorder = [-1], postorder = [-1]
+ Output: [-1]
+
+ ## 117. Populating Next Right Pointers in Each Node II, Populating Next Right Pointers in Each Node 2
+ also works for Populating Next Right Pointers in Each Node
+ https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given a binary tree
+
+ struct Node {
+   int val;
+   Node *left;
+   Node *right;
+   Node *next;
+ }
+ Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.
+
+ Initially, all next pointers are set to NULL.
+
+ Example 1:
+ Input: root = [1,2,3,4,5,null,7]
+ Output: [1,#,2,3,#,4,5,7,#]
+ Explanation: Given the above binary tree (Figure A), your function should populate each next pointer to point to its next right node, just like in Figure B. The serialized output is in level order as connected by the next pointers, with '#' signifying the end of each level.
+
+ Example 2:
+ Input: root = []
+ Output: []
+
+ ## 114. Flatten Binary Tree to Linked List
+ https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given the root of a binary tree, flatten the tree into a "linked list":
+
+ The "linked list" should use the same TreeNode class where the right child pointer points to the next node in the list and the left child pointer is always null.
+ The "linked list" should be in the same order as a pre-order traversal of the binary tree.
+
+ Example 1:
+ Input: root = [1,2,5,3,4,null,6]
+ Output: [1,null,2,null,3,null,4,null,5,null,6]
+
+ Example 2:
+ Input: root = []
+ Output: []
+
+ Example 3:
+ Input: root = [0]
+ Output: [0]
