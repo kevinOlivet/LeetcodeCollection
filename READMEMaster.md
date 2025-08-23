@@ -6496,3 +6496,57 @@ Algorithms of the Neetcode 150 not covered elsewhere
  Example 3:
  Input: root = [0]
  Output: [0]
+
+ ## 112. Path Sum
+ https://leetcode.com/problems/path-sum/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.
+
+ A leaf is a node with no children.
+
+ Example 1:
+ Input: root = [5,4,8,11,null,13,4,7,2,null,null,null,1], targetSum = 22
+ Output: true
+ Explanation: The root-to-leaf path with the target sum is shown.
+
+ Example 2:
+ Input: root = [1,2,3], targetSum = 5
+ Output: false
+ Explanation: There are two root-to-leaf paths in the tree:
+ (1 --> 2): The sum is 3.
+ (1 --> 3): The sum is 4.
+ There is no root-to-leaf path with sum = 5.
+
+ Example 3:
+ Input: root = [], targetSum = 0
+ Output: false
+ Explanation: Since the tree is empty, there are no root-to-leaf paths.
+
+ ## 129. Sum Root to Leaf Numbers
+ https://leetcode.com/problems/sum-root-to-leaf-numbers/description/?envType=study-plan-v2&envId=top-interview-150
+
+ You are given the root of a binary tree containing digits from 0 to 9 only.
+
+ Each root-to-leaf path in the tree represents a number.
+
+ For example, the root-to-leaf path 1 -> 2 -> 3 represents the number 123.
+ Return the total sum of all root-to-leaf numbers. Test cases are generated so that the answer will fit in a 32-bit integer.
+
+ A leaf node is a node with no children.
+
+ Example 1:
+ Input: root = [1,2,3]
+ Output: 25
+ Explanation:
+ The root-to-leaf path 1->2 represents the number 12.
+ The root-to-leaf path 1->3 represents the number 13.
+ Therefore, sum = 12 + 13 = 25.
+
+ Example 2:
+ Input: root = [4,9,0,5,1]
+ Output: 1026
+ Explanation:
+ The root-to-leaf path 4->9->5 represents the number 495.
+ The root-to-leaf path 4->9->1 represents the number 491.
+ The root-to-leaf path 4->0 represents the number 40.
+ Therefore, sum = 495 + 491 + 40 = 1026.
