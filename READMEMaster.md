@@ -6577,3 +6577,153 @@ Algorithms of the Neetcode 150 not covered elsewhere
  The number of nodes in the tree is in the range [0, 5 * 104].
  0 <= Node.val <= 5 * 104
  The tree is guaranteed to be complete.
+
+ ## 236. Lowest Common Ancestor of a Binary Tree
+ https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
+
+ According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).”
+
+ Example 1:
+ Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+ Output: 3
+ Explanation: The LCA of nodes 5 and 1 is 3.
+
+ Example 2:
+ Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4
+ Output: 5
+ Explanation: The LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.
+
+ Example 3:
+ Input: root = [1,2], p = 1, q = 2
+ Output: 1
+
+ ## 103. Binary Tree Zigzag Level Order Traversal
+ https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given the root of a binary tree, return the zigzag level order traversal of its nodes' values. (i.e., from left to right, then right to left for the next level and alternate between).
+
+ Example 1:
+ Input: root = [3,9,20,null,null,15,7]
+ Output: [[3],[20,9],[15,7]]
+
+ Example 2:
+ Input: root = [1]
+ Output: [[1]]
+
+ Example 3:
+ Input: root = []
+ Output: []
+
+ ## 637. Average of Levels in Binary Tree
+ https://leetcode.com/problems/average-of-levels-in-binary-tree/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given the root of a binary tree, return the average value of the nodes on each level in the form of an array. Answers within 10-5 of the actual answer will be accepted.
+
+ Example 1:
+ Input: root = [3,9,20,null,null,15,7]
+ Output: [3.00000,14.50000,11.00000]
+ Explanation: The average value of nodes on level 0 is 3, on level 1 is 14.5, and on level 2 is 11.
+ Hence return [3, 14.5, 11].
+
+ Example 2:
+ Input: root = [3,9,20,15,7]
+ Output: [3.00000,14.50000,11.00000]
+
+ ## 530. Minimum Absolute Difference in BST
+ https://leetcode.com/problems/minimum-absolute-difference-in-bst/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given the root of a Binary Search Tree (BST), return the minimum absolute difference between the values of any two different nodes in the tree.
+
+ Example 1:
+ Input: root = [4,2,6,1,3]
+ Output: 1
+
+ Example 2:
+ Input: root = [1,0,48,null,null,12,49]
+ Output: 1
+
+ ## 399. Evaluate Division
+ https://leetcode.com/problems/evaluate-division/description/?envType=study-plan-v2&envId=top-interview-150
+
+ You are given an array of variable pairs equations and an array of real numbers values, where equations[i] = [Ai, Bi] and values[i] represent the equation Ai / Bi = values[i]. Each Ai or Bi is a string that represents a single variable.
+
+ You are also given some queries, where queries[j] = [Cj, Dj] represents the jth query where you must find the answer for Cj / Dj = ?.
+
+ Return the answers to all queries. If a single answer cannot be determined, return -1.0.
+
+ Note: The input is always valid. You may assume that evaluating the queries will not result in division by zero and that there is no contradiction.
+
+ Note: The variables that do not occur in the list of equations are undefined, so the answer cannot be determined for them.
+
+ Example 1:
+ Input: equations = [["a","b"],["b","c"]], values = [2.0,3.0], queries = [["a","c"],["b","a"],["a","e"],["a","a"],["x","x"]]
+ Output: [6.00000,0.50000,-1.00000,1.00000,-1.00000]
+ Explanation:
+ Given: a / b = 2.0, b / c = 3.0
+ queries are: a / c = ?, b / a = ?, a / e = ?, a / a = ?, x / x = ?
+ return: [6.0, 0.5, -1.0, 1.0, -1.0 ]
+ note: x is undefined => -1.0
+
+ Example 2:
+ Input: equations = [["a","b"],["b","c"],["bc","cd"]], values = [1.5,2.5,5.0], queries = [["a","c"],["c","b"],["bc","cd"],["cd","bc"]]
+ Output: [3.75000,0.40000,5.00000,0.20000]
+ Example 3:
+
+ Input: equations = [["a","b"]], values = [0.5], queries = [["a","b"],["b","a"],["a","c"],["x","y"]]
+ Output: [0.50000,2.00000,-1.00000,-1.00000]
+
+ ## 909. Snakes and Ladders
+ https://leetcode.com/problems/snakes-and-ladders/description/?envType=study-plan-v2&envId=top-interview-150
+
+ You are given an n x n integer matrix board where the cells are labeled from 1 to n2 in a Boustrophedon style starting from the bottom left of the board (i.e. board[n - 1][0]) and alternating direction each row.
+
+ You start on square 1 of the board. In each move, starting from square curr, do the following:
+
+ Choose a destination square next with a label in the range [curr + 1, min(curr + 6, n2)].
+ This choice simulates the result of a standard 6-sided die roll: i.e., there are always at most 6 destinations, regardless of the size of the board.
+ If next has a snake or ladder, you must move to the destination of that snake or ladder. Otherwise, you move to next.
+ The game ends when you reach the square n2.
+ A board square on row r and column c has a snake or ladder if board[r][c] != -1. The destination of that snake or ladder is board[r][c]. Squares 1 and n2 are not the starting points of any snake or ladder.
+
+ Note that you only take a snake or ladder at most once per dice roll. If the destination to a snake or ladder is the start of another snake or ladder, you do not follow the subsequent snake or ladder.
+
+ For example, suppose the board is [[-1,4],[-1,3]], and on the first move, your destination square is 2. You follow the ladder to square 3, but do not follow the subsequent ladder to 4.
+ Return the least number of dice rolls required to reach the square n2. If it is not possible to reach the square, return -1.
+
+ Example 1:
+ Input: board = [[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,-1,-1,-1,-1,-1],[-1,35,-1,-1,13,-1],[-1,-1,-1,-1,-1,-1],[-1,15,-1,-1,-1,-1]]
+ Output: 4
+ Explanation:
+ In the beginning, you start at square 1 (at row 5, column 0).
+ You decide to move to square 2 and must take the ladder to square 15.
+ You then decide to move to square 17 and must take the snake to square 13.
+ You then decide to move to square 14 and must take the ladder to square 35.
+ You then decide to move to square 36, ending the game.
+ This is the lowest possible number of moves to reach the last square, so return 4.
+
+ Example 2:
+ Input: board = [[-1,-1],[-1,3]]
+ Output: 1
+
+ Constraints:
+ n == board.length == board[i].length
+ 2 <= n <= 20
+ board[i][j] is either -1 or in the range [1, n2].
+ The squares labeled 1 and n2 are not the starting points of any snake or ladder.
+
+ ## 108. Convert Sorted Array to Binary Search Tree
+ https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given an integer array nums where the elements are sorted in ascending order, convert it to a height-balanced binary search tree.
+
+ Example 1:
+ Input: nums = [-10,-3,0,5,9]
+ Output: [0,-3,9,-10,null,5]
+ Explanation: [0,-10,5,null,-3,null,9] is also accepted:
+
+ Example 2:
+ Input: nums = [1,3]
+ Output: [3,1]
+ Explanation: [1,null,3] and [3,1] are both height-balanced BSTs.
