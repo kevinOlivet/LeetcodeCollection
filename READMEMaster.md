@@ -6727,3 +6727,211 @@ Algorithms of the Neetcode 150 not covered elsewhere
  Input: nums = [1,3]
  Output: [3,1]
  Explanation: [1,null,3] and [3,1] are both height-balanced BSTs.
+
+ ## 148. Sort List
+ https://leetcode.com/problems/sort-list/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given the head of a linked list, return the list after sorting it in ascending order.
+
+ Example 1:
+ Input: head = [4,2,1,3]
+ Output: [1,2,3,4]
+
+ Example 2:
+ Input: head = [-1,5,3,4,0]
+ Output: [-1,0,3,4,5]
+
+ Example 3:
+ Input: head = []
+ Output: []
+
+ ## 427. Construct Quad Tree
+ https://leetcode.com/problems/construct-quad-tree/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given a n * n matrix grid of 0's and 1's only. We want to represent grid with a Quad-Tree.
+
+ Return the root of the Quad-Tree representing grid.
+
+ A Quad-Tree is a tree data structure in which each internal node has exactly four children. Besides, each node has two attributes:
+
+ val: True if the node represents a grid of 1's or False if the node represents a grid of 0's. Notice that you can assign the val to True or False when isLeaf is False, and both are accepted in the answer.
+ isLeaf: True if the node is a leaf node on the tree or False if the node has four children.
+ class Node {
+     public boolean val;
+     public boolean isLeaf;
+     public Node topLeft;
+     public Node topRight;
+     public Node bottomLeft;
+     public Node bottomRight;
+ }
+ We can construct a Quad-Tree from a two-dimensional area using the following steps:
+
+ If the current grid has the same value (i.e all 1's or all 0's) set isLeaf True and set val to the value of the grid and set the four children to Null and stop.
+ If the current grid has different values, set isLeaf to False and set val to any value and divide the current grid into four sub-grids as shown in the photo.
+ Recurse for each of the children with the proper sub-grid.
+
+ If you want to know more about the Quad-Tree, you can refer to the wiki.
+
+ Quad-Tree format:
+
+ You don't need to read this section for solving the problem. This is only if you want to understand the output format here. The output represents the serialized format of a Quad-Tree using level order traversal, where null signifies a path terminator where no node exists below.
+
+ It is very similar to the serialization of the binary tree. The only difference is that the node is represented as a list [isLeaf, val].
+
+ If the value of isLeaf or val is True we represent it as 1 in the list [isLeaf, val] and if the value of isLeaf or val is False we represent it as 0.
+
+ Example 1:
+ Input: grid = [
+ [0,1],
+ [1,0]]
+ Output: [[0,1],[1,0],[1,1],[1,1],[1,0]]
+ Explanation: The explanation of this example is shown below:
+ Notice that 0 represents False and 1 represents True in the photo representing the Quad-Tree.
+
+ Example 2:
+ Input: grid = [
+ [1,1,1,1,0,0,0,0],
+ [1,1,1,1,0,0,0,0],
+ [1,1,1,1,1,1,1,1],
+ [1,1,1,1,1,1,1,1],
+ [1,1,1,1,0,0,0,0],
+ [1,1,1,1,0,0,0,0],
+ [1,1,1,1,0,0,0,0],
+ [1,1,1,1,0,0,0,0]]
+ Output: [[0,1],[1,1],[0,1],[1,1],[1,0],null,null,null,null,[1,0],[1,0],[1,1],[1,1]]
+ Explanation: All values in the grid are not the same. We divide the grid into four sub-grids.
+ The topLeft, bottomLeft and bottomRight each has the same value.
+ The topRight have different values so we divide it into 4 sub-grids where each has the same value.
+ Explanation is shown in the photo below:
+
+ ## 918. Maximum Sum Circular Subarray
+ https://leetcode.com/problems/maximum-sum-circular-subarray/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given a circular integer array nums of length n, return the maximum possible sum of a non-empty subarray of nums.
+
+ A circular array means the end of the array connects to the beginning of the array. Formally, the next element of nums[i] is nums[(i + 1) % n] and the previous element of nums[i] is nums[(i - 1 + n) % n].
+
+ A subarray may only include each element of the fixed buffer nums at most once. Formally, for a subarray nums[i], nums[i + 1], ..., nums[j], there does not exist i <= k1, k2 <= j with k1 % n == k2 % n.
+
+ Example 1:
+ Input: nums = [1,-2,3,-2]
+ Output: 3
+ Explanation: Subarray [3] has maximum sum 3.
+
+ Example 2:
+ Input: nums = [5,-3,5]
+ Output: 10
+ Explanation: Subarray [5,5] has maximum sum 5 + 5 = 10.
+
+ Example 3:
+ Input: nums = [-3,-2,-3]
+ Output: -2
+ Explanation: Subarray [-2] has maximum sum -2.
+
+ ## 35. Search Insert Position
+ https://leetcode.com/problems/search-insert-position/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+
+ You must write an algorithm with O(log n) runtime complexity.
+
+ Example 1:
+ Input: nums = [1,3,5,6], target = 5
+ Output: 2
+
+ Example 2:
+ Input: nums = [1,3,5,6], target = 2
+ Output: 1
+
+ Example 3:
+ Input: nums = [1,3,5,6], target = 7
+ Output: 4
+
+ Constraints:
+ 1 <= nums.length <= 104
+
+ ## 162. Find Peak Element
+ https://leetcode.com/problems/find-peak-element/description/?envType=study-plan-v2&envId=top-interview-150
+
+ A peak element is an element that is strictly greater than its neighbors.
+
+ Given a 0-indexed integer array nums, find a peak element, and return its index. If the array contains multiple peaks, return the index to any of the peaks.
+
+ You may imagine that nums[-1] = nums[n] = -∞. In other words, an element is always considered to be strictly greater than a neighbor that is outside the array.
+
+ You must write an algorithm that runs in O(log n) time.
+
+ Example 1:
+ Input: nums = [1,2,3,1]
+ Output: 2
+ Explanation: 3 is a peak element and your function should return the index number 2.
+
+ Example 2:
+ Input: nums = [1,2,1,3,5,6,4]
+ Output: 5
+ Explanation: Your function can return either index number 1 where the peak element is 2, or index number 5 where the peak element is 6.
+
+ ## 34. Find First and Last Position of Element in Sorted Array
+ https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
+
+ If target is not found in the array, return [-1, -1].
+
+ You must write an algorithm with O(log n) runtime complexity.
+
+ Example 1:
+ Input: nums = [5,7,7,8,8,10], target = 8
+ Output: [3,4]
+
+ Example 2:
+ Input: nums = [5,7,7,8,8,10], target = 6
+ Output: [-1,-1]
+
+ Example 3:
+ Input: nums = [], target = 0
+ Output: [-1,-1]
+
+ ## 502. IPO
+ https://leetcode.com/problems/ipo/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Suppose LeetCode will start its IPO soon. In order to sell a good price of its shares to Venture Capital, LeetCode would like to work on some projects to increase its capital before the IPO. Since it has limited resources, it can only finish at most k distinct projects before the IPO. Help LeetCode design the best way to maximize its total capital after finishing at most k distinct projects.
+
+ You are given n projects where the ith project has a pure profit profits[i] and a minimum capital of capital[i] is needed to start it.
+
+ Initially, you have w capital. When you finish a project, you will obtain its pure profit and the profit will be added to your total capital.
+
+ Pick a list of at most k distinct projects from given projects to maximize your final capital, and return the final maximized capital.
+
+ The answer is guaranteed to fit in a 32-bit signed integer.
+
+ Example 1:
+ Input: k = 2, w = 0, profits = [1,2,3], capital = [0,1,1]
+ Output: 4
+ Explanation: Since your initial capital is 0, you can only start the project indexed 0.
+ After finishing it you will obtain profit 1 and your capital becomes 1.
+ With capital 1, you can either start the project indexed 1 or the project indexed 2.
+ Since you can choose at most 2 projects, you need to finish the project indexed 2 to get the maximum capital.
+ Therefore, output the final maximized capital, which is 0 + 1 + 3 = 4.
+
+ Example 2:
+ Input: k = 3, w = 0, profits = [1,2,3], capital = [0,1,2]
+ Output: 6
+
+ ## 67. Add Binary
+ https://leetcode.com/problems/add-binary/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given two binary strings a and b, return their sum as a binary string.
+
+ Example 1:
+ Input: a = "11", b = "1"
+ Output: "100"
+
+ Example 2:
+ Input: a = "1010", b = "1011"
+ Output: "10101"
+
+ Constraints:
+ 1 <= a.length, b.length <= 104
+ a and b consist only of '0' or '1' characters.
+ Each string does not contain leading zeros except for the zero itself.

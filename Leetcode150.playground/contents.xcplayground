@@ -1,2 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='7.0' target-platform='ios' swift-version='6' buildActiveScheme='true' importAppTypes='true'/>
+<playground version='7.0' target-platform='ios' swift-version='6' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='6ZigzagConversion'/>
+        <page name='12IntegerToRoman'/>
+        <page name='13RomanToInteger'/>
+        <page name='14LongestCommonPrefix'/>
+        <page name='26RemoveDuplicatesFromSortedArray'/>
+        <page name='27RemoveElement'/>
+        <page name='28FindTheIndexOfTheFirstOccurrenceInAString'/>
+        <page name='30SubstringWithConcatenationOfAllWords'/>
+        <page name='35SearchInsertPosition'/>
+        <page name='58LengthOfLastWord'/>
+        <page name='61RotateList'/>
+        <page name='68TextJustification'/>
+        <page name='80RemoveDuplicatesFromSortedArray2'/>
+        <page name='82RemoveDuplicatesFromSortedList2'/>
+        <page name='86PartitionList'/>
+        <page name='88MergeSortedArray'/>
+        <page name='92ReverseLinkedList2'/>
+        <page name='101SymmetricTree'/>
+        <page name='103BinaryTreeZigzagLevelOrderTraversal'/>
+        <page name='106ConstructBinaryTreeFromInorderAndPostorderTraversal'/>
+        <page name='108ConvertSortedArrayToBinarySearchTree'/>
+        <page name='112PathSum'/>
+        <page name='114FlattenBinaryTreeToLinkedList'/>
+        <page name='117PopulatingNextRightPointersInEachNode2'/>
+        <page name='122BestTimeToBuyAndSellStock2'/>
+        <page name='129SumRootToLeafNumbers'/>
+        <page name='135Candy'/>
+        <page name='148SortList'/>
+        <page name='169MajorityElement'/>
+        <page name='189RotateArray'/>
+        <page name='205IsomorphicStrings'/>
+        <page name='209MinimumSizeSubarraySum'/>
+        <page name='219ContainsDuplicate2'/>
+        <page name='222CountCompleteTreeNodes'/>
+        <page name='228SummaryRanges'/>
+        <page name='236LowestCommonAncestorOfABinaryTree'/>
+        <page name='274HIndex'/>
+        <page name='289GameOfLife'/>
+        <page name='290WordPattern'/>
+        <page name='380InsertDeleteGetRandom'/>
+        <page name='383RansomNote'/>
+        <page name='392IsSubsequence'/>
+        <page name='399EvaluateDivision'/>
+        <page name='427ConstructQuadTree'/>
+        <page name='452MinimumNumberOfArrowsToBurstBalloons'/>
+        <page name='472ConcatenatedWords'/>
+        <page name='530MinimumAbsoluteDifferenceInBST'/>
+        <page name='637AverageOfLevelsInBinaryTree'/>
+        <page name='909SnakesAndLadders'/>
+        <page name='918MaximumSumCircularSubarray'/>
+    </pages>
+</playground>
