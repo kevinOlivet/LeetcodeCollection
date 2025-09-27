@@ -22,14 +22,13 @@ import Foundation
 
 func addBinary(_ a: String, _ b: String) -> String {
     var result = ""
-    var carry: UInt8 = 0
+    var carry = 0
     let a = Array(a.reversed())
     let b = Array(b.reversed())
 
     for i in 0..<max(a.count, b.count) {
-        let zero = Character("0").asciiValue!
-        let digitA = i < a.count ? a[i].asciiValue! - zero : 0
-        let digitB = i < b.count ? b[i].asciiValue! - zero : 0
+        let digitA = i < a.count ? a[i].wholeNumberValue! : 0
+        let digitB = i < b.count ? b[i].wholeNumberValue! : 0
 
         let total = digitA + digitB + carry
         let char = String(total % 2)

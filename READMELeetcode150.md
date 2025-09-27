@@ -1306,3 +1306,62 @@ Algorithms not covered elsewhere in the Neetcode 150
  1 <= a.length, b.length <= 104
  a and b consist only of '0' or '1' characters.
  Each string does not contain leading zeros except for the zero itself.
+
+ ## 137. Single Number II, Single Number 2
+ https://leetcode.com/problems/single-number-ii/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given an integer array nums where every element appears three times except for one, which appears exactly once. Find the single element and return it.
+
+ You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+ Example 1:
+ Input: nums = [2,2,3,2]
+ Output: 3
+
+ Example 2:
+ Input: nums = [0,1,0,1,0,1,99]
+ Output: 99
+
+ ## 172. Factorial Trailing Zeroes
+ https://leetcode.com/problems/factorial-trailing-zeroes/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given an integer n, return the number of trailing zeroes in n!.
+
+ Note that n! = n * (n - 1) * (n - 2) * ... * 3 * 2 * 1.
+
+ Example 1:
+ Input: n = 3
+ Output: 0
+ Explanation: 3! = 6, no trailing zero.
+
+ Example 2:
+ Input: n = 5
+ Output: 1
+ Explanation: 5! = 120, one trailing zero.
+
+ Example 3:
+ Input: n = 0
+ Output: 0
+
+ Follow up: Could you write a solution that works in logarithmic time complexity?
+
+ ## 9. Palindrome Number
+ https://leetcode.com/problems/palindrome-number/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given an integer x, return true if x is a palindrome, and false otherwise.
+ Follow up: Could you solve it without converting the integer to a string?
+
+ Example 1:
+ Input: x = 121
+ Output: true
+ Explanation: 121 reads as 121 from left to right and from right to left.
+
+ Example 2:
+ Input: x = -121
+ Output: false
+ Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+
+ Example 3:
+ Input: x = 10
+ Output: false
+ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
