@@ -59,6 +59,15 @@ func minimumTotal(_ triangle: [[Int]]) -> Int {
 //    return dfs(r: 0, c: 0)
 //}
 
+func minimumTotal2(_ triangle: [[Int]]) -> Int {
+    var dp = Array(repeating: 0, count: triangle.count + 1)
+    for row in triangle.reversed() {
+        for (i, n) in row.enumerated() {
+            dp[i] = n + min(dp[i], dp[i + 1])
+        }
+    }
+    return dp[0]}
+
 let result = minimumTotal([[2],[3,4],[6,5,7],[4,1,8,3]]) // 11
 print(result)
 

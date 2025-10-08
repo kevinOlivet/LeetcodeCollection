@@ -25,33 +25,49 @@ import Foundation
  Output: 1
  */
 
+//func uniquePathsWithObstacles(_ obstacleGrid: [[Int]]) -> Int {
+//    guard obstacleGrid[obstacleGrid.count-1][obstacleGrid[0].count - 1] != 1 else { return 0 }
+//    var grid = obstacleGrid
+//
+//    var lastRowBlocked = false
+//    var lastColumnBlocked = false
+//
+//    for i in (0..<grid.count).reversed() {
+//        for j in (0..<grid[0].count).reversed() {
+//            if i == grid.count - 1 {
+//                if grid[i][j] == 1 {
+//                    lastRowBlocked = true
+//                }
+//                grid[i][j] = lastRowBlocked ? 0 : 1
+//            } else if j == grid[0].count - 1 {
+//                if grid[i][j] == 1 {
+//                    lastColumnBlocked = true
+//                }
+//                grid[i][j] = lastColumnBlocked ? 0 : 1
+//            } else if grid[i][j] == 1 {
+//                grid[i][j] = 0
+//            } else {
+//                grid[i][j] = grid[i+1][j] + grid[i][j+1]
+//            }
+//        }
+//    }
+//    return grid[0][0]
+//}
+
 func uniquePathsWithObstacles(_ obstacleGrid: [[Int]]) -> Int {
-    guard obstacleGrid[obstacleGrid.count-1][obstacleGrid[0].count - 1] != 1 else { return 0 }
-    var grid = obstacleGrid
+    var dp = Array(repeating: 0, count: obstacleGrid[0].count)
+    dp[obstacleGrid[0].count - 1] = 1
 
-    var lastRowBlocked = false
-    var lastColumnBlocked = false
-
-    for i in (0..<grid.count).reversed() {
-        for j in (0..<grid[0].count).reversed() {
-            if i == grid.count - 1 {
-                if grid[i][j] == 1 {
-                    lastRowBlocked = true
-                }
-                grid[i][j] = lastRowBlocked ? 0 : 1
-            } else if j == grid[0].count - 1 {
-                if grid[i][j] == 1 {
-                    lastColumnBlocked = true
-                }
-                grid[i][j] = lastColumnBlocked ? 0 : 1
-            } else if grid[i][j] == 1 {
-                grid[i][j] = 0
-            } else {
-                grid[i][j] = grid[i+1][j] + grid[i][j+1]
+    for r in (0..<obstacleGrid.count).reversed() {
+        for c in (0..<obstacleGrid[0].count).reversed() {
+            if obstacleGrid[r][c] == 1 {
+                dp[c] = 0
+            } else if c + 1 < obstacleGrid[0].count {
+                dp[c] = dp[c] + dp[c + 1]
             }
         }
     }
-    return grid[0][0]
+    return dp[0]
 }
 
 let result = uniquePathsWithObstacles([[0,0,0],[0,1,0],[0,0,0]]) // 2

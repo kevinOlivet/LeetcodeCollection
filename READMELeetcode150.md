@@ -1365,3 +1365,83 @@ Algorithms not covered elsewhere in the Neetcode 150
  Input: x = 10
  Output: false
  Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+
+ ## 69. Sqrt(x)
+ https://leetcode.com/problems/sqrtx/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given a non-negative integer x, return the square root of x rounded down to the nearest integer. The returned integer should be non-negative as well.
+
+ You must not use any built-in exponent function or operator.
+
+ For example, do not use pow(x, 0.5) in c++ or x ** 0.5 in python.
+
+ Example 1:
+ Input: x = 4
+ Output: 2
+ Explanation: The square root of 4 is 2, so we return 2.
+
+ Example 2:
+ Input: x = 8
+ Output: 2
+ Explanation: The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned.
+
+ ## 149. Max Points on a Line
+ https://leetcode.com/problems/max-points-on-a-line/description/?envType=study-plan-v2&envId=top-interview-150
+
+ Given an array of points where points[i] = [xi, yi] represents a point on the X-Y plane, return the maximum number of points that lie on the same straight line.
+
+ Example 1:
+ Input: points = [[1,1],[2,2],[3,3]]
+ Output: 3
+
+ Example 2:
+ Input: points = [[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]]
+ Output: 4
+
+ All the points are unique.
+
+ ## 123. Best Time to Buy and Sell Stock III, 123. Best Time to Buy and Sell Stock 3
+ https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description/?envType=study-plan-v2&envId=top-interview-150
+
+ You are given an array prices where prices[i] is the price of a given stock on the ith day.
+
+ Find the maximum profit you can achieve. You may complete at most two transactions.
+
+ Note: You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).
+
+ Example 1:
+ Input: prices = [3,3,5,0,0,3,1,4]
+ Output: 6
+ Explanation: Buy on day 4 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.
+ Then buy on day 7 (price = 1) and sell on day 8 (price = 4), profit = 4-1 = 3.
+
+ Example 2:
+ Input: prices = [1,2,3,4,5]
+ Output: 4
+ Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-1 = 4.
+ Note that you cannot buy on day 1, buy on day 2 and sell them later, as you are engaging multiple transactions at the same time. You must sell before buying again.
+
+ Example 3:
+ Input: prices = [7,6,4,3,1]
+ Output: 0
+ Explanation: In this case, no transaction is done, i.e. max profit = 0.
+
+ ## 188. Best Time to Buy and Sell Stock IV, 188. Best Time to Buy and Sell Stock 4
+ https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iv/description/?envType=study-plan-v2&envId=top-interview-150
+ NOTE: Same solution as 123. Best Time to Buy and Sell Stock III, 123. Best Time to Buy and Sell Stock 3
+ 
+ You are given an integer array prices where prices[i] is the price of a given stock on the ith day, and an integer k.
+
+ Find the maximum profit you can achieve. You may complete at most k transactions: i.e. you may buy at most k times and sell at most k times.
+
+ Note: You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).
+
+ Example 1:
+ Input: k = 2, prices = [2,4,1]
+ Output: 2
+ Explanation: Buy on day 1 (price = 2) and sell on day 2 (price = 4), profit = 4-2 = 2.
+
+ Example 2:
+ Input: k = 2, prices = [3,2,6,5,0,3]
+ Output: 7
+ Explanation: Buy on day 2 (price = 2) and sell on day 3 (price = 6), profit = 6-2 = 4. Then buy on day 5 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.
