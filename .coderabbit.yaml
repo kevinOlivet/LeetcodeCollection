@@ -8,3 +8,12 @@ reviews:
   auto_review:
     enabled: true
     drafts: false
+  summary:
+    prompt: |
+      Generate a comprehensive pull request summary that includes all the important details.
+
+      ## Type of Change
+      - [ ] Bug Fix (non-breaking change which fixes an issue)
+      - [ ] New Feature (non-breaking change which adds functionality)
+      - [ ] Breaking Change (fix or epic that causes existing functionality to change)
+      - [ ] Architecture Enhancements (non-breaking change which refactors existing functionality)
