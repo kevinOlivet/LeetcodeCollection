@@ -3,16 +3,8 @@
 # Minimal configuration for getting started
 language: "en-US"
 reviews:
-  profile: "chill"
+  profile: "assertive"
   high_level_summary: true
   auto_review:
     enabled: true
     drafts: false
-finishing_touches:
-  summary:
-    enabled: true
-    prompt: |
-      Summarize the pull request changes focusing on the business value and user-facing impact.
-      Avoid technical jargon and focus on what the user will experience.
-      Include a list of the main changes and a brief explanation for each.
-      Each list should begin with the words "Yo Mama - ".
